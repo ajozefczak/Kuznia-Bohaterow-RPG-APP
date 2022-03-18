@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#202653"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
 
         <TextView
             android:id="@+id/textView"
@@ -19,6 +21,7 @@
             android:padding="5dp"
             android:text="Mobilkowa Karczma"
             android:textAlignment="center"
+            android:textColor="#DCD1D1"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -29,6 +32,7 @@
             android:padding="5dp"
             android:text="Przedstawia"
             android:textAlignment="center"
+            android:textColor="#DCD1D1"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -39,6 +43,7 @@
             android:padding="5dp"
             android:text="Kuźnia Bohaterów"
             android:textAlignment="center"
+            android:textColor="#DCD1D1"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -49,13 +54,16 @@
 
             <Button
                 android:id="@+id/ButtonLogowanie"
-                android:layout_width="154dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="80dp"
                 android:layout_marginRight="10dp"
-                android:layout_weight="0.25"
-                android:text="Zaloguj" />
+                android:layout_weight="0.5"
+                android:background="@drawable/przyciski"
+                android:text="Zaloguj"
+                android:textColor="#000000"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/ButtonRejestracja"
@@ -64,9 +72,10 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="80dp"
                 android:layout_marginRight="10dp"
-                android:layout_weight="0.25"
-                android:text="Rejestracja" />
-
+                android:layout_weight="0.5"
+                android:background="@drawable/przyciski"
+                android:text="Rejestracja"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
