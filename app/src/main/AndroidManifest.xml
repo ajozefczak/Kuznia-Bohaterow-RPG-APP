@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KuzniaBohaterowRPGAPP">
         <activity
+            android:name=".EkranPostaci"
+            android:exported="false" />
+        <activity
+            android:name=".TworzeniePostaci"
+            android:exported="false" />
+        <activity
+            android:name=".Regulamin"
+            android:exported="false" />
+        <activity
             android:name=".EkranGracza"
             android:exported="false" />
         <activity
