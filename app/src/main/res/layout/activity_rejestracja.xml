@@ -63,7 +63,6 @@
                         android:ems="10"
                         android:fontFamily="@font/gabriela"
                         android:inputType="textPersonName"
-                        android:text="Name"
                         android:textColor="#ebebeb" />
                 </LinearLayout>
 
