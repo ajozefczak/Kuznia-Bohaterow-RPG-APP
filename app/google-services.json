@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "484067601584",
+    "firebase_url": "https://kuznia-bohaterow-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "kuznia-bohaterow",
+    "storage_bucket": "kuznia-bohaterow.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484067601584:android:0a05b1e0c3b9f8c1949f75",
+        "android_client_info": {
+          "package_name": "com.example.kuznia_bohaterow_rpg_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484067601584-kil70a15ulam7glt6hml97hb1k5egk6g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7CT7kOxKJwrK0fHQPqr_0-XW6csQBBSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484067601584-kil70a15ulam7glt6hml97hb1k5egk6g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

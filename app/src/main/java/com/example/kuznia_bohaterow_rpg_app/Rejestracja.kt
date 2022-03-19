@@ -40,22 +40,22 @@ class Rejestracja : AppCompatActivity() {
                     Toast.makeText(this,"Wprowadź ponownie haslo",Toast.LENGTH_SHORT).show()
                 }
 
-
-                /*if(editTextTextPassword2.text.toString() != editTextTextPassword3.text.toString()) -> {
-                    Toast.makeText(this,"Podane hasła różnią sie",Toast.LENGTH_SHORT).show()
-                }*/
-
-
                 else -> {
-                    val email: String = editTextTextEmailAddress2.text.toString()
 
 
-                    FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,editTextTextPassword2.text.toString()).addOnCompleteListener {
+
+                    FirebaseAuth.getInstance().createUserWithEmailAndPassword(editTextTextEmailAddress2.text.toString(),editTextTextPassword2.text.toString()).addOnCompleteListener {
                             task -> if (task.isSuccessful) {
                             val firebaseUser: FirebaseUser = task.result!!.user!!
 
-                            Toast.makeText(this,"Chyba działa",Toast.LENGTH_SHORT).show()
-                        }
+                            Toast.makeText(this,"Konto zostało założone w serwisie",Toast.LENGTH_SHORT).show()
+
+                            val MainIntent = Intent(this, MainActivity::class.java)
+                            startActivity(MainIntent)
+
+                    }else{
+                            Toast.makeText(this,"Wystąpił błąd podczas tworzenia konta",Toast.LENGTH_SHORT).show()
+                    }
                     }
                 }
 
