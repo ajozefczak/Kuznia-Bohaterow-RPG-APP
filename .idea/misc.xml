@@ -4,9 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/01projekt android/Kuznia-Bohaterow-RPG-APP/app/src/main/res/drawable/przyciski.xml" value="0.2125" />
+        <entry key="..\:/01projekt android/Kuznia-Bohaterow-RPG-APP/app/src/main/res/layout/activity_ekran_gracza.xml" value="0.36141304347826086" />
         <entry key="..\:/01projekt android/Kuznia-Bohaterow-RPG-APP/app/src/main/res/layout/activity_logowanie.xml" value="0.36666666666666664" />
         <entry key="..\:/01projekt android/Kuznia-Bohaterow-RPG-APP/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/01projekt android/Kuznia-Bohaterow-RPG-APP/app/src/main/res/layout/activity_rejestracja.xml" value="0.36666666666666664" />
+        <entry key="..\:/01projekt android/Kuznia-Bohaterow-RPG-APP/app/src/main/res/layout/activity_rejestracja.xml" value="0.33" />
       </map>
     </option>
   </component>

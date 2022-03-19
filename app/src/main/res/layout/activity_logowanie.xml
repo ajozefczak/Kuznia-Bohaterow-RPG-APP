@@ -9,15 +9,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/giants_fireplace_bar"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
+            android:fontFamily="@font/gabriela"
             android:padding="10dp"
             android:text="Logowanie"
+            android:textAlignment="center"
+            android:textColor="#ebebeb"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -34,52 +38,62 @@
                 android:padding="10dp">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="#A1261309"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        android:text="Email:" />
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.2"
+                        android:fontFamily="@font/gabriela"
+                        android:text="Email:"
+                        android:textColor="#ebebeb" />
 
                     <EditText
                         android:id="@+id/editTextTextEmailAddress"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginRight="10dp"
                         android:layout_weight="1"
+                        android:backgroundTint="#ebebeb"
                         android:ems="10"
-                        android:inputType="textEmailAddress" />
+                        android:inputType="textEmailAddress"
+                        android:textColor="#ebebeb" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="#94261309"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        android:text="Hasło:" />
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.2"
+                        android:fontFamily="@font/gabriela"
+                        android:text="Hasło:"
+                        android:textColor="#ebebeb" />
 
                     <EditText
                         android:id="@+id/editTextTextPassword"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginRight="10dp"
                         android:layout_weight="1"
+                        android:backgroundTint="#ebebeb"
                         android:ems="10"
-                        android:inputType="textPassword" />
+                        android:inputType="textPassword"
+                        android:textColor="#ebebeb" />
 
                 </LinearLayout>
 
@@ -94,28 +108,40 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
-                        android:text="Zaloguj" />
+                        android:background="@drawable/przycisknaprzyciski"
+                        android:fontFamily="@font/gabriela"
+                        android:text="Zaloguj"
+                        android:textColor="#ebebeb" />
 
                     <Button
-                        android:id="@+id/LButtonRejestracja"
+                        android:id="@+id/LButtonPrzzywruc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
-                        android:text="Załóż konto" />
+                        android:background="@drawable/przycisknaprzyciski"
+                        android:fontFamily="@font/gabriela"
+                        android:text="Przywróć Hasło"
+                        android:textColor="#ebebeb" />
 
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/textView9"
+                <Button
+                    android:id="@+id/LButtonRejestracja"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:text="Przywróć hasło"
-                    android:textAlignment="center" />
+                    android:background="@drawable/przycisknaprzyciski"
+                    android:fontFamily="@font/gabriela"
+                    android:text="Załóż konto"
+                    android:textAlignment="center"
+                    android:textColor="#ebebeb"
+                    android:textIsSelectable="false" />
+
             </LinearLayout>
 
         </FrameLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,15 +9,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/giants_fireplace_bar"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:fontFamily="@font/gabriela"
             android:padding="5dp"
             android:text="Rejestracja"
+            android:textAlignment="center"
+            android:textColor="#ebebeb"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -36,6 +40,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
+                    android:background="#94261309"
                     android:orientation="horizontal">
 
                     <TextView
@@ -45,21 +50,28 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
-                        android:text="Nick " />
+                        android:fontFamily="@font/gabriela"
+                        android:text="Nick "
+                        android:textColor="#ebebeb" />
 
                     <EditText
                         android:id="@+id/editTextTextPersonName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:backgroundTint="#ebebeb"
                         android:ems="10"
+                        android:fontFamily="@font/gabriela"
                         android:inputType="textPersonName"
-                        android:text="Name" />
+                        android:text="Name"
+                        android:textColor="#ebebeb" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="#94261309"
                     android:orientation="horizontal">
 
                     <TextView
@@ -69,20 +81,27 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
-                        android:text="*Email" />
+                        android:fontFamily="@font/gabriela"
+                        android:text="*Email"
+                        android:textColor="#ebebeb" />
 
                     <EditText
                         android:id="@+id/editTextTextEmailAddress2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:backgroundTint="#ebebeb"
                         android:ems="10"
-                        android:inputType="textEmailAddress" />
+                        android:fontFamily="@font/gabriela"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#ebebeb" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="#94261309"
                     android:orientation="horizontal">
 
                     <TextView
@@ -92,20 +111,28 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
-                        android:text="*Hasło" />
+                        android:fontFamily="@font/gabriela"
+                        android:text="*Hasło"
+                        android:textColor="#ebebeb" />
 
                     <EditText
                         android:id="@+id/editTextTextPassword2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:backgroundTint="#ebebeb"
                         android:ems="10"
-                        android:inputType="textPassword" />
+                        android:fontFamily="@font/gabriela"
+                        android:inputType="textPassword"
+                        android:textColor="#ebebeb" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#94261309"
                     android:orientation="horizontal">
 
                     <TextView
@@ -114,30 +141,50 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="5dp"
+                        android:layout_marginBottom="15dp"
                         android:layout_weight="1"
-                        android:text="*Powtórz Hasło" />
+                        android:fontFamily="@font/gabriela"
+                        android:text="*Powtórz Hasło"
+                        android:textColor="#ebebeb" />
 
                     <EditText
                         android:id="@+id/editTextTextPassword3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:backgroundTint="#ebebeb"
                         android:ems="10"
-                        android:inputType="textPassword" />
+                        android:fontFamily="@font/gabriela"
+                        android:inputType="textPassword"
+                        android:textColor="#ebebeb" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
                     android:orientation="horizontal">
 
                     <CheckBox
                         android:id="@+id/checkBox"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_margin="5dp"
                         android:layout_weight="1"
-                        android:text="Zakceptuj regulamin" />
+                        android:buttonTint="#ebebeb"
+                        android:fontFamily="@font/gabriela"
+                        android:text="Zakceptuj regulamin"
+                        android:textColor="#ebebeb" />
+
+                    <Button
+                        android:id="@+id/RButtonRegulamin"
+                        android:layout_width="188dp"
+                        android:layout_height="34dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/przycisknaprzyciski"
+                        android:fontFamily="@font/gabriela"
+                        android:text="Regulamin"
+                        android:textColor="#ebebeb" />
 
                 </LinearLayout>
 
@@ -146,22 +193,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/regulamin"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_weight="1"
-                        android:autoLink="web"
-                        android:text="@string/regulamin" />
-
-                    <Button
-                        android:id="@+id/RButtonRegulamin"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Button" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -175,7 +206,10 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
-                        android:text="Logowanie" />
+                        android:background="@drawable/przycisknaprzyciski"
+                        android:fontFamily="@font/gabriela"
+                        android:text="Logowanie"
+                        android:textColor="#ebebeb" />
 
                     <Button
                         android:id="@+id/RButtonRejestracja"
@@ -183,11 +217,27 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
-                        android:text="Rejestracja" />
+                        android:background="@drawable/przycisknaprzyciski"
+                        android:fontFamily="@font/gabriela"
+                        android:text="Rejestracja"
+                        android:textColor="#ebebeb" />
+
                 </LinearLayout>
 
             </LinearLayout>
         </FrameLayout>
+
+        <TextView
+            android:id="@+id/regulamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:autoLink="web"
+            android:text="@string/regulamin"
+            android:textColor="#ebebeb" />
 
     </LinearLayout>
 
