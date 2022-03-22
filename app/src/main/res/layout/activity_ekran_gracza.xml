@@ -23,7 +23,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:text="Tryb Gracza"
-                android:textColor="#ebebeb" />
+                android:textColor="#ebebeb"
+                android:textColorHighlight="#ebebeb"
+                android:textColorHint="#ebebeb"
+                android:textColorLink="#ebebeb" />
 
             <Button
                 android:id="@+id/GButtonWyloguj"
@@ -80,7 +83,9 @@
                 android:layout_weight="1"
                 android:backgroundTint="#ebebeb"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:text="Wpisz kod stołu"
+                android:textColor="#ebebeb" />
 
         </LinearLayout>
 

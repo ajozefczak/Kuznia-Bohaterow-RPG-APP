@@ -49,6 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Button" />
+
             </LinearLayout>
         </LinearLayout>
 
@@ -116,9 +117,10 @@
 
             <Button
                 android:id="@+id/TPButtonLosujKondycje"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.3" />
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/twenty_sided_dice" />
 
             <TextView
                 android:id="@+id/KondycjaLiczba"
@@ -146,7 +148,8 @@
                 android:id="@+id/TPButtonLosujBudoweCiala"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3" />
+                android:layout_weight="0.3"
+                android:background="@drawable/twenty_sided_dice" />
 
             <TextView
                 android:id="@+id/BudowaCialaLiczba"
@@ -173,7 +176,8 @@
                 android:id="@+id/TPButtonLosujZrencznosc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3" />
+                android:layout_weight="0.3"
+                android:background="@drawable/twenty_sided_dice" />
 
             <TextView
                 android:id="@+id/ZrecznoscLiczba"
@@ -200,7 +204,8 @@
                 android:id="@+id/TPButtonLosujInteligencje"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3" />
+                android:layout_weight="0.3"
+                android:background="@drawable/twenty_sided_dice" />
 
             <TextView
                 android:id="@+id/InteligencjaLiczba"
@@ -227,7 +232,8 @@
                 android:id="@+id/TPButtonLosujMoc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3" />
+                android:layout_weight="0.3"
+                android:background="@drawable/twenty_sided_dice" />
 
             <TextView
                 android:id="@+id/MocLiczba"
@@ -254,7 +260,8 @@
                 android:id="@+id/TPButtonLosujWyksztalcenie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3" />
+                android:layout_weight="0.3"
+                android:background="@drawable/twenty_sided_dice" />
 
             <TextView
                 android:id="@+id/WyksztalcenieLiczba"
@@ -281,7 +288,8 @@
                 android:id="@+id/TPButtonLosujPoczytalnosc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3" />
+                android:layout_weight="0.3"
+                android:background="@drawable/twenty_sided_dice" />
 
             <TextView
                 android:id="@+id/PoczytalnoscLiczba"
