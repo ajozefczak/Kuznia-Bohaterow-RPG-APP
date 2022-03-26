@@ -21,6 +21,7 @@
                 android:id="@+id/switch1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="Tryb MG" />
 
@@ -28,6 +29,7 @@
                 android:id="@+id/MGButtonWyloguj"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:text="Wyloguj" />
@@ -42,6 +44,7 @@
                 android:id="@+id/button8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:text="Tworzenie stołu" />
@@ -56,6 +59,7 @@
                 android:id="@+id/button9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:text="Kalendarz" />
