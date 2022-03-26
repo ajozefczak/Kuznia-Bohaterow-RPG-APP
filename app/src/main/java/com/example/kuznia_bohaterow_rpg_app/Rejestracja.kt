@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -29,59 +30,72 @@ class Rejestracja : AppCompatActivity() {
 
         // Code to register pepega acc
 
+        var errorMessage = "Wystąpił błąd w następujących polach:\n"
+        var tockenAcc = true;
+
         RButtonRejestracja.setOnClickListener{
-            when{
-                TextUtils.isEmpty(editTextTextPersonName.text.toString()) -> {
-                    Toast.makeText(this,"Wprowadź nick",Toast.LENGTH_SHORT).show()
-                }
-                TextUtils.isEmpty(editTextTextEmailAddress2.text.toString()) -> {
-                    Toast.makeText(this,"Wprowadź adres email",Toast.LENGTH_SHORT).show()
-                }
-                TextUtils.isEmpty(editTextTextPassword2.text.toString()) -> {
-                    Toast.makeText(this,"Wprowadź hasło",Toast.LENGTH_SHORT).show()
-                }
-                TextUtils.isEmpty(editTextTextPassword3.text.toString()) -> {
-                    Toast.makeText(this,"Wprowadź ponownie haslo",Toast.LENGTH_SHORT).show()
-                }
-                !editTextTextPassword2.text.toString().equals(editTextTextPassword3.text.toString()) -> {
-                    Toast.makeText(this,"Hasła nie są takie same",Toast.LENGTH_SHORT).show()
-                }
-                !checkBox.isChecked -> {
-                    Toast.makeText(this,"W celu utworzenia konta wymagana jest akceptacja regulaminu",Toast.LENGTH_SHORT).show()
-                }
-                editTextTextPassword2.text.toString().count()<7 -> {
-                    Toast.makeText(this,"Hasło powinno mieć więcej niż 6 znaków",Toast.LENGTH_SHORT).show()
-                }
-                editTextTextPassword2.text.toString().count()>128 -> {
-                    Toast.makeText(this,"Hasło jest zbyt długie",Toast.LENGTH_SHORT).show()
-                }
-                !android.util.Patterns.EMAIL_ADDRESS.matcher(editTextTextEmailAddress2.text.toString()).matches() -> {
-                    Toast.makeText(this,"Błędny adres email",Toast.LENGTH_SHORT).show()
-                }
-                else -> {
 
-                    FirebaseAuth.getInstance().createUserWithEmailAndPassword(editTextTextEmailAddress2.text.toString(),editTextTextPassword2.text.toString()).addOnCompleteListener {
-                            task -> if (task.isSuccessful) {
-                            val firebaseUser: FirebaseUser = task.result!!.user!!
+            if(TextUtils.isEmpty(editTextTextPersonName.text.toString())) {
+                errorMessage = errorMessage + "Wprowadź nick\n"
+                tockenAcc = false
+            }
+            /*if(TextUtils.isEmpty(editTextTextEmailAddress2.text.toString())){
+                errorMessage = errorMessage + "Wprowadź adres email\n"
+                tockenAcc = false;
+            }*/
+            if(!android.util.Patterns.EMAIL_ADDRESS.matcher(editTextTextEmailAddress2.text.toString()).matches()){
+                errorMessage = errorMessage + "Błędny adres email\n"
+                tockenAcc = false
+            }
+            if(TextUtils.isEmpty(editTextTextPassword2.text.toString())){
+                errorMessage = errorMessage + "Wprowadź hasło\n"
+                tockenAcc = false
+            }
+            if(TextUtils.isEmpty(editTextTextPassword3.text.toString())){
+                errorMessage = errorMessage + "Wprowadź ponownie haslo\n"
+                tockenAcc = false
+            }
+            if(!editTextTextPassword2.text.toString().equals(editTextTextPassword3.text.toString())){
+                errorMessage = errorMessage + "Hasła nie są takie same\n"
+                tockenAcc = false
+            }
+            if(!checkBox.isChecked){
+                errorMessage = errorMessage + "W celu utworzenia konta wymagana jest akceptacja regulaminu\n"
+                tockenAcc = false
+            }
+            if(editTextTextPassword2.text.toString().count()<7){
+                errorMessage = errorMessage + "Hasło powinno mieć więcej niż 6 znaków\n"
+                tockenAcc = false
+            }
+            if(editTextTextPassword2.text.toString().count()>128){
+                errorMessage = errorMessage + "Hasło jest zbyt długie\n"
+                tockenAcc = false
+            }
+            if(tockenAcc==true) {
+                FirebaseAuth.getInstance().createUserWithEmailAndPassword(
+                    editTextTextEmailAddress2.text.toString(),
+                    editTextTextPassword2.text.toString()
+                ).addOnSuccessListener {
+                    val firebaseUser = FirebaseAuth.getInstance().currentUser!!
 
-                        val db = FirebaseFirestore.getInstance()
-                        val user: MutableMap<String,String> = HashMap()
-                        user["nick"] = editTextTextPersonName.text.toString()
-                        user["id"] = firebaseUser.uid
-                        db.collection("users").add(user)
+                    val db = FirebaseFirestore.getInstance()
+                    val user: MutableMap<String, String> = HashMap()
+                    user["nick"] = editTextTextPersonName.text.toString()
+                    user["id"] = firebaseUser.uid
+                    db.collection("users").add(user)
 
-                            Toast.makeText(this,"Konto zostało założone w serwisie",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Konto zostało założone w serwisie", Toast.LENGTH_SHORT).show()
 
-                            val MainIntent = Intent(this, MainActivity::class.java)
-                            startActivity(MainIntent)
+                    val MainIntent = Intent(this, MainActivity::class.java)
+                    startActivity(MainIntent)
 
-                    }else{
-
-                            Toast.makeText(this,"Wystąpił błąd podczas tworzenia konta",Toast.LENGTH_SHORT).show()
-                    }
-                    }
+                }.addOnFailureListener { e ->
+                    Toast.makeText(this, "Wystąpił błąd podczas zakładania konta: " + e.message, Toast.LENGTH_SHORT).show()
                 }
-
+            }else{
+                Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
+                tockenAcc=true
+                errorMessage = "Wystąpił błąd w następujących polach: "
             }
         }
 
