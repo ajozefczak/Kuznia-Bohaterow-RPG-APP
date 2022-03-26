@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/tworzenie_postaci"
     tools:context=".TworzeniePostaci">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/tworzenie_postaci"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -387,7 +387,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/przycisknaprzyciski"
-            android:text="Zapisz Postać" />
+            android:text="Zapisz Postać"
+            android:textColor="#ebebeb" />
 
         <Button
             android:id="@+id/TPReset"
@@ -395,7 +396,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/przycisknaprzyciski"
-            android:text="Button" />
+            android:text="Zacznij od nowa"
+            android:textColor="#ebebeb" />
 
     </LinearLayout>
 
@@ -404,7 +406,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/przycisknaprzyciski"
-        android:text="Wruć do menu gownego"
+        android:text="Wróć do menu gownego"
+        android:textColor="#ebebeb"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="178dp" />
 

@@ -4,42 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/tworzenie_postaci"
     tools:context=".Regulamin">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textView37"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#94261309"
+            android:paddingLeft="5dp"
+            android:text="Regulamin"
+            android:textColor="#ebebeb"
+            android:textSize="34sp" />
 
-            <TextView
-                android:id="@+id/SilaLiczba"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.3"
-                android:text="50" />
-
-            <Button
-                android:id="@+id/TPButtonLosujSile"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="50dp"
-                android:layout_weight="0"
-                android:background="@drawable/twenty_sided_dice"
-                android:freezesText="true" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_weight="0.3"
-                android:text="Siła" />
-        </LinearLayout>
-
-    </FrameLayout>
-
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#94261309"
+            android:padding="10dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas auctor id lacus et imperdiet. Ut magna mauris, imperdiet fermentum quam quis, cursus fermentum lorem. Integer vitae fermentum dui, ut dapibus sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisi. Praesent porttitor rhoncus sodales. Etiam a libero tortor. Nulla eu lacinia justo, quis condimentum felis. Cras commodo nisl quis sapien condimentum, ac semper lorem placerat. Etiam eget est tempor, pellentesque justo eget, aliquet purus. Nam quis lorem aliquam, suscipit erat vel, aliquam lectus. Donec blandit efficitur urna nec tincidunt.  Etiam eget nisi quis nulla posuere tincidunt vitae id diam. Quisque dapibus lorem at elit semper feugiat. Maecenas lacinia semper velit, in venenatis ex imperdiet a. Duis eu tincidunt lacus. Curabitur ut tincidunt risus, quis iaculis ligula. Etiam vel urna ut ligula aliquet dapibus nec tristique est. In ut enim ultrices, placerat magna ac, sollicitudin nisl. Sed scelerisque risus eget libero iaculis pharetra. Fusce eget nibh nec dui porta pretium nec ullamcorper lacus. Praesent venenatis velit eu dui ornare condimentum. Integer vel ornare lacus, nec placerat tellus. Proin commodo sit amet dui eget pellentesque. Nullam tempor, tortor id varius eleifend, ligula nisl varius dolor, luctus posuere quam enim sed dolor.  Sed tincidunt, lacus et finibus molestie, lectus nisi dictum elit, a sodales risus turpis et mi. Proin ultrices turpis diam, ac dignissim felis lacinia nec. Cras consequat lacus ut est blandit malesuada ac nec eros. Proin malesuada enim justo, at lobortis urna euismod iaculis. Nulla arcu tellus, sollicitudin et justo vel, gravida imperdiet arcu. Nam ut tortor venenatis, iaculis tellus et, aliquam risus. Donec at tristique sem. Suspendisse dapibus condimentum massa."
+            android:textColor="#ebebeb" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

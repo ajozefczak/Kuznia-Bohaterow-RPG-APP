@@ -169,7 +169,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:layout_weight="1"
                         android:buttonTint="#ebebeb"
                         android:fontFamily="@font/gabriela"
                         android:text="Zakceptuj regulamin"
@@ -177,8 +176,8 @@
 
                     <Button
                         android:id="@+id/RButtonRegulamin"
-                        android:layout_width="188dp"
-                        android:layout_height="34dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:background="@drawable/przycisknaprzyciski"
                         android:fontFamily="@font/gabriela"
