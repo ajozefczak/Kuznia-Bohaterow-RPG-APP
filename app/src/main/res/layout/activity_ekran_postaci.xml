@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/postacb"
     tools:context=".EkranPostaci">
 
     <LinearLayout
@@ -16,154 +17,357 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView21"
+            <ImageView
+                android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/EPTextImie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#94261309"
+                    android:text="Imie"
+                    android:textColor="#ebebeb"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/EPTextZawod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#94261309"
+                    android:text="Zawud"
+                    android:textColor="#ebebeb"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/OpisNaStatystyki"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#94261309"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView23"
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TextView" />
+                android:layout_weight="0.5"
+                android:text="Ststystyka"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TextView" />
+                android:layout_weight="0.5"
+                android:text="Wartość"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/EPLayoutSila"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#94261309"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView25"
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TextView" />
+                android:layout_weight="0.5"
+                android:text="Siła"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView26"
-                android:layout_width="wrap_content"
+                android:id="@+id/EPLiczbaSila"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TextView" />
+                android:layout_weight="0.5"
+                android:text="50"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/EPLayoutKondycja"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#94261309"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView27"
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TextView" />
+                android:layout_weight="0.5"
+                android:text="Kondycja"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView29"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TextView" />
+                android:id="@+id/EPLiczbaKondycja"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:text="50"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/EPLayoutBudowaCiala"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#94261309"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="Budowa Ciała"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView30"
-                android:layout_width="wrap_content"
+                android:id="@+id/EPLiczbaBudowaCiala"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="50"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/EPLayoutZrecznosc"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#94261309"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView31"
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="Zręczność"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
+                android:id="@+id/EPLiczbaZrecznosc"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="50"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/EPLayoutInteligecja"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#94261309"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView33"
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="Inteligencja"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView34"
-                android:layout_width="wrap_content"
+                android:id="@+id/EPLiczbaInteligencja"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="50"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/EPLayoutMoc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#94261309"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Moc"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/EPLiczbaMoc"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="50"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/EPLayoutWyksztalcenie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#94261309"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wykształcenie"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/EPLiczbaWyksztalcenie"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="50"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/EPLayoutPoczytalnosc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#94261309"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Poczytalność"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/EPLiczbaPoczytalnosc"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="50"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView35"
+            <Button
+                android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:background="@drawable/przycisknaprzyciski"
+                android:text="Rozwiń Postać"
+                android:textColor="#ebebeb" />
 
-            <TextView
-                android:id="@+id/textView36"
+            <Button
+                android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:background="@drawable/przycisknaprzyciski"
+                android:text="Usuń Postać"
+                android:textColor="#ebebeb" />
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/przycisknaprzyciski"
+                android:text="Ekwipunek"
+                android:textColor="#ebebeb" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/przycisknaprzyciski"
+                android:text="Historia"
+                android:textColor="#ebebeb" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/przycisknaprzyciski"
+                android:text="Zaklęcia"
+                android:textColor="#ebebeb" />
+        </LinearLayout>
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/przycisknaprzyciski"
+        android:text="Historia postaci"
+        android:textColor="#ebebeb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
