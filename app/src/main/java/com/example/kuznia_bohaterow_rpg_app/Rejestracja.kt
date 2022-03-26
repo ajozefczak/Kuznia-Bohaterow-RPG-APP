@@ -90,10 +90,7 @@ class Rejestracja : AppCompatActivity() {
                     startActivity(MainIntent)
 
                 }.addOnFailureListener { e ->
-                    /*if(e.message =="auth/email-already-in-use"){
-                        Toast.makeText(this, "" + e.message, Toast.LENGTH_SHORT).show()
-                    }*/
-                    Toast.makeText(this, "Wystąpił błąd podczas zakładania konta: ", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
                 }
             }else{
                 Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
