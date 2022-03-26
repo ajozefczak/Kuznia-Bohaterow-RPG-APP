@@ -35,13 +35,13 @@ class Rejestracja : AppCompatActivity() {
 
         RButtonRejestracja.setOnClickListener{
 
-            if(TextUtils.isEmpty(editTextTextPersonName.text.toString())) {
+            if(TextUtils.isEmpty(editTextTextPersonName.text.toString().trim { it <= ' ' })) {
                 errorMessage = errorMessage + "Wprowadź nick\n"
                 tockenAcc = false
             }
             /*if(TextUtils.isEmpty(editTextTextEmailAddress2.text.toString())){
                 errorMessage = errorMessage + "Wprowadź adres email\n"
-                tockenAcc = false;
+                tockenAcc = false
             }*/
             if(!android.util.Patterns.EMAIL_ADDRESS.matcher(editTextTextEmailAddress2.text.toString()).matches()){
                 errorMessage = errorMessage + "Błędny adres email\n"
@@ -90,7 +90,10 @@ class Rejestracja : AppCompatActivity() {
                     startActivity(MainIntent)
 
                 }.addOnFailureListener { e ->
-                    Toast.makeText(this, "Wystąpił błąd podczas zakładania konta: " + e.message, Toast.LENGTH_SHORT).show()
+                    /*if(e.message =="auth/email-already-in-use"){
+                        Toast.makeText(this, "" + e.message, Toast.LENGTH_SHORT).show()
+                    }*/
+                    Toast.makeText(this, "Wystąpił błąd podczas zakładania konta: ", Toast.LENGTH_SHORT).show()
                 }
             }else{
                 Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
