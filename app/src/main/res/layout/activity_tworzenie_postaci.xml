@@ -25,8 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/hammer" />
+                android:layout_weight="1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -41,6 +40,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="#ebebeb"
                     android:ems="10"
+                    android:fontFamily="@font/gabriela"
                     android:inputType="textPersonName"
                     android:text="Imie postaci"
                     android:textColor="#ebebeb" />
@@ -51,6 +51,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="#ebebeb"
                     android:ems="10"
+                    android:fontFamily="@font/gabriela"
                     android:inputType="textPersonName"
                     android:text="Profesja"
                     android:textColor="#ebebeb" />
@@ -70,6 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="Wylosuj"
                 android:textAlignment="textEnd"
                 android:textColor="#ebebeb"
@@ -82,6 +84,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="Rzut kostką"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -91,6 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="Wynik"
                 android:textColor="#ebebeb" />
 
@@ -108,6 +112,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="Poczytalność"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -118,13 +123,15 @@
                 android:layout_height="60dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
-                android:backgroundTint="#ebebeb" />
+                android:backgroundTint="#ebebeb"
+                android:fontFamily="@font/gabriela" />
 
             <TextView
                 android:id="@+id/PoczytalnoscLiczba"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -143,6 +150,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="Wykształcenie"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -154,6 +162,7 @@
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
                 android:backgroundTint="#ebebeb"
+                android:fontFamily="@font/gabriela"
                 android:textColor="#ebebeb" />
 
             <TextView
@@ -161,6 +170,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -178,6 +188,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="Moc"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -188,13 +199,15 @@
                 android:layout_height="60dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
-                android:backgroundTint="#ebebeb" />
+                android:backgroundTint="#ebebeb"
+                android:fontFamily="@font/gabriela" />
 
             <TextView
                 android:id="@+id/MocLiczba"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -212,6 +225,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="Inteligencja"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -222,13 +236,15 @@
                 android:layout_height="60dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
-                android:backgroundTint="#ebebeb" />
+                android:backgroundTint="#ebebeb"
+                android:fontFamily="@font/gabriela" />
 
             <TextView
                 android:id="@+id/InteligencjaLiczba"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -246,6 +262,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="Zręczność"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -256,13 +273,15 @@
                 android:layout_height="60dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
-                android:backgroundTint="#ebebeb" />
+                android:backgroundTint="#ebebeb"
+                android:fontFamily="@font/gabriela" />
 
             <TextView
                 android:id="@+id/ZrecznoscLiczba"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -280,6 +299,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="Budowa Ciała"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -290,13 +310,15 @@
                 android:layout_height="60dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
-                android:backgroundTint="#ebebeb" />
+                android:backgroundTint="#ebebeb"
+                android:fontFamily="@font/gabriela" />
 
             <TextView
                 android:id="@+id/BudowaCialaLiczba"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -314,6 +336,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="Kondycja"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -324,13 +347,15 @@
                 android:layout_height="60dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
-                android:backgroundTint="#ebebeb" />
+                android:backgroundTint="#ebebeb"
+                android:fontFamily="@font/gabriela" />
 
             <TextView
                 android:id="@+id/KondycjaLiczba"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -349,6 +374,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="Siła"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -359,13 +385,15 @@
                 android:layout_height="60dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
-                android:backgroundTint="#ebebeb" />
+                android:backgroundTint="#ebebeb"
+                android:fontFamily="@font/gabriela" />
 
             <TextView
                 android:id="@+id/SilaLiczba"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
@@ -387,6 +415,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
             android:text="Zapisz Postać"
             android:textColor="#ebebeb" />
 
@@ -396,6 +425,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
             android:text="Zacznij od nowa"
             android:textColor="#ebebeb" />
 
@@ -406,6 +436,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/przycisknaprzyciski"
+        android:fontFamily="@font/gabriela"
         android:text="Wróć do menu gownego"
         android:textColor="#ebebeb"
         app:layout_constraintBottom_toBottomOf="parent"

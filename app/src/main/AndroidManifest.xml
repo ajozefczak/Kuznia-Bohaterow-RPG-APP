@@ -10,6 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KuzniaBohaterowRPGAPP">
         <activity
+            android:name=".ResetHasla"
+            android:exported="false"
+            android:label="@string/title_activity_reset_hasla"
+            android:theme="@style/Theme.KuzniaBohaterowRPGAPP.NoActionBar" />
+        <activity
+            android:name=".Kalendarz"
+            android:exported="false" />
+        <activity
+            android:name=".EkranMG"
+            android:exported="false" />
+        <activity
             android:name=".EkranPostaci"
             android:exported="false" />
         <activity

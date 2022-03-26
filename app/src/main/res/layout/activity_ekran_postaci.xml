@@ -37,6 +37,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="#94261309"
+                    android:fontFamily="@font/gabriela"
                     android:text="Imie"
                     android:textColor="#ebebeb"
                     android:textSize="24sp" />
@@ -48,7 +49,8 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="#94261309"
-                    android:text="Zawud"
+                    android:fontFamily="@font/gabriela"
+                    android:text="Zawód"
                     android:textColor="#ebebeb"
                     android:textSize="24sp" />
             </LinearLayout>
@@ -68,7 +70,8 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="Ststystyka"
+                android:fontFamily="@font/gabriela"
+                android:text="Statystyka"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
 
@@ -77,6 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
+                android:fontFamily="@font/gabriela"
                 android:text="Wartość"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -95,6 +99,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
+                android:fontFamily="@font/gabriela"
                 android:text="Siła"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -104,6 +109,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -122,6 +128,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
+                android:fontFamily="@font/gabriela"
                 android:text="Kondycja"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -131,6 +138,7 @@
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -149,6 +157,7 @@
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="Budowa Ciała"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -158,6 +167,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -176,6 +186,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="Zręczność"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -185,6 +196,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -203,6 +215,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="Inteligencja"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -212,6 +225,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -230,6 +244,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="Moc"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -239,6 +254,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -257,6 +273,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="Wykształcenie"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -266,6 +283,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -284,6 +302,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="Poczytalność"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -293,6 +312,7 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
                 android:text="50"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
@@ -310,6 +330,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
+                android:fontFamily="@font/gabriela"
                 android:text="Rozwiń Postać"
                 android:textColor="#ebebeb" />
 
@@ -319,6 +340,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
+                android:fontFamily="@font/gabriela"
                 android:text="Usuń Postać"
                 android:textColor="#ebebeb" />
         </LinearLayout>
@@ -335,6 +357,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
+                android:fontFamily="@font/gabriela"
                 android:text="Ekwipunek"
                 android:textColor="#ebebeb" />
 
@@ -344,6 +367,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
+                android:fontFamily="@font/gabriela"
                 android:text="Historia"
                 android:textColor="#ebebeb" />
 
@@ -353,6 +377,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
+                android:fontFamily="@font/gabriela"
                 android:text="Zaklęcia"
                 android:textColor="#ebebeb" />
         </LinearLayout>
@@ -365,6 +390,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:background="@drawable/przycisknaprzyciski"
+        android:fontFamily="@font/gabriela"
         android:text="Historia postaci"
         android:textColor="#ebebeb"
         app:layout_constraintBottom_toBottomOf="parent"
