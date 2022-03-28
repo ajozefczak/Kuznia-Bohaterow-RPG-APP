@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val ButtonRejestracja = findViewById<Button>(R.id.ButtonRejestracja)
         ButtonRejestracja.setOnClickListener(ButtonRejestracjaListener)
+
     }
 
     private val ButtonLogowanieListener = View.OnClickListener { callLogowanieActivity() }
