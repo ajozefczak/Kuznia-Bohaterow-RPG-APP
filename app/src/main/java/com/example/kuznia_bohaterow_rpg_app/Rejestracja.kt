@@ -112,14 +112,21 @@ class Rejestracja : AppCompatActivity() {
         val RButtonLogowanie = findViewById<Button>(R.id.RButtonLogowanie)
         RButtonLogowanie.setOnClickListener(RButtonLogowanieListener)
 
+        val RButtonRegulamin = findViewById<Button>(R.id.RButtonRegulamin)
+        RButtonRegulamin.setOnClickListener(RButtonRegulaminListener)
     }
 
     private val RButtonLogowanieListener = View.OnClickListener { callLogowanieActivity() }
-
+    private val RButtonRegulaminListener = View.OnClickListener { callRegulaminActivity() }
 
     private fun callLogowanieActivity() {
         val LogowanieIntent = Intent(this, Logowanie::class.java)
         startActivity(LogowanieIntent)
+    }
+
+    private fun callRegulaminActivity() {
+        val RegulaminIntent = Intent(this, Regulamin::class.java)
+        startActivity(RegulaminIntent)
     }
 
     private fun registerAcc(){
