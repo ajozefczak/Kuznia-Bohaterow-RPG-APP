@@ -123,11 +123,13 @@
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:layout_weight="1"
         android:background="#94261309"
         android:scrollbars="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
     </androidx.recyclerview.widget.RecyclerView>
@@ -135,11 +137,12 @@
     <SearchView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
         android:background="#94261309"
         android:touchscreenBlocksFocus="false"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
     </SearchView>

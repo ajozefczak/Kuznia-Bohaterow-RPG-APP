@@ -22,10 +22,11 @@
 
             <ImageButton
                 android:id="@+id/imageButton"
-                android:layout_width="match_parent"
+                android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:background="@drawable/rameczka" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -101,9 +102,45 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/Wyglad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:background="#A1261309"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="Wygląd"
+                android:textAlignment="center"
+                android:textColor="#ebebeb" />
+
+            <Button
+                android:id="@+id/ButtonLosujWyglad"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="0"
+                android:background="@drawable/twenty_sided_dice"
+                android:backgroundTint="#ebebeb" />
+
+            <TextView
+                android:id="@+id/WygladLiczba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="50"
+                android:textAlignment="center"
+                android:textColor="#ebebeb" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/POCZYTALNOSC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:background="#A1261309"
             android:orientation="horizontal">
 
@@ -119,8 +156,8 @@
 
             <Button
                 android:id="@+id/TPButtonLosujPoczytalnosc"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
                 android:backgroundTint="#ebebeb"
@@ -142,6 +179,7 @@
             android:id="@+id/WYKSZTALCENIE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:background="#A1261309"
             android:orientation="horizontal">
 
@@ -157,8 +195,8 @@
 
             <Button
                 android:id="@+id/TPButtonLosujWyksztalcenie"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
                 android:backgroundTint="#ebebeb"
@@ -180,6 +218,7 @@
             android:id="@+id/MOC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:background="#A1261309"
             android:orientation="horizontal">
 
@@ -195,8 +234,8 @@
 
             <Button
                 android:id="@+id/TPButtonLosujMoc"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
                 android:backgroundTint="#ebebeb"
@@ -217,6 +256,7 @@
             android:id="@+id/INTELIGENCJA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:background="#A1261309"
             android:orientation="horizontal">
 
@@ -232,8 +272,8 @@
 
             <Button
                 android:id="@+id/TPButtonLosujInteligencje"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
                 android:backgroundTint="#ebebeb"
@@ -254,6 +294,7 @@
             android:id="@+id/ZRENCZNOSC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:background="#A1261309"
             android:orientation="horizontal">
 
@@ -269,8 +310,8 @@
 
             <Button
                 android:id="@+id/TPButtonLosujZrencznosc"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
                 android:backgroundTint="#ebebeb"
@@ -291,6 +332,7 @@
             android:id="@+id/BUDOWACIALA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:background="#A1261309"
             android:orientation="horizontal">
 
@@ -306,8 +348,8 @@
 
             <Button
                 android:id="@+id/TPButtonLosujBudoweCiala"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
                 android:backgroundTint="#ebebeb"
@@ -328,6 +370,7 @@
             android:id="@+id/KONDYCJA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:background="#A1261309"
             android:orientation="horizontal">
 
@@ -343,8 +386,8 @@
 
             <Button
                 android:id="@+id/TPButtonLosujKondycje"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
                 android:backgroundTint="#ebebeb"
@@ -366,6 +409,7 @@
             android:id="@+id/SILA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:background="#A1261309"
             android:orientation="horizontal">
 
@@ -381,8 +425,8 @@
 
             <Button
                 android:id="@+id/TPButtonLosujSile"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
                 android:layout_weight="0"
                 android:background="@drawable/twenty_sided_dice"
                 android:backgroundTint="#ebebeb"
@@ -397,6 +441,7 @@
                 android:text="50"
                 android:textAlignment="center"
                 android:textColor="#ebebeb" />
+
         </LinearLayout>
 
     </LinearLayout>

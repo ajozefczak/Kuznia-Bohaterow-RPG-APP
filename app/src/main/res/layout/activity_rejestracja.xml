@@ -171,7 +171,7 @@
                         android:layout_margin="5dp"
                         android:buttonTint="#ebebeb"
                         android:fontFamily="@font/gabriela"
-                        android:text="Zakceptuj regulamin"
+                        android:text="Zaakceptuj regulamin"
                         android:textColor="#ebebeb" />
 
                     <Button
@@ -232,18 +232,6 @@
 
             </LinearLayout>
         </FrameLayout>
-
-        <TextView
-            android:id="@+id/regulamin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:autoLink="web"
-            android:text="@string/regulamin"
-            android:textColor="#ebebeb" />
 
     </LinearLayout>
 
