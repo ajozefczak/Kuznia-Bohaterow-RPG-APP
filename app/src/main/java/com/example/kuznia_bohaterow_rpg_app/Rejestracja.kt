@@ -1,5 +1,6 @@
 package com.example.kuznia_bohaterow_rpg_app
 
+import android.accounts.AccountsException
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -11,9 +12,13 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthEmailException
+import com.google.firebase.auth.FirebaseAuthException
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreException
 import kotlinx.android.synthetic.main.activity_rejestracja.*
 import java.lang.Exception
 
@@ -88,9 +93,22 @@ class Rejestracja : AppCompatActivity() {
 
                     val MainIntent = Intent(this, MainActivity::class.java)
                     startActivity(MainIntent)
+                    finish()
 
                 }.addOnFailureListener { e ->
+                    Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
+
+                    // NIE USUWAC TEGO CO JEST NIZEJ W KOMENTARZU
+
+                    /*
+                        var exep = (e.cause as FirebaseAuthException?)!!.errorCode
+                        Toast.makeText(this, exep, Toast.LENGTH_SHORT).show()
+                    if(exep=="auth/email-already-exists")
+                        Toast.makeText(this, "pepega", Toast.LENGTH_SHORT).show()
+                    else{
                         Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
+                    }*/
+
                 }
             }else{
                 Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
@@ -102,7 +120,7 @@ class Rejestracja : AppCompatActivity() {
     }
 
     fun setupHyperlink() {
-        val linkTextView = findViewById<TextView>(R.id.regulamin)
+        val linkTextView = findViewById<TextView>(R.id.RButtonRegulamin)
         linkTextView.setMovementMethod(LinkMovementMethod.getInstance());
         linkTextView.setLinkTextColor(Color.BLUE)
     }
@@ -122,11 +140,13 @@ class Rejestracja : AppCompatActivity() {
     private fun callLogowanieActivity() {
         val LogowanieIntent = Intent(this, Logowanie::class.java)
         startActivity(LogowanieIntent)
+        finish()
     }
 
     private fun callRegulaminActivity() {
         val RegulaminIntent = Intent(this, Regulamin::class.java)
         startActivity(RegulaminIntent)
+        finish()
     }
 
     private fun registerAcc(){
