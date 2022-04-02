@@ -16,6 +16,13 @@ class Logowanie : AppCompatActivity() {
         setContentView(R.layout.activity_logowanie)
         initListeners()
 
+
+        LButtonPrzzywruc.setOnClickListener {
+            val ResetHaslaIntent = Intent(this, ResetHasla::class.java)
+            startActivity(ResetHaslaIntent)
+            finish()
+        }
+
         LButtonZaloguj.setOnClickListener{
             when{
                 TextUtils.isEmpty(editTextTextEmailAddress.text.toString()) -> {
@@ -35,6 +42,7 @@ class Logowanie : AppCompatActivity() {
 
                             val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
                             startActivity(EkranGraczaIntent)
+                            finish()
                         }else{
                             Toast.makeText(this,"Wystąpił błąd podczas logowania. Użytkownik nie istnieje lub podane dane są błędne",Toast.LENGTH_LONG).show()
                         }
@@ -58,5 +66,6 @@ class Logowanie : AppCompatActivity() {
     private fun callRejestracjaActivity() {
         val RejestracjaIntent = Intent(this, Rejestracja::class.java)
         startActivity(RejestracjaIntent)
+        finish()
     }
 }

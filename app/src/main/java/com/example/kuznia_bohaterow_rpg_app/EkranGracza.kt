@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_ekran_gracza.*
 
 class EkranGracza : AppCompatActivity() {
@@ -13,9 +15,16 @@ class EkranGracza : AppCompatActivity() {
         setContentView(R.layout.activity_ekran_gracza)
         initListeners()
 
+        GButtonWyloguj.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            Toast.makeText(this, "Poprawnie wylogowano sie z systemu", Toast.LENGTH_SHORT).show()
+            finish()
+        }
+
         GButtonPostac.setOnClickListener {
             val tworzeniePostaciIntent = Intent(this, TworzeniePostaci::class.java)
             startActivity(tworzeniePostaciIntent)
+            finish()
         }
     }
 
@@ -29,6 +38,7 @@ class EkranGracza : AppCompatActivity() {
     private fun callKalendarzActivity() {
         val KalendarzIntent = Intent(this, Kalendarz::class.java)
         startActivity(KalendarzIntent)
+        finish()
     }
 
 }

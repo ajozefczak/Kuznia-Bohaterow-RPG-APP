@@ -28,6 +28,67 @@ class TworzeniePostaci : AppCompatActivity() {
             startActivityForResult(intent,0)
         }
 
+        // kostek
+
+        ButtonLosujWyglad.setOnClickListener {
+            val randomPepegaValue = (1..100).random()
+            WygladLiczba.setText(randomPepegaValue.toString())
+        }
+
+        TPButtonLosujPoczytalnosc.setOnClickListener {
+            var randomPepegaValue = (1..100).random()
+            PoczytalnoscLiczba.setText(randomPepegaValue.toString())
+        }
+
+        TPButtonLosujWyksztalcenie.setOnClickListener {
+            var randomPepegaValue = (1..100).random()
+            WyksztalcenieLiczba.setText(randomPepegaValue.toString())
+        }
+
+        TPButtonLosujMoc.setOnClickListener {
+            var randomPepegaValue = (1..100).random()
+            MocLiczba.setText(randomPepegaValue.toString())
+        }
+
+        TPButtonLosujInteligencje.setOnClickListener {
+            var randomPepegaValue = (1..100).random()
+            InteligencjaLiczba.setText(randomPepegaValue.toString())
+        }
+
+        TPButtonLosujZrencznosc.setOnClickListener {
+            var randomPepegaValue = (1..100).random()
+            ZrecznoscLiczba.setText(randomPepegaValue.toString())
+        }
+
+        TPButtonLosujBudoweCiala.setOnClickListener {
+            var randomPepegaValue = (1..100).random()
+            BudowaCialaLiczba.setText(randomPepegaValue.toString())
+        }
+
+        TPButtonLosujKondycje.setOnClickListener {
+            var randomPepegaValue = (1..100).random()
+            KondycjaLiczba.setText(randomPepegaValue.toString())
+        }
+
+        TPButtonLosujSile.setOnClickListener {
+            var randomPepegaValue = (1..100).random()
+            SilaLiczba.setText(randomPepegaValue.toString())
+        }
+
+        // rest pepega
+
+        TPReset.setOnClickListener {
+            val ResetTworzeniaPostaciIntent = Intent(this, TworzeniePostaci::class.java)
+            startActivity(ResetTworzeniaPostaciIntent)
+            finish()
+        }
+
+        TPButtonPowrod.setOnClickListener {
+            val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
+            startActivity(EkranGraczaIntent)
+            finish()
+        }
+
         TPButtonZapiszPostac.setOnClickListener {
             if (selectedImg != null) {
 
@@ -46,6 +107,8 @@ class TworzeniePostaci : AppCompatActivity() {
                 charactersheet["SIZ"] = BudowaCialaLiczba.text.toString()
                 charactersheet["CON"] = KondycjaLiczba.text.toString()
                 charactersheet["STR"] = SilaLiczba.text.toString()
+                charactersheet["APP"] = WygladLiczba.text.toString()
+
 
                 val imgFileName = UUID.randomUUID().toString()
                 val imgToStore = FirebaseStorage.getInstance().getReference("/images/$imgFileName")
@@ -56,6 +119,7 @@ class TworzeniePostaci : AppCompatActivity() {
                         Toast.makeText(this, "Pomyślnie stworzon postać", Toast.LENGTH_SHORT).show()
                         val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
                         startActivity(EkranGraczaIntent)
+                        finish()
                     }.addOnFailureListener {
                             e ->
                         Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
