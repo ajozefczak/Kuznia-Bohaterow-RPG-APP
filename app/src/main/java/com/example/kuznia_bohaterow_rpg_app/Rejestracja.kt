@@ -102,7 +102,7 @@ class Rejestracja : AppCompatActivity() {
     }
 
     fun setupHyperlink() {
-        val linkTextView = findViewById<TextView>(R.id.regulamin)
+        val linkTextView = findViewById<TextView>(R.id.RButtonRegulamin)
         linkTextView.setMovementMethod(LinkMovementMethod.getInstance());
         linkTextView.setLinkTextColor(Color.BLUE)
     }
