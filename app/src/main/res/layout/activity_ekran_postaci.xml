@@ -19,10 +19,10 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="83dp"
                 android:layout_margin="5dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@drawable/rameczka" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -309,6 +309,35 @@
 
             <TextView
                 android:id="@+id/EPLiczbaPoczytalnosc"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
+                android:text="50"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/EPLayoutWyglad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#94261309"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/gabriela"
+                android:text="Wygląd"
+                android:textColor="#ebebeb"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/EPLiczbaWyglad"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

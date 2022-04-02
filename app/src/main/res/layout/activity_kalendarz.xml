@@ -4,32 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/tlokalendarz"
     tools:context=".Kalendarz">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/KTextPoka"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="-107dp"
-        tools:layout_editor_absoluteY="-149dp">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#94261309"
+        android:fontFamily="@font/gabriela"
+        android:padding="20dp"
+        android:text="Nie masz ustalonego spotkania"
+        android:textAlignment="center"
+        android:textColor="#ebebeb"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.493" />
 
-        <TextView
-            android:id="@+id/KTextPoka"
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="5dp">
+
+        <Button
+            android:id="@+id/KButtonData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Twoje Następne Spotkanie"
-            android:textSize="34sp" />
-    </LinearLayout>
+            android:layout_weight="1"
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:text="Ustal Spotkanie"
+            android:textColor="#ebebeb" />
 
-    <Button
-        android:id="@+id/KButtonData"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/przycisknaprzyciski"
-        android:text="Ustal Spotkanie"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/KButtonCofnij"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="4"
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:text="Cofnij"
+            android:textColor="#ebebeb" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

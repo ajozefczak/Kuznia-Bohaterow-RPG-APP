@@ -26,7 +26,7 @@ class Rejestracja : AppCompatActivity() {
         setContentView(R.layout.activity_rejestracja)
 
         initListeners()
-        setupHyperlink()
+        /*setupHyperlink()*/
 
         // Code to register pepega acc
 
@@ -101,11 +101,11 @@ class Rejestracja : AppCompatActivity() {
 
     }
 
-    fun setupHyperlink() {
+    /*fun setupHyperlink() {
         val linkTextView = findViewById<TextView>(R.id.regulamin)
         linkTextView.setMovementMethod(LinkMovementMethod.getInstance());
         linkTextView.setLinkTextColor(Color.BLUE)
-    }
+    }*/
 
 
     private fun initListeners() {

@@ -65,7 +65,7 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
         savedHour = p1
         savedMinute = p2
 
-        KTextPoka.text ="$savedDay-$savedMonth-$savedYear\n Hour: $savedHour Minuty: $savedMinute"
+        KTextPoka.text ="Następne spotkanie odbędzie sie: \n $savedDay-$savedMonth-$savedYear\n $savedHour : $savedMinute"
     }
 
 
