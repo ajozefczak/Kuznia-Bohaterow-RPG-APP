@@ -64,7 +64,7 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
                         Log.e("logData",dbHour)
                         Log.e("logData",dbMinute)
 
-                        KTextPoka.text ="Następne spotkanie odbędzie sie: \n $savedDay-$savedMonth-$savedYear\n $savedHour : $savedMinute"
+                        KTextPoka.text ="Następne spotkanie odbędzie sie: \n $savedDay-$savedMonth-$savedYear\n $savedHour:$savedMinute"
 
                     }
                 }
@@ -79,10 +79,11 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
 
     private fun pickDate(){
         KButtonData.setOnClickListener {
-            getDateTimeCalendar()
+                getDateTimeCalendar()
 
-
-                DatePickerDialog(this,this,year,month,day).show()
+                val datePickerDialog = DatePickerDialog(this,this,year,month,day)
+                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                datePickerDialog.show()
 
                 val userMeetingInformation: MutableMap<String, String> = HashMap()
 
@@ -139,7 +140,7 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
         savedHour = p1
         savedMinute = p2
 
-        KTextPoka.text ="Następne spotkanie odbędzie sie: \n $savedDay-$savedMonth-$savedYear\n $savedHour : $savedMinute"
+        KTextPoka.text ="Następne spotkanie odbędzie sie: \n $savedDay-$savedMonth-$savedYear\n $savedHour:$savedMinute"
 
     }
 
