@@ -31,48 +31,72 @@ class TworzeniePostaci : AppCompatActivity() {
         // kostek
 
         ButtonLosujWyglad.setOnClickListener {
-            val randomPepegaValue = (1..100).random()
-            WygladLiczba.setText(randomPepegaValue.toString())
+            val randomPepegaValue = (1..6).random()
+            val randomPepegaValue2 = (1..6).random()
+            val randomPepegaValue3 = (1..6).random()
+            val finalPepegaValue = (randomPepegaValue + randomPepegaValue2 +randomPepegaValue3) * 5
+            WygladLiczba.setText(finalPepegaValue.toString())
         }
 
         TPButtonLosujPoczytalnosc.setOnClickListener {
-            var randomPepegaValue = (1..100).random()
-            PoczytalnoscLiczba.setText(randomPepegaValue.toString())
+            val randomPepegaValue = (1..6).random()
+            val randomPepegaValue2 = (1..6).random()
+            val randomPepegaValue3 = (1..6).random()
+            val finalPepegaValue = (randomPepegaValue + randomPepegaValue2 +randomPepegaValue3) * 5
+            PoczytalnoscLiczba.setText(finalPepegaValue.toString())
         }
 
         TPButtonLosujWyksztalcenie.setOnClickListener {
-            var randomPepegaValue = (1..100).random()
-            WyksztalcenieLiczba.setText(randomPepegaValue.toString())
+            val randomPepegaValue = (1..6).random()
+            val randomPepegaValue2 = (1..6).random()
+            val finalPepegaValue = (randomPepegaValue + randomPepegaValue2 + 6) * 5
+            WyksztalcenieLiczba.setText(finalPepegaValue.toString())
         }
 
         TPButtonLosujMoc.setOnClickListener {
-            var randomPepegaValue = (1..100).random()
-            MocLiczba.setText(randomPepegaValue.toString())
+            val randomPepegaValue = (1..6).random()
+            val randomPepegaValue2 = (1..6).random()
+            val randomPepegaValue3 = (1..6).random()
+            val finalPepegaValue = (randomPepegaValue + randomPepegaValue2 +randomPepegaValue3) * 5
+            MocLiczba.setText(finalPepegaValue.toString())
         }
 
         TPButtonLosujInteligencje.setOnClickListener {
-            var randomPepegaValue = (1..100).random()
-            InteligencjaLiczba.setText(randomPepegaValue.toString())
+            val randomPepegaValue = (1..6).random()
+            val randomPepegaValue2 = (1..6).random()
+            val finalPepegaValue = (randomPepegaValue + randomPepegaValue2 + 6) * 5
+            InteligencjaLiczba.setText(finalPepegaValue.toString())
         }
 
         TPButtonLosujZrencznosc.setOnClickListener {
-            var randomPepegaValue = (1..100).random()
-            ZrecznoscLiczba.setText(randomPepegaValue.toString())
+            val randomPepegaValue = (1..6).random()
+            val randomPepegaValue2 = (1..6).random()
+            val randomPepegaValue3 = (1..6).random()
+            val finalPepegaValue = (randomPepegaValue + randomPepegaValue2 +randomPepegaValue3) * 5
+            ZrecznoscLiczba.setText(finalPepegaValue.toString())
         }
 
         TPButtonLosujBudoweCiala.setOnClickListener {
-            var randomPepegaValue = (1..100).random()
-            BudowaCialaLiczba.setText(randomPepegaValue.toString())
+            val randomPepegaValue = (1..6).random()
+            val randomPepegaValue2 = (1..6).random()
+            val finalPepegaValue = (randomPepegaValue + randomPepegaValue2 + 6) * 5
+            BudowaCialaLiczba.setText(finalPepegaValue.toString())
         }
 
         TPButtonLosujKondycje.setOnClickListener {
-            var randomPepegaValue = (1..100).random()
-            KondycjaLiczba.setText(randomPepegaValue.toString())
+            val randomPepegaValue = (1..6).random()
+            val randomPepegaValue2 = (1..6).random()
+            val randomPepegaValue3 = (1..6).random()
+            val finalPepegaValue = (randomPepegaValue + randomPepegaValue2 +randomPepegaValue3) * 5
+            KondycjaLiczba.setText(finalPepegaValue.toString())
         }
 
         TPButtonLosujSile.setOnClickListener {
-            var randomPepegaValue = (1..100).random()
-            SilaLiczba.setText(randomPepegaValue.toString())
+            val randomPepegaValue = (1..6).random()
+            val randomPepegaValue2 = (1..6).random()
+            val randomPepegaValue3 = (1..6).random()
+            val finalPepegaValue = (randomPepegaValue + randomPepegaValue2 +randomPepegaValue3) * 5
+            SilaLiczba.setText(finalPepegaValue.toString())
         }
 
         // rest pepega
