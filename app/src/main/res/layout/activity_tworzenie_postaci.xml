@@ -130,7 +130,7 @@
 
             <TextView
                 android:id="@+id/SilaLiczba"
-                android:layout_width="wrap_content"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
@@ -169,7 +169,7 @@
 
             <TextView
                 android:id="@+id/KondycjaLiczba"
-                android:layout_width="wrap_content"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
@@ -208,7 +208,7 @@
 
             <TextView
                 android:id="@+id/BudowaCialaLiczba"
-                android:layout_width="wrap_content"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
@@ -245,7 +245,7 @@
 
             <TextView
                 android:id="@+id/WygladLiczba"
-                android:layout_width="wrap_content"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
@@ -283,7 +283,7 @@
 
             <TextView
                 android:id="@+id/InteligencjaLiczba"
-                android:layout_width="wrap_content"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
@@ -321,7 +321,7 @@
 
             <TextView
                 android:id="@+id/ZrecznoscLiczba"
-                android:layout_width="wrap_content"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
@@ -360,7 +360,7 @@
 
             <TextView
                 android:id="@+id/WyksztalcenieLiczba"
-                android:layout_width="wrap_content"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
@@ -398,7 +398,7 @@
 
             <TextView
                 android:id="@+id/MocLiczba"
-                android:layout_width="wrap_content"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
@@ -436,7 +436,7 @@
 
             <TextView
                 android:id="@+id/PoczytalnoscLiczba"
-                android:layout_width="wrap_content"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
