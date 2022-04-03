@@ -17,6 +17,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_kalendarz.*
+import kotlinx.android.synthetic.main.activity_tworzenie_postaci.*
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -71,7 +72,13 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
             }
 
         pickDate()
+        setDate()
 
+            KButtonCofnij.setOnClickListener {
+                val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
+                startActivity(EkranGraczaIntent)
+                finish()
+            }
         }
 
 
@@ -84,32 +91,34 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
                 val datePickerDialog = DatePickerDialog(this,this,year,month,day)
                 datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
                 datePickerDialog.show()
+        }
+    }
 
-                val userMeetingInformation: MutableMap<String, String> = HashMap()
 
-                userMeetingInformation["id"] = firebaseUser.uid
-                userMeetingInformation["year"] = year.toString()
-                userMeetingInformation["month"] = month.toString()
-                userMeetingInformation["day"] = day.toString()
-                userMeetingInformation["hour"] = hour.toString()
-                userMeetingInformation["minute"] = minute.toString()
+    private fun setDate(){
+        KButtonZapiszTeermin.setOnClickListener() {
+            val userMeetingInformation: MutableMap<String, String> = HashMap()
 
-                Log.e("logData",year.toString())
-                Log.e("logData",month.toString())
-                Log.e("logData",day.toString())
-                Log.e("logData",hour.toString())
-                Log.e("logData",minute.toString())
+            userMeetingInformation["id"] = firebaseUser.uid
+            userMeetingInformation["year"] = year.toString()
+            userMeetingInformation["month"] = month.toString()
+            userMeetingInformation["day"] = day.toString()
+            userMeetingInformation["hour"] = hour.toString()
+            userMeetingInformation["minute"] = minute.toString()
 
-                db.collection("meetings").document(firebaseUser.uid).delete().addOnCompleteListener {
-                    db.collection("meetings").document(firebaseUser.uid).set(userMeetingInformation).addOnSuccessListener {
-                        Toast.makeText(this, "Poprawnie dodano spotkanie", Toast.LENGTH_SHORT).show()
-                    }.addOnFailureListener { e ->
-                        Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
-                    }
+            Log.e("logData",year.toString())
+            Log.e("logData",month.toString())
+            Log.e("logData",day.toString())
+            Log.e("logData",hour.toString())
+            Log.e("logData",minute.toString())
+
+            db.collection("meetings").document(firebaseUser.uid).delete().addOnCompleteListener {
+                db.collection("meetings").document(firebaseUser.uid).set(userMeetingInformation).addOnSuccessListener {
+                    Toast.makeText(this, "Poprawnie dodano spotkanie", Toast.LENGTH_SHORT).show()
+                }.addOnFailureListener { e ->
+                    Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
                 }
-
-
-
+            }
         }
     }
 
