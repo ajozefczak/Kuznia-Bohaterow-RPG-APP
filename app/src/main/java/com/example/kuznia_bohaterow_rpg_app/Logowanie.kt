@@ -20,7 +20,6 @@ class Logowanie : AppCompatActivity() {
         LButtonPrzzywruc.setOnClickListener {
             val ResetHaslaIntent = Intent(this, ResetHasla::class.java)
             startActivity(ResetHaslaIntent)
-            finish()
         }
 
         LButtonZaloguj.setOnClickListener{

@@ -156,7 +156,7 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
 
     override fun onDateSet(p0: DatePicker?, p1: Int, p2: Int, p3: Int) {
         savedDay = p3
-        savedMonth = p2
+        savedMonth = p2 + 1
         savedYear = p1
 
         Log.e("logDataSetDate","------------" + savedMonth.toString())
