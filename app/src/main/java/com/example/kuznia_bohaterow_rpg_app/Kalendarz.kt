@@ -54,7 +54,7 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
 
                         savedYear = dbYear.toInt()
                         savedMonth = dbMonth.toInt()
-                        savedDay = dbMonth.toInt()
+                        savedDay = dbDay.toInt()
                         savedHour = dbHour.toInt()
                         savedMinute = dbMinute.toInt()
 
@@ -100,17 +100,37 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
             val userMeetingInformation: MutableMap<String, String> = HashMap()
 
             userMeetingInformation["id"] = firebaseUser.uid
-            userMeetingInformation["year"] = year.toString()
-            userMeetingInformation["month"] = month.toString()
-            userMeetingInformation["day"] = day.toString()
-            userMeetingInformation["hour"] = hour.toString()
-            userMeetingInformation["minute"] = minute.toString()
+            userMeetingInformation["year"] = savedYear.toString()
+            userMeetingInformation["month"] = savedMonth.toString()
+            userMeetingInformation["day"] = savedDay.toString()
+            userMeetingInformation["hour"] = savedHour.toString()
+            userMeetingInformation["minute"] = savedMinute.toString()
 
-            Log.e("logData",year.toString())
-            Log.e("logData",month.toString())
-            Log.e("logData",day.toString())
-            Log.e("logData",hour.toString())
-            Log.e("logData",minute.toString())
+            Log.e("logDataSetDate",savedDay.toString())
+            Log.e("logDataSetDate",day.toString())
+            Log.e("logDataSetDate","^^^day^^^")
+
+
+            Log.e("logDataSetDate",savedMonth.toString())
+            Log.e("logDataSetDate",month.toString())
+            Log.e("logDataSetDate","^^^month^^^")
+
+
+            Log.e("logDataSetDate",savedYear.toString())
+            Log.e("logDataSetDate",year.toString())
+            Log.e("logDataSetDate","^^^year^^^")
+
+
+            Log.e("logDataSetDate",savedHour.toString())
+            Log.e("logDataSetDate",hour.toString())
+            Log.e("logDataSetDate","^^^hour^^^")
+
+
+            Log.e("logDataSetDate",savedMinute.toString())
+            Log.e("logDataSetDate",minute.toString())
+            Log.e("logDataSetDate","^^^minute^^^")
+
+
 
             db.collection("meetings").document(firebaseUser.uid).delete().addOnCompleteListener {
                 db.collection("meetings").document(firebaseUser.uid).set(userMeetingInformation).addOnSuccessListener {
@@ -138,6 +158,9 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
         savedDay = p3
         savedMonth = p2
         savedYear = p1
+
+        Log.e("logDataSetDate","------------" + savedMonth.toString())
+
 
         getDateTimeCalendar()
         TimePickerDialog(this,this,hour,minute,true).show()
