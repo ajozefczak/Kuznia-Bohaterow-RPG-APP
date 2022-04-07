@@ -460,6 +460,7 @@
             android:id="@+id/TPButtonZapiszPostac"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="3dp"
             android:layout_weight="1"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
@@ -470,10 +471,11 @@
             android:id="@+id/TPReset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="3dp"
             android:layout_weight="1"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
-            android:text="Zacznij od nowa"
+            android:text="Losuj Wszystko"
             android:textColor="#ebebeb" />
 
     </LinearLayout>
@@ -482,6 +484,7 @@
         android:id="@+id/TPButtonPowrod"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="3dp"
         android:background="@drawable/przycisknaprzyciski"
         android:fontFamily="@font/gabriela"
         android:text="Wróć do menu gownego"
