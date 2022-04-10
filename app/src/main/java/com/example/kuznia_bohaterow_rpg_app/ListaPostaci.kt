@@ -31,11 +31,13 @@ class ListaPostaci : AppCompatActivity() {
                 for (data in task.result) {
                     characterNamesMutable.add(data["name"].toString());
                     characterOcupationsMutable.add(data["job"].toString());
+                    //pobierany do listy jest obrazek
                     characterAvatarsMutable.add(data["imgURL"].toString());
                     characterIDsMutable.add(data["id"].toString());
 
                     }
 
+                //tu jest przekazywany do myListAdapter które dodaje elementy do listView customowe
                 val myListAdapter = MyListAdapter(this,characterNamesMutable,characterOcupationsMutable,characterAvatarsMutable)
                 characterList.adapter = myListAdapter
 

@@ -12,12 +12,13 @@ class MyListAdapter(private val context: Activity, private val title: MutableLis
         val rowView = inflater.inflate(R.layout.custom_list, null, true)
 
         val titleText = rowView.findViewById(R.id.characterName) as TextView
+        //tu jest przekazywany url w postaci Stringa
         val imageView = rowView.findViewById(R.id.characterAvatar) as ImageView
         val subtitleText = rowView.findViewById(R.id.characterOccupation) as TextView
 
         titleText.text = title[position]
 
-        //@Immlerth tutaj jebnąć trzeba obrazek :kekw:
+        //@Immlerth tutaj jebnąć trzeba obrazek :kekw:, albo pobrać i ustawić albo przez url czarną magią. GLHF
         //imageView.setImageResource()
 
         subtitleText.text = description[position]
