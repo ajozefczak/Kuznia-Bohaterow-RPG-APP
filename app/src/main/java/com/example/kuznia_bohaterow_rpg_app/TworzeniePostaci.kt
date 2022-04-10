@@ -102,9 +102,24 @@ class TworzeniePostaci : AppCompatActivity() {
         // rest pepega
 
         TPReset.setOnClickListener {
-            val ResetTworzeniaPostaciIntent = Intent(this, TworzeniePostaci::class.java)
-            startActivity(ResetTworzeniaPostaciIntent)
-            finish()
+            var finalPepegaValue = ((1..6).random() + (1..6).random() + (1..6).random()) * 5
+            WygladLiczba.setText(finalPepegaValue.toString())
+            finalPepegaValue = ((1..6).random() + (1..6).random() + (1..6).random()) * 5
+            PoczytalnoscLiczba.setText(finalPepegaValue.toString())
+            finalPepegaValue = ((1..6).random() + (1..6).random() + 6) * 5
+            WyksztalcenieLiczba.setText(finalPepegaValue.toString())
+            finalPepegaValue = ((1..6).random() + (1..6).random() + (1..6).random()) * 5
+            MocLiczba.setText(finalPepegaValue.toString())
+            finalPepegaValue = ((1..6).random() + (1..6).random() + 6) * 5
+            InteligencjaLiczba.setText(finalPepegaValue.toString())
+            finalPepegaValue = ((1..6).random() + (1..6).random() + (1..6).random()) * 5
+            ZrecznoscLiczba.setText(finalPepegaValue.toString())
+            finalPepegaValue = ((1..6).random() + (1..6).random() + 6) * 5
+            BudowaCialaLiczba.setText(finalPepegaValue.toString())
+            finalPepegaValue = ((1..6).random() + (1..6).random() + (1..6).random()) * 5
+            KondycjaLiczba.setText(finalPepegaValue.toString())
+            finalPepegaValue = ((1..6).random() + (1..6).random() + (1..6).random()) * 5
+            SilaLiczba.setText(finalPepegaValue.toString())
         }
 
         TPButtonPowrod.setOnClickListener {
