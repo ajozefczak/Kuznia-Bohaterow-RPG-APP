@@ -354,7 +354,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/EPButtonRozwin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -364,7 +364,7 @@
                 android:textColor="#ebebeb" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/EPButtonUsun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -381,7 +381,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/EPButtonEkiwpunek"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -391,7 +391,7 @@
                 android:textColor="#ebebeb" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/EPButtonHistoria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -401,7 +401,7 @@
                 android:textColor="#ebebeb" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/EPButtonZaklęcia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -414,13 +414,13 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/EPButtonNotatki"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:background="@drawable/przycisknaprzyciski"
         android:fontFamily="@font/gabriela"
-        android:text="Historia postaci"
+        android:text="Notatki"
         android:textColor="#ebebeb"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
