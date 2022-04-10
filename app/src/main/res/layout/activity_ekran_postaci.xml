@@ -9,18 +9,19 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="150dp"
-                android:layout_height="83dp"
+                android:layout_height="85dp"
                 android:layout_margin="5dp"
                 tools:srcCompat="@drawable/rameczka" />
 
@@ -60,8 +61,9 @@
         <LinearLayout
             android:id="@+id/OpisNaStatystyki"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_weight="1"
             android:background="#94261309"
             android:orientation="horizontal">
 
@@ -89,8 +91,9 @@
         <LinearLayout
             android:id="@+id/EPLayoutSila"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_weight="1"
             android:background="#94261309"
             android:orientation="horizontal">
 
@@ -118,8 +121,9 @@
         <LinearLayout
             android:id="@+id/EPLayoutKondycja"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_weight="1"
             android:background="#94261309"
             android:orientation="horizontal">
 
@@ -147,8 +151,9 @@
         <LinearLayout
             android:id="@+id/EPLayoutBudowaCiala"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_weight="1"
             android:background="#94261309"
             android:orientation="horizontal">
 
@@ -176,7 +181,7 @@
         <LinearLayout
             android:id="@+id/EPLayoutZrecznosc"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="#94261309"
             android:orientation="horizontal">
@@ -205,8 +210,9 @@
         <LinearLayout
             android:id="@+id/EPLayoutInteligecja"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_weight="1"
             android:background="#94261309"
             android:orientation="horizontal">
 
@@ -234,8 +240,9 @@
         <LinearLayout
             android:id="@+id/EPLayoutMoc"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_weight="1"
             android:background="#94261309"
             android:orientation="horizontal">
 
@@ -263,8 +270,9 @@
         <LinearLayout
             android:id="@+id/EPLayoutWyksztalcenie"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_weight="1"
             android:background="#94261309"
             android:orientation="horizontal">
 
@@ -292,8 +300,9 @@
         <LinearLayout
             android:id="@+id/EPLayoutPoczytalnosc"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_weight="1"
             android:background="#94261309"
             android:orientation="horizontal">
 
@@ -321,8 +330,9 @@
         <LinearLayout
             android:id="@+id/EPLayoutWyglad"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_weight="1"
             android:background="#94261309"
             android:orientation="horizontal">
 
@@ -349,8 +359,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <Button
@@ -376,8 +387,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <Button
@@ -411,18 +423,17 @@
                 android:textColor="#ebebeb" />
         </LinearLayout>
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/EPButtonNotatki"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:text="Notatki"
+            android:textColor="#ebebeb" />
 
-    <Button
-        android:id="@+id/EPButtonNotatki"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@drawable/przycisknaprzyciski"
-        android:fontFamily="@font/gabriela"
-        android:text="Notatki"
-        android:textColor="#ebebeb"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
