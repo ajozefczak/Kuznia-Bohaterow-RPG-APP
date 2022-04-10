@@ -4,6 +4,10 @@ import android.app.Activity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import com.bumptech.glide.Glide
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
+
 class MyListAdapter(private val context: Activity, private val title: MutableList<String>, private val description: MutableList<String>, private val imgid: MutableList<String>)
     : ArrayAdapter<String>(context, R.layout.custom_list, title) {
 
@@ -20,6 +24,8 @@ class MyListAdapter(private val context: Activity, private val title: MutableLis
 
         //@Immlerth tutaj jebnąć trzeba obrazek :kekw:, albo pobrać i ustawić albo przez url czarną magią. GLHF
         //imageView.setImageResource()
+
+        Glide.with(context).load(imgid[position]).override(300,300).centerCrop().into(imageView)
 
         subtitleText.text = description[position]
 
