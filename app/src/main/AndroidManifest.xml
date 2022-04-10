@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KuzniaBohaterowRPGAPP">
         <activity
+            android:name=".ListaPostaci"
+            android:exported="false" />
+        <activity
             android:name=".ResetHasla"
             android:exported="false"
             android:label="@string/title_activity_reset_hasla"
