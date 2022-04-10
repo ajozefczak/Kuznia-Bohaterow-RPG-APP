@@ -26,6 +26,12 @@ class EkranGracza : AppCompatActivity() {
             startActivity(tworzeniePostaciIntent)
             finish()
         }
+
+        GButtonWyszukajPostac.setOnClickListener {
+            val listaPostaciIntent = Intent(this, ListaPostaci::class.java)
+            startActivity(listaPostaciIntent)
+            finish()
+        }
     }
 
     private fun initListeners() {

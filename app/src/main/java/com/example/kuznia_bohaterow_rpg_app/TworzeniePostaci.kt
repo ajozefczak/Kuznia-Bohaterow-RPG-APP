@@ -155,7 +155,7 @@ class TworzeniePostaci : AppCompatActivity() {
                     imgToStore.downloadUrl.addOnSuccessListener {
                         charactersheet["imgURL"] = it.toString()
                         db.collection("charactersheet").add(charactersheet)
-                        Toast.makeText(this, "Pomyślnie stworzon postać", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Pomyślnie stworzono postać", Toast.LENGTH_SHORT).show()
                         val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
                         startActivity(EkranGraczaIntent)
                         finish()
