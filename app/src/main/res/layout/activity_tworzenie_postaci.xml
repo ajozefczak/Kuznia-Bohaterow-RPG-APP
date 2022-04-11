@@ -528,7 +528,7 @@
             android:layout_weight="1"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
-            android:text="Wróć do menu gownego"
+            android:text="Wróć do menu głównego"
             android:textColor="#ebebeb" />
 
     </LinearLayout>
