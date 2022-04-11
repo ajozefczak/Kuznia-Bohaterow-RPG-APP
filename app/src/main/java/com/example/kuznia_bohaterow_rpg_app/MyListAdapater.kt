@@ -21,12 +21,7 @@ class MyListAdapter(private val context: Activity, private val title: MutableLis
         val subtitleText = rowView.findViewById(R.id.characterOccupation) as TextView
 
         titleText.text = title[position]
-
-        //@Immlerth tutaj jebnąć trzeba obrazek :kekw:, albo pobrać i ustawić albo przez url czarną magią. GLHF
-        //imageView.setImageResource()
-
-        Glide.with(context).load(imgid[position]).override(300,300).centerCrop().into(imageView)
-
+        Glide.with(context).load(imgid[position]).override(100,100).centerCrop().into(imageView)
         subtitleText.text = description[position]
 
         return rowView
