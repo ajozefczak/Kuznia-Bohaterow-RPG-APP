@@ -2,24 +2,17 @@ package com.example.kuznia_bohaterow_rpg_app
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.content.Intent
-import android.graphics.Color
-import android.text.TextUtils
-import android.text.method.LinkMovementMethod
+import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.*
+import android.widget.DatePicker
+import android.widget.TimePicker
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_kalendarz.*
-import kotlinx.android.synthetic.main.activity_tworzenie_postaci.*
 import java.util.*
-import kotlin.collections.ArrayList
 
 
 class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
@@ -35,6 +28,13 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
     var savedYear = 0
     var savedHour = 0
     var savedMinute = 0
+
+    val calendar = Calendar.getInstance()
+    var currHour = calendar[Calendar.HOUR_OF_DAY]
+    var currMinute = calendar[Calendar.MINUTE]
+    var currDay = calendar[Calendar.DAY_OF_MONTH]
+    var currMonth = calendar[Calendar.MONTH] + 1
+    var currYear = calendar[Calendar.YEAR]
 
     val db = FirebaseFirestore.getInstance()
     val firebaseUser = FirebaseAuth.getInstance().currentUser!!
@@ -162,18 +162,50 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
         Log.e("logDataSetDate","------------" + savedMonth.toString())
 
 
+
+        val timePickerDialog = TimePickerDialog(this,this,currHour,currMinute, true)
+        timePickerDialog.show()
+
+
         getDateTimeCalendar()
-        TimePickerDialog(this,this,hour,minute,true).show()
+        //TimePickerDialog(this,this,hour,minute,true).show()
 
 
     }
 
     override fun onTimeSet(p0: TimePicker?, p1: Int, p2: Int) {
-        savedHour = p1
-        savedMinute = p2
 
-        KTextPoka.text ="Następne spotkanie odbędzie sie: \n $savedDay-$savedMonth-$savedYear\n $savedHour:$savedMinute"
+        Log.e("pepegaCal","Day " + savedDay.toString())
+        Log.e("pepegaCal","Curr Day " + currDay.toString())
+        Log.e("pepegaCal","Month " + savedMonth.toString())
+        Log.e("pepegaCal","Curr Month " + currMonth.toString())
+        Log.e("pepegaCal","Year " + savedYear.toString())
+        Log.e("pepegaCal","Curr Year " + currYear.toString())
 
+         currHour = calendar[Calendar.HOUR_OF_DAY]
+         currMinute = calendar[Calendar.MINUTE]
+         currDay = calendar[Calendar.DAY_OF_MONTH]
+         currMonth = calendar[Calendar.MONTH] + 1
+         currYear = calendar[Calendar.YEAR]
+
+
+        if(savedDay==currDay && savedMonth==currMonth && savedYear==currYear) {
+            if (p1 >= currHour && p2 >= currMinute) {
+                savedHour = p1
+                savedMinute = p2
+                KTextPoka.text =
+                    "Następne spotkanie odbędzie sie: \n $savedDay-$savedMonth-$savedYear\n $savedHour:$savedMinute"
+            } else {
+                Toast.makeText(this, "Błędna godzina", Toast.LENGTH_LONG).show()
+                val timePickerDialog = TimePickerDialog(this, this, currHour, currMinute, true)
+                timePickerDialog.show()
+            }
+        }else{
+            savedHour = p1
+            savedMinute = p2
+            KTextPoka.text =
+                "Następne spotkanie odbędzie sie: \n $savedDay-$savedMonth-$savedYear\n $savedHour:$savedMinute"
+        }
     }
 
 
