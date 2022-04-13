@@ -10,6 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KuzniaBohaterowRPGAPP">
         <activity
+            android:name=".RozwojPostaci"
+            android:exported="false" />
+        <activity
+            android:name=".NotatkiGracza"
+            android:exported="false" />
+        <activity
+            android:name=".HistoriaPostaci"
+            android:exported="false" />
+        <activity
+            android:name=".DodajZaklecie"
+            android:exported="false" />
+        <activity
+            android:name=".Zaklecia"
+            android:exported="false" />
+        <activity
+            android:name=".DodajPrzedmiot"
+            android:exported="false" />
+        <activity
+            android:name=".Przedmioty"
+            android:exported="false" />
+        <activity
             android:name=".ListaPostaci"
             android:exported="false" />
         <activity
