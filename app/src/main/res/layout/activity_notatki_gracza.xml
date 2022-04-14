@@ -17,7 +17,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Notatki" />
+            android:fontFamily="@font/gabriela"
+            android:text="Notatki"
+            android:textColor="#ebebeb" />
 
         <EditText
             android:id="@+id/NGEditTextTextMultiLineNotatkiGracza"
@@ -26,8 +28,10 @@
             android:layout_weight="1"
             android:background="#94261309"
             android:ems="10"
+            android:fontFamily="@font/gabriela"
             android:gravity="start|top"
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            android:textColor="#ebebeb" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,7 +46,9 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
-                android:text="Cofnij" />
+                android:fontFamily="@font/gabriela"
+                android:text="Cofnij"
+                android:textColor="#ebebeb" />
 
             <Button
                 android:id="@+id/button5"
@@ -51,7 +57,9 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
-                android:text="Zapisz" />
+                android:fontFamily="@font/gabriela"
+                android:text="Zapisz"
+                android:textColor="#ebebeb" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

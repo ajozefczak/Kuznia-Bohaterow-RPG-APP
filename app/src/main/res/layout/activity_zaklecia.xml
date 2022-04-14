@@ -31,7 +31,9 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
-                android:text="Cofnij" />
+                android:fontFamily="@font/gabriela"
+                android:text="Cofnij"
+                android:textColor="#ebebeb" />
 
             <Button
                 android:id="@+id/button2"
@@ -40,7 +42,9 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
-                android:text="Dodaj zaklęcie" />
+                android:fontFamily="@font/gabriela"
+                android:text="Dodaj zaklęcie"
+                android:textColor="#ebebeb" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,7 +35,9 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
-                android:text="Cofnij" />
+                android:fontFamily="@font/gabriela"
+                android:text="Cofnij"
+                android:textColor="#ebebeb" />
 
             <Button
                 android:id="@+id/PrzedmiotButtonDodajPrzedmiot"
@@ -44,7 +46,9 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
-                android:text="Dodaj Przedmiot" />
+                android:fontFamily="@font/gabriela"
+                android:text="Dodaj Przedmiot"
+                android:textColor="#ebebeb" />
 
         </LinearLayout>
 

@@ -4,6 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sciana"
     tools:context=".DodajZaklecie">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#94261309"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ebebeb"
+                android:fontFamily="@font/gabriela"
+                android:text="Nazwa:"
+                android:textColor="#ebebeb" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ebebeb"
+                android:ems="10"
+                android:fontFamily="@font/gabriela"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:textColor="#ebebeb" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ebebeb"
+                android:fontFamily="@font/gabriela"
+                android:text="Koszt:"
+                android:textColor="#ebebeb" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ebebeb"
+                android:ems="10"
+                android:fontFamily="@font/gabriela"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:textColor="#ebebeb" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ebebeb"
+                android:fontFamily="@font/gabriela"
+                android:text="Opis"
+                android:textColor="#ebebeb" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ebebeb"
+                android:ems="10"
+                android:fontFamily="@font/gabriela"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:textColor="#ebebeb" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout">
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:text="Dodaj"
+            android:textColor="#ebebeb" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
