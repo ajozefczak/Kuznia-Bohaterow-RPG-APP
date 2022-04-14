@@ -6,4 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".Przedmioty">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/jezioro"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/przedmityList"
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/dialog_min_width_minor"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#94261309"
+            android:paddingTop="5dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/PrzedmiotButtonCofnij"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/przycisknaprzyciski"
+                android:text="Cofnij" />
+
+            <Button
+                android:id="@+id/PrzedmiotButtonDodajPrzedmiot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/przycisknaprzyciski"
+                android:text="Dodaj Przedmiot" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
