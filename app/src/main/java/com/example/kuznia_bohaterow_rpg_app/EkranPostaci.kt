@@ -1,7 +1,10 @@
 package com.example.kuznia_bohaterow_rpg_app
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import com.bumptech.glide.Glide
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_ekran_postaci.*
@@ -31,7 +34,46 @@ class EkranPostaci : AppCompatActivity() {
                Glide.with(this).load(task.result["imgURL"]).override(100,100).centerCrop().into(EPAvatarImage)
             }
         }
+        initListeners()
+    }
+
+    private fun initListeners(){
+        val ButtonEkiwpunek = findViewById<Button>(R.id.EPButtonEkiwpunek)
+        ButtonEkiwpunek.setOnClickListener(ButtonEkiwpunekListener)
+
+        val ButtonHistoria = findViewById<Button>(R.id.EPButtonHistoria)
+        ButtonHistoria.setOnClickListener(ButtonHistoriaListener)
+
+        val ButtonZaklecia = findViewById<Button>(R.id.EPButtonZaklecia)
+        ButtonZaklecia.setOnClickListener(ButtonZakleciaListener)
+
+        val ButtonNotatki = findViewById<Button>(R.id.EPButtonNotatki)
+        ButtonNotatki.setOnClickListener(ButtonNotatkiListener)
+    }
 
 
+    private val ButtonEkiwpunekListener = View.OnClickListener { callButtonEkiwpunekListenerActivity() }
+    private val ButtonHistoriaListener = View.OnClickListener { callButtonHistoriaListenerActivity() }
+    private val ButtonZakleciaListener = View.OnClickListener { callButtonZakleciaActivity() }
+    private val ButtonNotatkiListener = View.OnClickListener { callButtonNotatkiListenerActivity() }
+
+    private fun callButtonEkiwpunekListenerActivity() {
+        val EkiwpunekIntent = Intent(this, DodajZaklecie::class.java)
+        startActivity(EkiwpunekIntent)
+    }
+
+    private fun callButtonHistoriaListenerActivity() {
+        val HistoriaIntent = Intent(this, DodajZaklecie::class.java)
+        startActivity(HistoriaIntent)
+    }
+
+    private fun callButtonZakleciaActivity() {
+        val ZaklęciaIntent = Intent(this, DodajZaklecie::class.java)
+        startActivity(ZaklęciaIntent)
+    }
+
+    private fun callButtonNotatkiListenerActivity() {
+        val NotatkiIntent = Intent(this, DodajZaklecie::class.java)
+        startActivity(NotatkiIntent)
     }
 }

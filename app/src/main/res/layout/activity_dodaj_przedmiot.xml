@@ -29,7 +29,7 @@
                 android:textColor="#ebebeb" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName6"
+                android:id="@+id/NazwaPrzedmiotuInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ebebeb"
@@ -54,9 +54,10 @@
                 android:textColor="#ebebeb" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName7"
+                android:id="@+id/KosztPrzedmiotuInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#ebebeb"
                 android:ems="10"
                 android:fontFamily="@font/gabriela"
                 android:foregroundTint="#ebebeb"
@@ -78,9 +79,10 @@
                 android:textColor="#ebebeb" />
 
             <EditText
-                android:id="@+id/editTextTextMultiLine3"
+                android:id="@+id/OpisPrzedmiotuInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#ebebeb"
                 android:ems="10"
                 android:fontFamily="@font/gabriela"
                 android:foregroundTint="#ebebeb"
@@ -99,12 +101,12 @@
         app:layout_constraintTop_toBottomOf="@+id/tableLayout2">
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/DodajPrzedmiotButtonDodaj"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
-            android:text="Button"
+            android:text="Dodaj"
             android:textColor="#ebebeb" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

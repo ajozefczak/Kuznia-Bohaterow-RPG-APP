@@ -23,7 +23,7 @@
             android:textColor="#ebebeb" />
 
         <EditText
-            android:id="@+id/editTextTextMultiLine"
+            android:id="@+id/HistoriaEditTextTextMultiLineHistoria"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
@@ -42,7 +42,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/HistoriaButtonCofnij"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -53,7 +53,7 @@
                 android:textColor="#ebebeb" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/HistoriaButtonZapisz"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"

@@ -18,7 +18,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1">
 
             <TextView
@@ -31,7 +31,7 @@
                 android:textColor="#ebebeb" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName4"
+                android:id="@+id/NazwaZaklecieInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ebebeb"
@@ -57,7 +57,7 @@
                 android:textColor="#ebebeb" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName5"
+                android:id="@+id/KosztZakleciaInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ebebeb"
@@ -83,7 +83,7 @@
                 android:textColor="#ebebeb" />
 
             <EditText
-                android:id="@+id/editTextTextMultiLine2"
+                android:id="@+id/OpisZakleciaInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ebebeb"
@@ -104,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tableLayout">
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/DodajZaklecieButtonDodaj"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

@@ -413,7 +413,7 @@
                 android:textColor="#ebebeb" />
 
             <Button
-                android:id="@+id/EPButtonZaklęcia"
+                android:id="@+id/EPButtonZaklecia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
