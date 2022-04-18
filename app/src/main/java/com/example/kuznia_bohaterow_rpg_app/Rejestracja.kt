@@ -35,6 +35,8 @@ class Rejestracja : AppCompatActivity() {
 
         RButtonRejestracja.setOnClickListener{
 
+            RButtonRejestracja.isEnabled = false
+
             if(TextUtils.isEmpty(editTextTextPersonName.text.toString().trim { it <= ' ' })) {
                 errorMessage = errorMessage + "Wprowadź nick\n"
                 tockenAcc = false
@@ -88,14 +90,18 @@ class Rejestracja : AppCompatActivity() {
 
                     val MainIntent = Intent(this, MainActivity::class.java)
                     startActivity(MainIntent)
-
+                    RButtonRejestracja.isEnabled = true
+                    finish()
                 }.addOnFailureListener { e ->
                         Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
+                    RButtonRejestracja.isEnabled = true
+
                 }
             }else{
                 Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
                 tockenAcc=true
                 errorMessage = "Wystąpił błąd w następujących polach: "
+                RButtonRejestracja.isEnabled = true
             }
         }
 
@@ -120,13 +126,19 @@ class Rejestracja : AppCompatActivity() {
     private val RButtonRegulaminListener = View.OnClickListener { callRegulaminActivity() }
 
     private fun callLogowanieActivity() {
+        RButtonLogowanie.isEnabled = false
         val LogowanieIntent = Intent(this, Logowanie::class.java)
         startActivity(LogowanieIntent)
+        RButtonLogowanie.isEnabled = true
+        finish()
     }
 
     private fun callRegulaminActivity() {
+        RButtonRegulamin.isEnabled = false
         val RegulaminIntent = Intent(this, Regulamin::class.java)
         startActivity(RegulaminIntent)
+        RButtonRegulamin.isEnabled = true
+        finish()
     }
 
     private fun registerAcc(){

@@ -5,16 +5,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import com.bumptech.glide.Glide
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_ekran_postaci.*
 
 class EkranPostaci : AppCompatActivity() {
+
+    val db = FirebaseFirestore.getInstance()
+    val firebaseUser = FirebaseAuth.getInstance().currentUser!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ekran_postaci)
 
         val idCharacter = intent.getStringExtra("id").toString()
+
 
         FirebaseFirestore.getInstance().collection("charactersheet").document(idCharacter).get().addOnCompleteListener{ task ->
             if(task.isSuccessful) {
@@ -49,6 +56,9 @@ class EkranPostaci : AppCompatActivity() {
 
         val ButtonNotatki = findViewById<Button>(R.id.EPButtonNotatki)
         ButtonNotatki.setOnClickListener(ButtonNotatkiListener)
+
+        val ButtonUsun = findViewById<Button>(R.id.EPButtonUsun)
+        ButtonUsun.setOnClickListener(ButtonUsunListener)
     }
 
 
@@ -56,6 +66,8 @@ class EkranPostaci : AppCompatActivity() {
     private val ButtonHistoriaListener = View.OnClickListener { callButtonHistoriaListenerActivity() }
     private val ButtonZakleciaListener = View.OnClickListener { callButtonZakleciaActivity() }
     private val ButtonNotatkiListener = View.OnClickListener { callButtonNotatkiListenerActivity() }
+    private val ButtonUsunListener = View.OnClickListener { callButtonUsun() }
+
 
     private fun callButtonEkiwpunekListenerActivity() {
         val EkiwpunekIntent = Intent(this, DodajZaklecie::class.java)
@@ -76,4 +88,23 @@ class EkranPostaci : AppCompatActivity() {
         val NotatkiIntent = Intent(this, DodajZaklecie::class.java)
         startActivity(NotatkiIntent)
     }
+
+    private fun callButtonUsun() {
+
+        EPButtonUsun.isEnabled = false
+
+        val idCharacter = intent.getStringExtra("id").toString()
+
+        db.collection("charactersheet").document(idCharacter).delete().addOnSuccessListener {
+            Toast.makeText(this, "Poprawnie usunięto postać", Toast.LENGTH_SHORT).show()
+            val listaPostaciIntent = Intent(this, ListaPostaci::class.java)
+            startActivity(listaPostaciIntent)
+            finish()
+            EPButtonUsun.isEnabled = true
+        }.addOnFailureListener{
+            Toast.makeText(this, "Wystąpił błąd przy usuwaniu postaci", Toast.LENGTH_SHORT).show()
+            EPButtonUsun.isEnabled = true
+        }
+    }
+
 }

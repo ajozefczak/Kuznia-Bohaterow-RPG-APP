@@ -18,11 +18,15 @@ class Logowanie : AppCompatActivity() {
 
 
         LButtonPrzzywruc.setOnClickListener {
+            LButtonPrzzywruc.isEnabled = false
             val ResetHaslaIntent = Intent(this, ResetHasla::class.java)
             startActivity(ResetHaslaIntent)
+            LButtonPrzzywruc.isEnabled = true
+            finish()
         }
 
         LButtonZaloguj.setOnClickListener{
+            LButtonZaloguj.isEnabled = false
             when{
                 TextUtils.isEmpty(editTextTextEmailAddress.text.toString()) -> {
                     Toast.makeText(this,"Wprowadź adres email",Toast.LENGTH_SHORT).show()
@@ -41,8 +45,10 @@ class Logowanie : AppCompatActivity() {
 
                             val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
                             startActivity(EkranGraczaIntent)
+                            LButtonZaloguj.isEnabled = true
                             finish()
                         }else{
+                            LButtonZaloguj.isEnabled = true
                             Toast.makeText(this,"Wystąpił błąd podczas logowania. Użytkownik nie istnieje lub podane dane są błędne",Toast.LENGTH_LONG).show()
                         }
                     }
@@ -63,8 +69,10 @@ class Logowanie : AppCompatActivity() {
 
 
     private fun callRejestracjaActivity() {
+        LButtonRejestracja.isEnabled = false
         val RejestracjaIntent = Intent(this, Rejestracja::class.java)
         startActivity(RejestracjaIntent)
+        LButtonRejestracja.isEnabled = true
         finish()
     }
 }

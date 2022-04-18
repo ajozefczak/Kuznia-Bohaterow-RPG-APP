@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,13 +29,17 @@ class MainActivity : AppCompatActivity() {
     private val ButtonRejestracjaListener = View.OnClickListener { callRejestracjaActivity() }
 
     private fun callLogowanieActivity() {
+        ButtonLogowanie.isEnabled = false
         val LogowanieIntent = Intent(this, Logowanie::class.java)
         startActivity(LogowanieIntent)
+        ButtonLogowanie.isEnabled = true
     }
 
     private fun callRejestracjaActivity() {
+        ButtonRejestracja.isEnabled = false
         val RejestracjaIntent = Intent(this, Rejestracja::class.java)
         startActivity(RejestracjaIntent)
+        ButtonRejestracja.isEnabled = true
     }
 
 }

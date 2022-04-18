@@ -75,8 +75,10 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
         setDate()
 
             KButtonCofnij.setOnClickListener {
-                val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
-                startActivity(EkranGraczaIntent)
+                KButtonCofnij.isEnabled = false
+                /*val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
+                startActivity(EkranGraczaIntent)*/
+                KButtonCofnij.isEnabled = true
                 finish()
             }
         }
@@ -86,17 +88,20 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
 
     private fun pickDate(){
         KButtonData.setOnClickListener {
+            KButtonData.isEnabled = false
                 getDateTimeCalendar()
 
                 val datePickerDialog = DatePickerDialog(this,this,year,month,day)
                 datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
                 datePickerDialog.show()
+            KButtonData.isEnabled = true
         }
     }
 
 
     private fun setDate(){
         KButtonZapiszTeermin.setOnClickListener() {
+            KButtonZapiszTeermin.isEnabled = false
             val userMeetingInformation: MutableMap<String, String> = HashMap()
 
             userMeetingInformation["id"] = firebaseUser.uid
@@ -135,8 +140,10 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
             db.collection("meetings").document(firebaseUser.uid).delete().addOnCompleteListener {
                 db.collection("meetings").document(firebaseUser.uid).set(userMeetingInformation).addOnSuccessListener {
                     Toast.makeText(this, "Poprawnie dodano spotkanie", Toast.LENGTH_SHORT).show()
+                    KButtonZapiszTeermin.isEnabled = true
                 }.addOnFailureListener { e ->
                     Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                    KButtonZapiszTeermin.isEnabled = true
                 }
             }
         }

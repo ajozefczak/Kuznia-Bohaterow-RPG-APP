@@ -123,13 +123,17 @@ class TworzeniePostaci : AppCompatActivity() {
         }
 
         TPButtonPowrod.setOnClickListener {
-            val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
-            startActivity(EkranGraczaIntent)
+            TPButtonPowrod.isEnabled = false
+            /*val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
+            TPButtonPowrod.isEnabled = true*/
             finish()
+            //startActivity(EkranGraczaIntent)
         }
 
         TPButtonZapiszPostac.setOnClickListener {
             if (selectedImg != null) {
+
+                TPButtonZapiszPostac.isEnabled = false
 
                 val firebaseUser = FirebaseAuth.getInstance().currentUser!!
                 val db = FirebaseFirestore.getInstance()
@@ -156,12 +160,14 @@ class TworzeniePostaci : AppCompatActivity() {
                         charactersheet["imgURL"] = it.toString()
                         db.collection("charactersheet").add(charactersheet)
                         Toast.makeText(this, "Pomyślnie stworzono postać", Toast.LENGTH_SHORT).show()
-                        val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
-                        startActivity(EkranGraczaIntent)
+                        /*val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
+                        startActivity(EkranGraczaIntent)*/
+                        TPButtonZapiszPostac.isEnabled = true
                         finish()
                     }.addOnFailureListener {
                             e ->
                         Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                        TPButtonZapiszPostac.isEnabled = true
                     }
                 }
 

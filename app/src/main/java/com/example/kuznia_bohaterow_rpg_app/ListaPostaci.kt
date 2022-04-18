@@ -44,11 +44,14 @@ class ListaPostaci : AppCompatActivity() {
                     val intent = Intent(this,EkranPostaci::class.java)
                     intent.putExtra("id",characterIDsMutable[position])
                     startActivity(intent)
+                    finish()
                 }
 
                 LiButtonCofnij.setOnClickListener {
-                    val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
-                    startActivity(EkranGraczaIntent)
+                    LiButtonCofnij.isEnabled = false
+                    /*val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
+                    startActivity(EkranGraczaIntent)*/
+                    LiButtonCofnij.isEnabled = true
                     finish()
                 }
 

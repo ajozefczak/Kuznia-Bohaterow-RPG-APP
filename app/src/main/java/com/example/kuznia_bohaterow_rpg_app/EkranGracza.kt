@@ -16,20 +16,25 @@ class EkranGracza : AppCompatActivity() {
         initListeners()
 
         GButtonWyloguj.setOnClickListener {
+            GButtonWyloguj.isEnabled = false
             FirebaseAuth.getInstance().signOut()
             Toast.makeText(this, "Poprawnie wylogowano sie z systemu", Toast.LENGTH_SHORT).show()
+            GButtonWyloguj.isEnabled = true
             finish()
         }
 
         GButtonPostac.setOnClickListener {
+            GButtonPostac.isEnabled = false
             val tworzeniePostaciIntent = Intent(this, TworzeniePostaci::class.java)
             startActivity(tworzeniePostaciIntent)
-            finish()
+            GButtonPostac.isEnabled = true
         }
 
         GButtonWyszukajPostac.setOnClickListener {
+            GButtonWyszukajPostac.isEnabled = false
             val listaPostaciIntent = Intent(this, ListaPostaci::class.java)
             startActivity(listaPostaciIntent)
+            GButtonWyszukajPostac.isEnabled = true
         }
     }
 
@@ -41,9 +46,10 @@ class EkranGracza : AppCompatActivity() {
     private val GButtonKalendarzListener = View.OnClickListener { callKalendarzActivity() }
 
     private fun callKalendarzActivity() {
+        GButtonKalendarz.isEnabled = false
         val KalendarzIntent = Intent(this, Kalendarz::class.java)
         startActivity(KalendarzIntent)
-        finish()
+        GButtonKalendarz.isEnabled = true
     }
 
 }
