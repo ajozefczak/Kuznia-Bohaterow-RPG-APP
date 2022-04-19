@@ -6,13 +6,6 @@ import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_lista_postaci.*
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter
-import android.widget.ListView;
-import android.widget.Toast;
-import kotlinx.android.synthetic.main.activity_kalendarz.*
-import kotlinx.android.synthetic.main.custom_list.*
 
 class ListaPostaci : AppCompatActivity() {
 
@@ -23,26 +16,36 @@ class ListaPostaci : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_postaci)
 
-        val characterNamesMutable: MutableList<String> = mutableListOf()
-        val characterOcupationsMutable: MutableList<String> = mutableListOf()
-        val characterAvatarsMutable: MutableList<String> = mutableListOf()
-        val characterIDsMutable: MutableList<String> = mutableListOf()
+        val characters: MutableList<CharacterOnList> = mutableListOf()
+        //val characterNamesMutable: MutableList<String> = mutableListOf()
+        //val characterOcupationsMutable: MutableList<String> = mutableListOf()
+        //val characterAvatarsMutable: MutableList<String> = mutableListOf()
+        //val characterIDsMutable: MutableList<String> = mutableListOf()
 
         FirebaseFirestore.getInstance().collection("charactersheet").whereEqualTo("id", firebaseUser.uid).get().addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 for (data in task.result) {
-                    characterNamesMutable.add(data["name"].toString())
-                    characterOcupationsMutable.add(data["job"].toString())
-                    characterAvatarsMutable.add(data["imgURL"].toString())
-                    characterIDsMutable.add(data.id)
+                    var tempCharName = data["name"].toString()
+                    var tempOccup = data["job"].toString()
+                    var tempAvatars = data["imgURL"].toString()
+                    var tempIds = data.id
+
+                    var chartemp = CharacterOnList(tempCharName, tempOccup, tempAvatars, tempIds)
+                    characters.add(chartemp)
+
+                    //characterNamesMutable.add(data["name"].toString())
+                    //characterOcupationsMutable.add(data["job"].toString())
+                    //characterAvatarsMutable.add(data["imgURL"].toString())
+                    //characterIDsMutable.add(data.id)
                     }
 
-                val myListAdapter = MyListAdapter(this,characterNamesMutable,characterOcupationsMutable,characterAvatarsMutable)
+                characters.sortBy {it.firstName}
+                val myListAdapter = MyListAdapter(this,characters)
                 characterList.adapter = myListAdapter
 
                 characterList.setOnItemClickListener(){adapterView, view, position, id ->
                     val intent = Intent(this,EkranPostaci::class.java)
-                    intent.putExtra("id",characterIDsMutable[position])
+                    intent.putExtra("id",characters[position].id)
                     startActivity(intent)
                     finish()
                 }
