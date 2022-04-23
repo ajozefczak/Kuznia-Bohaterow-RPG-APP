@@ -75,7 +75,9 @@ class EkranPostaci : AppCompatActivity() {
     }
 
     private fun callButtonHistoriaListenerActivity() {
-        val HistoriaIntent = Intent(this, DodajZaklecie::class.java)
+        val HistoriaIntent = Intent(this, HistoriaPostaci::class.java)
+        val idCharacter = intent.getStringExtra("id").toString()
+        HistoriaIntent.putExtra("id",idCharacter)
         startActivity(HistoriaIntent)
     }
 
@@ -85,7 +87,9 @@ class EkranPostaci : AppCompatActivity() {
     }
 
     private fun callButtonNotatkiListenerActivity() {
-        val NotatkiIntent = Intent(this, DodajZaklecie::class.java)
+        val NotatkiIntent = Intent(this, NotatkiGracza::class.java)
+        val idCharacter = intent.getStringExtra("id").toString()
+        NotatkiIntent.putExtra("id",idCharacter)
         startActivity(NotatkiIntent)
     }
 
