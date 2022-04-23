@@ -12,17 +12,16 @@
         android:background="@drawable/jezioro"
         android:orientation="vertical">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/przedmityList"
+        <ListView
+            android:id="@+id/przedmiotyList"
             android:layout_width="match_parent"
-            android:layout_height="@android:dimen/dialog_min_width_minor"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:background="#94261309"
             android:paddingTop="5dp">
 
-        </androidx.recyclerview.widget.RecyclerView>
-
+        </ListView>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -5,8 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.bumptech.glide.Glide
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.ktx.storage
 
 class MyListAdapter(private val context: Activity, private val charlist: MutableList<CharacterOnList>)
     : ArrayAdapter<CharacterOnList>(context, R.layout.custom_list, charlist) {
@@ -25,4 +23,5 @@ class MyListAdapter(private val context: Activity, private val charlist: Mutable
         subtitleText.text = charlist[position].occupa
         return rowView
     }
+
 }

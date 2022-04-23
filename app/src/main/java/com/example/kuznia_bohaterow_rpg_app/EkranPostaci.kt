@@ -70,8 +70,17 @@ class EkranPostaci : AppCompatActivity() {
 
 
     private fun callButtonEkiwpunekListenerActivity() {
-        val EkiwpunekIntent = Intent(this, DodajZaklecie::class.java)
+        val EkiwpunekIntent = Intent(this, Przedmioty::class.java)
+        val idCharacter = intent.getStringExtra("id").toString()
+        EkiwpunekIntent.putExtra("id",idCharacter)
         startActivity(EkiwpunekIntent)
+    }
+
+    private fun callButtonZakleciaActivity() {
+        val ZakleciaIntent = Intent(this, Zaklecia::class.java)
+        val idCharacter = intent.getStringExtra("id").toString()
+        ZakleciaIntent.putExtra("id",idCharacter)
+        startActivity(ZakleciaIntent)
     }
 
     private fun callButtonHistoriaListenerActivity() {
@@ -79,11 +88,6 @@ class EkranPostaci : AppCompatActivity() {
         val idCharacter = intent.getStringExtra("id").toString()
         HistoriaIntent.putExtra("id",idCharacter)
         startActivity(HistoriaIntent)
-    }
-
-    private fun callButtonZakleciaActivity() {
-        val ZaklęciaIntent = Intent(this, DodajZaklecie::class.java)
-        startActivity(ZaklęciaIntent)
     }
 
     private fun callButtonNotatkiListenerActivity() {

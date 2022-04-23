@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ebebeb"
                 android:fontFamily="@font/gabriela"
-                android:text="Nazwa:"
+                android:text="Nazwa zaklęcia:"
                 android:textColor="#ebebeb" />
 
             <EditText
@@ -38,7 +38,6 @@
                 android:ems="10"
                 android:fontFamily="@font/gabriela"
                 android:inputType="textPersonName"
-                android:text="Name"
                 android:textColor="#ebebeb" />
         </TableRow>
 
@@ -64,7 +63,6 @@
                 android:ems="10"
                 android:fontFamily="@font/gabriela"
                 android:inputType="textPersonName"
-                android:text="Name"
                 android:textColor="#ebebeb" />
         </TableRow>
 
@@ -79,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ebebeb"
                 android:fontFamily="@font/gabriela"
-                android:text="Opis"
+                android:text="Opis:"
                 android:textColor="#ebebeb" />
 
             <EditText

@@ -37,7 +37,6 @@
                 android:fontFamily="@font/gabriela"
                 android:foregroundTint="#ebebeb"
                 android:inputType="textPersonName"
-                android:text="Name"
                 android:textColor="#ebebeb" />
         </TableRow>
 
@@ -50,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gabriela"
-                android:text="Koszt:"
+                android:text="Wartość:"
                 android:textColor="#ebebeb" />
 
             <EditText
@@ -62,7 +61,6 @@
                 android:fontFamily="@font/gabriela"
                 android:foregroundTint="#ebebeb"
                 android:inputType="textPersonName"
-                android:text="Name"
                 android:textColor="#ebebeb" />
         </TableRow>
 
