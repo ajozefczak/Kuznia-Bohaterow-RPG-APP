@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_ekran_postaci.*
+import kotlinx.android.synthetic.main.activity_zaklecia.*
 
 class EkranPostaci : AppCompatActivity() {
 
@@ -59,6 +60,10 @@ class EkranPostaci : AppCompatActivity() {
 
         val ButtonUsun = findViewById<Button>(R.id.EPButtonUsun)
         ButtonUsun.setOnClickListener(ButtonUsunListener)
+
+        EPButtonPowrot.setOnClickListener {
+            finish()
+        }
     }
 
 

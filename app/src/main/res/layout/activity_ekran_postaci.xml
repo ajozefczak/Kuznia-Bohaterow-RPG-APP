@@ -423,16 +423,34 @@
                 android:textColor="#ebebeb" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/EPButtonNotatki"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
             android:layout_weight="1"
-            android:background="@drawable/przycisknaprzyciski"
-            android:fontFamily="@font/gabriela"
-            android:text="Notatki"
-            android:textColor="#ebebeb" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/EPButtonNotatki"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/przycisknaprzyciski"
+                android:fontFamily="@font/gabriela"
+                android:text="Notatki"
+                android:textColor="#ebebeb" />
+
+            <Button
+                android:id="@+id/EPButtonPowrot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/przycisknaprzyciski"
+                android:fontFamily="@font/gabriela"
+                android:text="Menu Gówne"
+                android:textColor="#ebebeb" />
+        </LinearLayout>
 
     </LinearLayout>
 
