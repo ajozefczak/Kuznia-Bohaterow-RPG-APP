@@ -25,7 +25,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
                 android:fontFamily="@font/gabriela"
-                android:text="name"
+                android:text="Nazwa"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="#ebebeb"
                 android:textStyle="bold" />
@@ -37,7 +37,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
                 android:fontFamily="@font/gabriela"
-                android:text="desc"
+                android:text="Opis"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="#ebebeb"
                 android:textStyle="bold" />
@@ -50,15 +50,18 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/gabriela"
-                android:text="value"
+                android:text="Wartość"
                 android:textColor="#ebebeb"
                 android:textSize="16sp" />
 
             <Button
                 android:id="@+id/spellDelete"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="35dp"
-                android:text="Usuń" />
+                android:layout_gravity="center"
+                android:background="@drawable/przycisknaprzyciski"
+                android:text="Usuń"
+                android:textColor="#ebebeb" />
 
         </LinearLayout>
     </LinearLayout>
