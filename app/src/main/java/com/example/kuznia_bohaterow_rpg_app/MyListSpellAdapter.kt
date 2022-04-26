@@ -23,7 +23,7 @@ class MyListSpellAdapter(private val context: Activity, private val spelllist: M
         val spellDelete = rowView.findViewById(R.id.spellDelete) as Button
 
         nameSpell.text = spelllist[position].spellName
-        valueSpell.text = spelllist[position].spellValue.toString()
+        valueSpell.text = "Koszt zaklęcia: " + spelllist[position].spellValue.toString() + " PM"
         descSpell.text = spelllist[position].spellDesc
 
         spellDelete.setOnClickListener {

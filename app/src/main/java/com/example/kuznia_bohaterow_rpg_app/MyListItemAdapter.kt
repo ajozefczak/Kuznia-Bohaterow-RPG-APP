@@ -24,7 +24,7 @@ class MyListItemAdapter(private val context: Activity, private val itemlist: Mut
         val itemDelete = rowView.findViewById(R.id.itemDelete) as Button
 
         nameItem.text = itemlist[position].itemName
-        valueItem.text = itemlist[position].itemValue.toString()
+        valueItem.text = "Wartość: " + itemlist[position].itemValue.toString() + " $"
         descItem.text = itemlist[position].itemDesc
 
         itemDelete.setOnClickListener {
