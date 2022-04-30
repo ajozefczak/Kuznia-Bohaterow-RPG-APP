@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KuzniaBohaterowRPGAPP">
         <activity
+            android:name=".ListaStoly"
+            android:exported="false" />
+        <activity
+            android:name=".Stoly"
+            android:exported="false" />
+        <activity
             android:name=".RozwojPostaci"
             android:exported="false" />
         <activity

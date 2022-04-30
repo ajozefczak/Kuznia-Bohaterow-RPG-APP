@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/giants_fireplace_bar"
     tools:context=".EkranMG">
 
     <LinearLayout
@@ -26,7 +27,8 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/gabriela"
-                android:text="Tryb MG" />
+                android:text="Tryb MG"
+                android:textColor="#ebebeb" />
 
             <Button
                 android:id="@+id/MGButtonWyloguj"
@@ -36,7 +38,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Wyloguj" />
+                android:text="Wyloguj"
+                android:textColor="#ebebeb" />
         </LinearLayout>
 
         <LinearLayout
@@ -52,7 +55,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Tworzenie stołu" />
+                android:text="Tworzenie stołu"
+                android:textColor="#ebebeb" />
         </LinearLayout>
 
         <LinearLayout
@@ -68,14 +72,18 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Kalendarz" />
+                android:text="Kalendarz"
+                android:textColor="#ebebeb" />
         </LinearLayout>
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/przycisknaprzyciski"
+            android:text="Button"
+            android:textColor="#ebebeb" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout3" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
