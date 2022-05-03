@@ -4,11 +4,397 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/korytarz"
+    android:background="@drawable/bg69"
     tools:context=".RozwojPostaci">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="Statystyki"
+                android:textColor="#ebebeb"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/RPSila"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#94261309"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:text="Siła"
+                android:textAlignment="textStart"
+                android:textColor="#ebebeb"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:backgroundTint="#ebebeb"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#ebebeb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/RPKondycja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#94261309"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:text="Kondycja"
+                android:textAlignment="textStart"
+                android:textColor="#ebebeb"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:backgroundTint="#ebebeb"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#ebebeb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/RPBudowaCiala"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#94261309"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:text="Budowa Ciała"
+                android:textAlignment="textStart"
+                android:textColor="#ebebeb"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:backgroundTint="#ebebeb"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#ebebeb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/RPZrecznosc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#94261309"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:text="Zręczność"
+                android:textAlignment="textStart"
+                android:textColor="#ebebeb"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:backgroundTint="#ebebeb"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#ebebeb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/RPInteligencja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#94261309"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:text="Inteligencja"
+                android:textAlignment="textStart"
+                android:textColor="#ebebeb"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:backgroundTint="#ebebeb"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#ebebeb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/RPMoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#94261309"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:text="Moc"
+                android:textAlignment="textStart"
+                android:textColor="#ebebeb"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:backgroundTint="#ebebeb"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#ebebeb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/RPWyksztalcenie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#94261309"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:text="Wykształcenie"
+                android:textAlignment="textStart"
+                android:textColor="#ebebeb"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:backgroundTint="#ebebeb"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#ebebeb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/RPoczytalnosc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#94261309"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:text="Poczytalność"
+                android:textAlignment="textStart"
+                android:textColor="#ebebeb"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:backgroundTint="#ebebeb"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#ebebeb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/RPWyglad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#94261309"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:text="Wygląd"
+                android:textAlignment="textStart"
+                android:textColor="#ebebeb"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:backgroundTint="#ebebeb"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#ebebeb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/RozwojPostaciButtonD4"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/d4" />
+
+            <Button
+                android:id="@+id/RozwojPostaciButtonD6"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/d6" />
+
+            <Button
+                android:id="@+id/RozwojPostaciButtonD8"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/d8" />
+
+            <Button
+                android:id="@+id/RozwojPostaciButtonD10"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/d10" />
+
+            <Button
+                android:id="@+id/RozwojPostaciButtonD12"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/d12" />
+
+            <Button
+                android:id="@+id/RozwojPostaciButtonD20"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/d20" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView59"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="#94261309"
+            android:padding="10dp"
+            android:text="Wynik rzutu"
+            android:textAlignment="center"
+            android:textColor="#ebebeb"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/RPCofnij"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/przycisknaprzyciski"
+                android:text="Cofnij"
+                android:textColor="#ebebeb" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/przycisknaprzyciski"
+                android:text="Zapisz"
+                android:textColor="#ebebeb" />
+
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
