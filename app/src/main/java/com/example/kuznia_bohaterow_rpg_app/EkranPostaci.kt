@@ -61,6 +61,9 @@ class EkranPostaci : AppCompatActivity() {
         val ButtonUsun = findViewById<Button>(R.id.EPButtonUsun)
         ButtonUsun.setOnClickListener(ButtonUsunListener)
 
+        val ButtonRozwinPostac = findViewById<Button>(R.id.EPButtonRozwin)
+        ButtonRozwinPostac.setOnClickListener(ButtonRozwinPostacListener)
+
         EPButtonPowrot.setOnClickListener {
             finish()
         }
@@ -72,6 +75,14 @@ class EkranPostaci : AppCompatActivity() {
     private val ButtonZakleciaListener = View.OnClickListener { callButtonZakleciaActivity() }
     private val ButtonNotatkiListener = View.OnClickListener { callButtonNotatkiListenerActivity() }
     private val ButtonUsunListener = View.OnClickListener { callButtonUsun() }
+    private val ButtonRozwinPostacListener = View.OnClickListener { callButtonRozwinPostac() }
+
+    private fun callButtonRozwinPostac(){
+        val RozwinPostac = Intent(this,RozwojPostaci::class.java)
+        val idCharacter = intent.getStringExtra("id").toString()
+        RozwinPostac.putExtra("id",idCharacter)
+        startActivity(RozwinPostac)
+    }
 
 
     private fun callButtonEkiwpunekListenerActivity() {
@@ -117,6 +128,30 @@ class EkranPostaci : AppCompatActivity() {
         }.addOnFailureListener{
             Toast.makeText(this, "Wystąpił błąd przy usuwaniu postaci", Toast.LENGTH_SHORT).show()
             EPButtonUsun.isEnabled = true
+        }
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        val idCharacter = intent.getStringExtra("id").toString()
+
+        FirebaseFirestore.getInstance().collection("charactersheet").document(idCharacter).get().addOnCompleteListener{ task ->
+            if(task.isSuccessful) {
+                EPTextImie.text = task.result["name"].toString();
+                EPTextZawod.text = task.result["job"].toString();
+                EPLiczbaSila.text = task.result["STR"].toString();
+                EPLiczbaZrecznosc.text = task.result["DEX"].toString();
+                EPLiczbaBudowaCiala.text = task.result["SIZ"].toString();
+                EPLiczbaKondycja.text = task.result["CON"].toString();
+                EPLiczbaWyglad.text = task.result["APP"].toString();
+                EPLiczbaWyksztalcenie.text = task.result["EDU"].toString();
+                EPLiczbaMoc.text = task.result["POW"].toString();
+                EPLiczbaInteligencja.text = task.result["INT"].toString();
+                EPLiczbaPoczytalnosc.text = task.result["sanity"].toString();
+                EPLiczbaMoc.text = task.result["POW"].toString();
+
+                Glide.with(this).load(task.result["imgURL"]).override(100,100).centerCrop().into(EPAvatarImage)
+            }
         }
     }
 
