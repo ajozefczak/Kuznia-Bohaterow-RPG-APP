@@ -41,6 +41,24 @@ class EkranGracza : AppCompatActivity() {
     private fun initListeners() {
         val GButtonKalendarz = findViewById<Button>(R.id.GButtonKalendarz)
         GButtonKalendarz.setOnClickListener(GButtonKalendarzListener)
+
+        GButtonSwitchPlayer.setOnClickListener {
+            if (GButtonSwitchPlayer.isChecked) {
+                GButtonTworzenieStołu.visibility = View.VISIBLE;
+                GButtonListaZarzadzanychStolow.visibility = View.VISIBLE;
+                GButtonListaStoly.visibility = View.INVISIBLE;
+                GButtonWyszukajPostac.visibility = View.INVISIBLE;
+                idLayoutDolacz.visibility = View.INVISIBLE;
+                GButtonSwitchPlayer.text = "Tryb MG"
+            } else {
+                GButtonTworzenieStołu.visibility = View.INVISIBLE;
+                GButtonListaZarzadzanychStolow.visibility = View.INVISIBLE;
+                GButtonListaStoly.visibility = View.VISIBLE;
+                GButtonWyszukajPostac.visibility = View.VISIBLE;
+                idLayoutDolacz.visibility = View.VISIBLE;
+                GButtonSwitchPlayer.text = "Tryb Gracza"
+            }
+        }
     }
 
     private val GButtonKalendarzListener = View.OnClickListener { callKalendarzActivity() }
@@ -51,5 +69,6 @@ class EkranGracza : AppCompatActivity() {
         startActivity(KalendarzIntent)
         GButtonKalendarz.isEnabled = true
     }
+
 
 }

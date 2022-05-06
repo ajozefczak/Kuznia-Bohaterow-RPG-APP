@@ -38,13 +38,13 @@
             android:orientation="horizontal">
 
             <Switch
-                android:id="@+id/switch2"
+                android:id="@+id/GButtonSwitchPlayer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:fontFamily="@font/gabriela"
                 android:padding="5dp"
-                android:text="Tryb Gracza"
+                android:text="Tryb Gracz"
                 android:textColor="#ebebeb"
                 android:textColorHighlight="#ebebeb"
                 android:textColorHint="#6C5D5D"
@@ -92,6 +92,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/idLayoutDolacz"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
@@ -123,14 +124,28 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/GButtonTworzenieStołu"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
-            android:background="#ebebeb"
-            android:orientation="horizontal">
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:text="Tworzenie stołu"
+            android:textColor="#ebebeb"
+            android:visibility="invisible" />
 
-        </LinearLayout>
+        <Button
+            android:id="@+id/GButtonListaZarzadzanychStolow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/przycisknaprzyciski"
+            android:text="Zarządzaj stołem"
+            android:textColor="#ebebeb"
+            android:visibility="invisible" />
 
     </LinearLayout>
 
