@@ -39,7 +39,7 @@
 
             <Switch
                 android:id="@+id/GButtonSwitchPlayer"
-                android:layout_width="wrap_content"
+                android:layout_width="400px"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:fontFamily="@font/gabriela"
@@ -66,6 +66,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/GButtonKalendarz"
+                android:layout_width="414dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/przycisknaprzyciski"
+                android:fontFamily="@font/gabriela"
+                android:text="Kalendarz"
+                android:textColor="#ebebeb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:orientation="horizontal">
 
             <Button
@@ -79,16 +98,6 @@
                 android:text="Stwórz postać"
                 android:textColor="#ebebeb" />
 
-            <Button
-                android:id="@+id/GButtonKalendarz"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="3dp"
-                android:layout_weight="1"
-                android:background="@drawable/przycisknaprzyciski"
-                android:fontFamily="@font/gabriela"
-                android:text="Kalendarz"
-                android:textColor="#ebebeb" />
         </LinearLayout>
 
         <LinearLayout
@@ -124,29 +133,6 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/GButtonTworzenieStołu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/przycisknaprzyciski"
-            android:fontFamily="@font/gabriela"
-            android:text="Tworzenie stołu"
-            android:textColor="#ebebeb"
-            android:visibility="invisible" />
-
-        <Button
-            android:id="@+id/GButtonListaZarzadzanychStolow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/przycisknaprzyciski"
-            android:text="Zarządzaj stołem"
-            android:textColor="#ebebeb"
-            android:visibility="invisible" />
-
     </LinearLayout>
 
     <Button
@@ -159,6 +145,21 @@
         android:text="Lista stołów"
         android:textColor="#ebebeb"
         app:layout_constraintBottom_toTopOf="@+id/GButtonWyszukajPostac"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/GButtonTworzenieStołu"
+        android:layout_width="337dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="50dp"
+        android:layout_weight="1"
+        android:background="@drawable/przycisknaprzyciski"
+        android:fontFamily="@font/gabriela"
+        android:text="Stwórz nowy stół"
+        android:textColor="#ebebeb"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

@@ -52,6 +52,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/gabriela"
                     android:text="Kodzik here"
+                    android:textAlignment="center"
                     android:textColor="#ebebeb" />
 
             </LinearLayout>

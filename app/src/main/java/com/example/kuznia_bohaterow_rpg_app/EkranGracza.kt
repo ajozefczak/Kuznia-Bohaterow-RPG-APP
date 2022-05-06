@@ -36,32 +36,41 @@ class EkranGracza : AppCompatActivity() {
             startActivity(listaPostaciIntent)
             GButtonWyszukajPostac.isEnabled = true
         }
+
+        GButtonListaStoly.setOnClickListener {
+            GButtonListaStoly.isEnabled = false
+            val listStolowIntent = Intent(this, ListaStoly::class.java)
+            startActivity(listStolowIntent)
+            GButtonListaStoly.isEnabled = true
+        }
     }
 
     private fun initListeners() {
         val GButtonKalendarz = findViewById<Button>(R.id.GButtonKalendarz)
         GButtonKalendarz.setOnClickListener(GButtonKalendarzListener)
 
+        val GButtonDodajSt = findViewById<Button>(R.id.GButtonTworzenieStołu)
+        GButtonDodajSt.setOnClickListener(GButtonDodajStolListener)
+
         GButtonSwitchPlayer.setOnClickListener {
             if (GButtonSwitchPlayer.isChecked) {
                 GButtonTworzenieStołu.visibility = View.VISIBLE;
-                GButtonListaZarzadzanychStolow.visibility = View.VISIBLE;
-                GButtonListaStoly.visibility = View.INVISIBLE;
                 GButtonWyszukajPostac.visibility = View.INVISIBLE;
                 idLayoutDolacz.visibility = View.INVISIBLE;
+                GButtonPostac.visibility = View.INVISIBLE;
                 GButtonSwitchPlayer.text = "Tryb MG"
             } else {
                 GButtonTworzenieStołu.visibility = View.INVISIBLE;
-                GButtonListaZarzadzanychStolow.visibility = View.INVISIBLE;
-                GButtonListaStoly.visibility = View.VISIBLE;
                 GButtonWyszukajPostac.visibility = View.VISIBLE;
                 idLayoutDolacz.visibility = View.VISIBLE;
+                GButtonPostac.visibility = View.VISIBLE;
                 GButtonSwitchPlayer.text = "Tryb Gracza"
             }
         }
     }
 
     private val GButtonKalendarzListener = View.OnClickListener { callKalendarzActivity() }
+    private val GButtonDodajStolListener = View.OnClickListener { callDodajStolActivity() }
 
     private fun callKalendarzActivity() {
         GButtonKalendarz.isEnabled = false
@@ -70,5 +79,10 @@ class EkranGracza : AppCompatActivity() {
         GButtonKalendarz.isEnabled = true
     }
 
-
+    private fun callDodajStolActivity() {
+        val DodajStolIntent = Intent(this, DodajStol::class.java)
+        val idCharacter = intent.getStringExtra("id").toString()
+        DodajStolIntent.putExtra("id",idCharacter)
+        startActivity(DodajStolIntent)
+    }
 }

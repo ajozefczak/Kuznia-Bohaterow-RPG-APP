@@ -12,10 +12,13 @@ import kotlinx.android.synthetic.main.activity_historia_postaci.*
 import kotlinx.android.synthetic.main.activity_logowanie.*
 import java.util.HashMap
 
-val db = FirebaseFirestore.getInstance()
-val firebaseUser = FirebaseAuth.getInstance().currentUser!!
+
 
 class DodajPrzedmiot : AppCompatActivity() {
+
+    val db = FirebaseFirestore.getInstance()
+    val firebaseUser = FirebaseAuth.getInstance().currentUser!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dodaj_przedmiot)
