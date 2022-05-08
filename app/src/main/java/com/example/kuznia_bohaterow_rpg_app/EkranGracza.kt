@@ -3,11 +3,19 @@ package com.example.kuznia_bohaterow_rpg_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_dodaj_przedmiot.*
+import kotlinx.android.synthetic.main.activity_dodaj_stol.*
 import kotlinx.android.synthetic.main.activity_ekran_gracza.*
+import kotlinx.android.synthetic.main.activity_ekran_postaci.*
+
+val db = FirebaseFirestore.getInstance()
+val firebaseUser = FirebaseAuth.getInstance().currentUser!!
 
 class EkranGracza : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,6 +50,33 @@ class EkranGracza : AppCompatActivity() {
             val listStolowIntent = Intent(this, ListaStoly::class.java)
             startActivity(listStolowIntent)
             GButtonListaStoly.isEnabled = true
+        }
+
+        GButtonDolaczDoStołu.setOnClickListener {
+            when {
+                TextUtils.isEmpty(GEditTextKodStolu.text.toString()) -> {
+                    Toast.makeText(this, "Wprowadź kod!", Toast.LENGTH_SHORT).show()
+                }
+                else -> {
+                    GButtonDolaczDoStołu.isEnabled = false
+                    var userCode = GEditTextKodStolu.text.toString()
+                    FirebaseFirestore.getInstance().collection("tables")
+                        .whereEqualTo("joinCode", userCode).get().addOnCompleteListener { task ->
+                            if (!task.result.isEmpty) {
+                                for (data in task.result) {
+                                    val StolyIntent = Intent(this, Stoly::class.java)
+                                    StolyIntent.putExtra("tableID",data.id)
+                                    finish()
+                                    startActivity(StolyIntent)
+                                }
+                            }
+                            else {
+                                Toast.makeText(this, "Nie znaleziono kodu lub stół nie istnieje.", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                }
+            }
+            GButtonDolaczDoStołu.isEnabled = true
         }
     }
 

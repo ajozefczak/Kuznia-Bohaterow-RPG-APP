@@ -33,12 +33,13 @@ class DodajStol : AppCompatActivity() {
                 else -> {
                     DodajStolButton.isEnabled = false
                         val itemMutable: MutableMap<String, String> = HashMap()
+                        val itemMutable2: MutableMap<String, String> = HashMap()
                         itemMutable["gmID"] = firebaseUser.uid
                         itemMutable["tableName"] = NazwaStoluInput.text.toString()
-                        itemMutable["tableName"] = OpisStoluInput.text.toString()
+                        itemMutable["tableDesc"] = OpisStoluInput.text.toString()
                         itemMutable["joinCode"] = generateCode()
                         db.collection("tables").add(itemMutable).addOnSuccessListener {
-                            Toast.makeText(this, "Poprawnie dodano stol.", Toast.LENGTH_SHORT)
+                            Toast.makeText(this, "Poprawnie dodano stół.", Toast.LENGTH_SHORT)
                                 .show()
                             val ListaIntent = Intent(this, ListaStoly::class.java)
                             finish()

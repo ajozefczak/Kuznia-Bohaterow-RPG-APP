@@ -42,7 +42,6 @@ class Logowanie : AppCompatActivity() {
                         task ->
                         if(task.isSuccessful){
                             Toast.makeText(this,"Poprawnie zalogowano sie do systemu",Toast.LENGTH_SHORT).show()
-
                             val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
                             startActivity(EkranGraczaIntent)
                             LButtonZaloguj.isEnabled = true
