@@ -19,14 +19,9 @@ class MyListTableAdapter(private val context: Activity, private val tablelist: M
 
         val nameTable = rowView.findViewById(R.id.tableNameText) as TextView
         val descTable = rowView.findViewById(R.id.tableDescText) as TextView
-        val gmStatus = rowView.findViewById(R.id.tableIsGM) as TextView
 
         nameTable.text = tablelist[position].tableName
         descTable.text = tablelist[position].tableDescription
-
-        if(firebaseUser.uid.equals(tablelist[position].gmID)) {
-            gmStatus.visibility = View.VISIBLE
-        }
 
         return rowView
     }

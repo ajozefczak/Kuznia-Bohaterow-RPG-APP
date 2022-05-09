@@ -42,19 +42,6 @@
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="#ebebeb" />
 
-            <TextView
-                android:id="@+id/tableIsGM"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:fontFamily="@font/gabriela"
-                android:text="Jesteś mistrzem gry tego stołu"
-                android:textAlignment="center"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                android:textColor="#FFC107"
-                android:textStyle="bold"
-                android:visibility="gone" />
-
         </LinearLayout>
 
     </LinearLayout>

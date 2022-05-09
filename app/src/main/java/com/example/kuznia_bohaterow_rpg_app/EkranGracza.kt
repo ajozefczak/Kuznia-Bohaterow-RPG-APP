@@ -54,42 +54,68 @@ class EkranGracza : AppCompatActivity() {
         }
 
         GButtonDolaczDoStołu.setOnClickListener {
-            when {
-                TextUtils.isEmpty(GEditTextKodStolu.text.toString()) -> {
-                    Toast.makeText(this, "Wprowadź kod!", Toast.LENGTH_SHORT).show()
-                }
-                else -> {
-                    GButtonDolaczDoStołu.isEnabled = false
-                    var userCode = GEditTextKodStolu.text.toString()
-                    FirebaseFirestore.getInstance().collection("tables")
-                        .whereEqualTo("joinCode", userCode).get().addOnCompleteListener { task ->
-                            if (!task.result.isEmpty) {
-                                for (data in task.result) {
-                                    val joinMutable: MutableMap<String, String> = HashMap()
-                                    joinMutable["tableID"] = data.id
-                                    joinMutable["playerID"] = firebaseUser.uid
-                                    joinMutable["characterID"] = ""
-                                    FirebaseFirestore.getInstance().collection("tables_joins").add(joinMutable).addOnSuccessListener {
-                                        val StolyIntent = Intent(this, Stoly::class.java)
-                                        StolyIntent.putExtra("tableID",data.id)
-                                        startActivity(StolyIntent)
+                when {
+                    TextUtils.isEmpty(GEditTextKodStolu.text.toString()) -> {
+                        Toast.makeText(this, "Wprowadź kod!", Toast.LENGTH_SHORT).show()
+                    }
+                    else -> {
+                        GButtonDolaczDoStołu.isEnabled = false
+                        var userCode = GEditTextKodStolu.text.toString()
+                        FirebaseFirestore.getInstance().collection("tables")
+                            .whereEqualTo("joinCode", userCode).get().addOnCompleteListener { task ->
+                                if (!task.result.isEmpty) {
+                                    for (data in task.result) {
+                                        val joinMutable: MutableMap<String, String> = HashMap()
+                                        var tempIDTable = data.id
+                                        joinMutable["tableID"] = data.id
+                                        joinMutable["playerID"] = firebaseUser.uid
+                                        joinMutable["characterID"] = ""
 
-                                    }.addOnFailureListener { e ->
-                                        Toast.makeText(
-                                            this,
-                                            "Wystąpił nieoczekiwany błąd: " + e,
-                                            Toast.LENGTH_SHORT
-                                        ).show()
+                                        var tempGID = data["gmID"].toString()
+                                        if(tempGID.equals(firebaseUser.uid)){
+                                            Toast.makeText(
+                                                this,
+                                                "Jesteś już na tym stole, bądź jesteś jego Mistrzem Gry ",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                        }
+                                        else
+                                        {
+                                            FirebaseFirestore.getInstance().collection("tables_joins").whereEqualTo("tableID", tempIDTable).whereEqualTo("playerID", firebaseUser.uid).get().addOnCompleteListener { task ->
+                                                if(!task.result.isEmpty)
+                                                {
+                                                    Toast.makeText(
+                                                        this,
+                                                        "Jesteś już na tym stole, bądź jesteś jego Mistrzem Gry ",
+                                                        Toast.LENGTH_SHORT
+                                                    ).show()
+                                                }
+                                                else {
+                                                    FirebaseFirestore.getInstance().collection("tables_joins").add(joinMutable).addOnSuccessListener {
+                                                        val StolyIntent = Intent(this, Stoly::class.java)
+                                                        StolyIntent.putExtra("tableID",data.id)
+                                                        startActivity(StolyIntent)
+
+                                                    }.addOnFailureListener { e ->
+                                                        Toast.makeText(
+                                                            this,
+                                                            "Wystąpił nieoczekiwany błąd: " + e,
+                                                            Toast.LENGTH_SHORT
+                                                        ).show()
+                                                    }
+                                                }
+
+                                            }
+                                        }
                                     }
                                 }
+                                else {
+                                    Toast.makeText(this, "Nie znaleziono kodu lub stół nie istnieje.", Toast.LENGTH_SHORT).show()
+                                }
                             }
-                            else {
-                                Toast.makeText(this, "Nie znaleziono kodu lub stół nie istnieje.", Toast.LENGTH_SHORT).show()
-                            }
-                        }
+                    }
                 }
-            }
-            GButtonDolaczDoStołu.isEnabled = true
+                GButtonDolaczDoStołu.isEnabled = true
         }
     }
 

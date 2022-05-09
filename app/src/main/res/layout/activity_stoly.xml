@@ -65,7 +65,8 @@
                     android:fontFamily="@font/gabriela"
                     android:text="Kod"
                     android:textAlignment="center"
-                    android:textColor="#ebebeb" />
+                    android:textColor="#ebebeb"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 

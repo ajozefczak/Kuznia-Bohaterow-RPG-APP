@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_ekran_postaci.*
 import kotlinx.android.synthetic.main.activity_lista_postaci.*
 import kotlinx.android.synthetic.main.activity_lista_stoly.*
 
@@ -26,7 +27,7 @@ class ListaStoly : AppCompatActivity() {
         }
 
         FirebaseFirestore.getInstance().collection("tables").whereEqualTo("gmID", firebaseUser.uid).get().addOnCompleteListener { task ->
-            if (task.isComplete) {
+            if (!task.result.isEmpty) {
                 for (data in task.result) {
                     var tempTableName = data["tableName"].toString()
                     var tempTableDesc = data["tableDesc"].toString()
@@ -40,7 +41,7 @@ class ListaStoly : AppCompatActivity() {
             }
 
             FirebaseFirestore.getInstance().collection("tables_joins").whereEqualTo("playerID", firebaseUser.uid).get().addOnCompleteListener { task ->
-                if (task.isComplete) {
+                if (!task.result.isEmpty) {
                     for (data in task.result) {
                         var tempTableID = data["tableID"].toString()
 
@@ -56,22 +57,34 @@ class ListaStoly : AppCompatActivity() {
                                 println(tableTemp2.id)
                                 tables.add(tableTemp2)
                             }
+                            tables.sortBy { it.tableName }
+                            val myListTableAdapter = MyListTableAdapter(this, tables)
+                            tableList.adapter = myListTableAdapter
 
+                            tableList.setOnItemClickListener() { adapterView, view, position, id ->
+                                val intent = Intent(this, Stoly::class.java)
+                                intent.putExtra("tableID", tables[position].id)
+                                intent.putExtra("gmID", tables[position].gmID)
+                                intent.putExtra("joinCode", tables[position].tableCode)
+                                startActivity(intent)
+                                finish()
+                            }
                         }
                     }
                 }
+                else {
+                    tables.sortBy { it.tableName }
+                    val myListTableAdapter = MyListTableAdapter(this, tables)
+                    tableList.adapter = myListTableAdapter
 
-                tables.sortBy { it.tableName }
-                val myListTableAdapter = MyListTableAdapter(this, tables)
-                tableList.adapter = myListTableAdapter
-
-                tableList.setOnItemClickListener() { adapterView, view, position, id ->
-                    val intent = Intent(this, Stoly::class.java)
-                    intent.putExtra("tableID", tables[position].id)
-                    intent.putExtra("gmID", tables[position].gmID)
-                    intent.putExtra("joinCode", tables[position].tableCode)
-                    startActivity(intent)
-                    finish()
+                    tableList.setOnItemClickListener() { adapterView, view, position, id ->
+                        val intent = Intent(this, Stoly::class.java)
+                        intent.putExtra("tableID", tables[position].id)
+                        intent.putExtra("gmID", tables[position].gmID)
+                        intent.putExtra("joinCode", tables[position].tableCode)
+                        startActivity(intent)
+                        finish()
+                    }
                 }
             }
         }
