@@ -38,12 +38,12 @@ class DodajStol : AppCompatActivity() {
                         itemMutable["tableName"] = NazwaStoluInput.text.toString()
                         itemMutable["tableDesc"] = OpisStoluInput.text.toString()
                         itemMutable["joinCode"] = generateCode()
+                        itemMutable["joinCode"] = generateCode()
+                        itemMutable["joinCode"] = generateCode()
                         db.collection("tables").add(itemMutable).addOnSuccessListener {
                             Toast.makeText(this, "Poprawnie dodano stół.", Toast.LENGTH_SHORT)
                                 .show()
-                            val ListaIntent = Intent(this, ListaStoly::class.java)
                             finish()
-                            startActivity(ListaIntent)
                             DodajStolButton.isEnabled = true
 
                         }.addOnFailureListener { e ->

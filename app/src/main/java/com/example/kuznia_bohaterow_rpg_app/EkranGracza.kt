@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_dodaj_przedmiot.*
 import kotlinx.android.synthetic.main.activity_dodaj_stol.*
 import kotlinx.android.synthetic.main.activity_ekran_gracza.*
 import kotlinx.android.synthetic.main.activity_ekran_postaci.*
+import java.util.HashMap
 
 val db = FirebaseFirestore.getInstance()
 val firebaseUser = FirebaseAuth.getInstance().currentUser!!
@@ -64,10 +65,22 @@ class EkranGracza : AppCompatActivity() {
                         .whereEqualTo("joinCode", userCode).get().addOnCompleteListener { task ->
                             if (!task.result.isEmpty) {
                                 for (data in task.result) {
-                                    val StolyIntent = Intent(this, Stoly::class.java)
-                                    StolyIntent.putExtra("tableID",data.id)
-                                    finish()
-                                    startActivity(StolyIntent)
+                                    val joinMutable: MutableMap<String, String> = HashMap()
+                                    joinMutable["tableID"] = data.id
+                                    joinMutable["playerID"] = firebaseUser.uid
+                                    joinMutable["characterID"] = ""
+                                    FirebaseFirestore.getInstance().collection("tables_joins").add(joinMutable).addOnSuccessListener {
+                                        val StolyIntent = Intent(this, Stoly::class.java)
+                                        StolyIntent.putExtra("tableID",data.id)
+                                        startActivity(StolyIntent)
+
+                                    }.addOnFailureListener { e ->
+                                        Toast.makeText(
+                                            this,
+                                            "Wystąpił nieoczekiwany błąd: " + e,
+                                            Toast.LENGTH_SHORT
+                                        ).show()
+                                    }
                                 }
                             }
                             else {

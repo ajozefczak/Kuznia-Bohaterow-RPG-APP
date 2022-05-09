@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class MyListTableAdapter(private val context: Activity, private val tablelist: MutableList<TableOnList>)
-    : ArrayAdapter<TableOnList>(context, R.layout.custom_spell_list, tablelist) {
+    : ArrayAdapter<TableOnList>(context, R.layout.custom_table_list, tablelist) {
 
     override fun getView(position: Int, view: View?, parent: ViewGroup): View {
         val inflater = context.layoutInflater
@@ -19,14 +19,15 @@ class MyListTableAdapter(private val context: Activity, private val tablelist: M
 
         val nameTable = rowView.findViewById(R.id.tableNameText) as TextView
         val descTable = rowView.findViewById(R.id.tableDescText) as TextView
-        val tableDelete = rowView.findViewById(R.id.tableEditButton) as Button
+        val gmStatus = rowView.findViewById(R.id.tableIsGM) as TextView
 
         nameTable.text = tablelist[position].tableName
         descTable.text = tablelist[position].tableDescription
 
-        tableDelete.setOnClickListener {
-
+        if(firebaseUser.uid.equals(tablelist[position].gmID)) {
+            gmStatus.visibility = View.VISIBLE
         }
+
         return rowView
     }
 
