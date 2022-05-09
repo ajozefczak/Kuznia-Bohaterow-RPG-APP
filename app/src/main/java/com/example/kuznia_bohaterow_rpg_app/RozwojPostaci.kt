@@ -72,6 +72,48 @@ class RozwojPostaci : AppCompatActivity() {
             finish()
         }
 
+        RozwojPostaciButtonD4.setOnClickListener {
+            RozwojPostaciButtonD4.isEnabled = false
+            val pepegaValue = (1..4).random()
+            textView59.setText(pepegaValue.toString())
+            RozwojPostaciButtonD4.isEnabled = true
+        }
+
+        RozwojPostaciButtonD6.setOnClickListener {
+            RozwojPostaciButtonD6.isEnabled = false
+            val pepegaValue = (1..6).random()
+            textView59.setText(pepegaValue.toString())
+            RozwojPostaciButtonD6.isEnabled = true
+        }
+
+        RozwojPostaciButtonD8.setOnClickListener {
+            RozwojPostaciButtonD8.isEnabled = false
+            val pepegaValue = (1..8).random()
+            textView59.setText(pepegaValue.toString())
+            RozwojPostaciButtonD8.isEnabled = true
+        }
+
+        RozwojPostaciButtonD10.setOnClickListener {
+            RozwojPostaciButtonD10.isEnabled = false
+            val pepegaValue = (1..10).random()
+            textView59.setText(pepegaValue.toString())
+            RozwojPostaciButtonD10.isEnabled = true
+        }
+
+        RozwojPostaciButtonD12.setOnClickListener {
+            RozwojPostaciButtonD12.isEnabled = false
+            val pepegaValue = (1..12).random()
+            textView59.setText(pepegaValue.toString())
+            RozwojPostaciButtonD12.isEnabled = true
+        }
+
+        RozwojPostaciButtonD20.setOnClickListener {
+            RozwojPostaciButtonD20.isEnabled = false
+            val pepegaValue = (1..20).random()
+            textView59.setText(pepegaValue.toString())
+            RozwojPostaciButtonD20.isEnabled = true
+        }
+
 
 
     }
