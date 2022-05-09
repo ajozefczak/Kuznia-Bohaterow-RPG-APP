@@ -33,17 +33,37 @@ class RozwojPostaci : AppCompatActivity() {
             }
         }
 
+
+
         button2.setOnClickListener{
+            var pepega1 = Integer.parseInt(editTextTextPersonName4.text.toString())
+            var pepega2 = Integer.parseInt(editTextTextPersonName7.text.toString())
+            var pepega3 = Integer.parseInt(editTextTextPersonName8.text.toString())
+            var pepega4 = Integer.parseInt(editTextTextPersonName9.text.toString())
+            var pepega5 = Integer.parseInt(editTextTextPersonName10.text.toString())
+            var pepega6 = Integer.parseInt(editTextTextPersonName11.text.toString())
+            var pepega7 = Integer.parseInt(editTextTextPersonName12.text.toString())
+            var pepega8 = Integer.parseInt(editTextTextPersonName13.text.toString())
+            var pepega9 = Integer.parseInt(editTextTextPersonName14.text.toString())
             if(
                 !editTextTextPersonName4.text.isEmpty() &&
+                pepega1 > 0 && pepega1 < 100 &&
                 !editTextTextPersonName7.text.isEmpty() &&
+                pepega2 > 0 && pepega2 < 100 &&
                 !editTextTextPersonName8.text.isEmpty() &&
+                pepega3 > 0 && pepega3 < 100 &&
                 !editTextTextPersonName9.text.isEmpty() &&
+                pepega4 > 0 && pepega4 < 100 &&
                 !editTextTextPersonName10.text.isEmpty() &&
+                pepega5 > 0 && pepega5 < 100 &&
                 !editTextTextPersonName11.text.isEmpty() &&
+                pepega6 > 0 && pepega6 < 100 &&
                 !editTextTextPersonName12.text.isEmpty() &&
+                pepega7 > 0 && pepega7 < 100 &&
                 !editTextTextPersonName13.text.isEmpty() &&
-                !editTextTextPersonName14.text.isEmpty()
+                pepega8 > 0 && pepega8 < 100 &&
+                !editTextTextPersonName14.text.isEmpty() &&
+                pepega9 > 0 && pepega9 < 100
                     ) {
                 button2.isEnabled = false
                 FirebaseFirestore.getInstance().collection("charactersheet").document(idCharacter)
