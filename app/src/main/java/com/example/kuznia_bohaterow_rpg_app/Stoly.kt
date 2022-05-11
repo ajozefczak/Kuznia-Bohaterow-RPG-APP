@@ -1,17 +1,20 @@
 package com.example.kuznia_bohaterow_rpg_app
 
-import androidx.appcompat.app.AppCompatActivity
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_ekran_postaci.*
 import kotlinx.android.synthetic.main.activity_kalendarz.*
 import kotlinx.android.synthetic.main.activity_lista_postaci.*
 import kotlinx.android.synthetic.main.activity_stoly.*
-import java.util.HashMap
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 class Stoly : AppCompatActivity() {
 
@@ -22,6 +25,7 @@ class Stoly : AppCompatActivity() {
     var runnable: Runnable? = null
     var delay = 3000
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stoly)
@@ -48,10 +52,15 @@ class Stoly : AppCompatActivity() {
 
                 val charactersheet: MutableMap<String, String> = HashMap()
 
+                val current = LocalDateTime.now()
+                /*val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+                val formatedCurrent: String = current.format(formatter)*/
+
                 charactersheet["id"] = firebaseUser.uid
                 charactersheet["message"] = editTextTextPersonName5.text.toString()
                 charactersheet["table"] = idTable
                 charactersheet["nick"] = firebaseUser.uid
+                charactersheet["date"] = current.toString()
 
                 db.collection("chat").add(charactersheet).addOnSuccessListener {
                         Toast.makeText(this, "Wiadomość została wysłana", Toast.LENGTH_SHORT).show()
@@ -75,9 +84,13 @@ class Stoly : AppCompatActivity() {
                 for(data in task.result){
                     var nick = data["nick"].toString()
                     var message = data["message"].toString()
+                    var date = data["date"].toString()
 
-                    var tempChatMessage = MessagesOnList(nick,message)
+
+                    var tempChatMessage = MessagesOnList(nick,message,date)
                     chatMessages.add(tempChatMessage)
+
+                    chatMessages.sortBy { it.date }
 
                     val myListChatAdapter = MyListChatMessageAdapter(this,chatMessages)
                     chatlist.adapter = myListChatAdapter
@@ -128,9 +141,13 @@ class Stoly : AppCompatActivity() {
                     for(data in task.result){
                         var nick = data["nick"].toString()
                         var message = data["message"].toString()
+                        var date = data["date"].toString()
 
-                        var tempChatMessage = MessagesOnList(nick,message)
+
+                        var tempChatMessage = MessagesOnList(nick,message,date)
                         chatMessages.add(tempChatMessage)
+
+                        chatMessages.sortBy { it.date }
 
                         val myListChatAdapter = MyListChatMessageAdapter(this,chatMessages)
                         chatlist.adapter = myListChatAdapter
