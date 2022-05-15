@@ -12,36 +12,40 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/gabriela"
+            android:text="nick"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="#ebebeb"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gabriela"
+            android:text=":"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="#ebebeb"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/message"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/gabriela"
+            android:text="message"
+            android:textColor="#ebebeb"
+            android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/nick"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:fontFamily="@font/gabriela"
-                android:text="nick"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                android:textColor="#ebebeb"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/message"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/gabriela"
-                android:text="message"
-                android:textColor="#ebebeb"
-                android:textSize="14sp" />
-        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

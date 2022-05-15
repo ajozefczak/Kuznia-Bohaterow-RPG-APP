@@ -15,7 +15,7 @@ class DodajStol : AppCompatActivity() {
 
     val db = FirebaseFirestore.getInstance()
     val firebaseUser = FirebaseAuth.getInstance().currentUser!!
-
+    var codeGenerated = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dodaj_stol)
@@ -40,6 +40,7 @@ class DodajStol : AppCompatActivity() {
                         itemMutable["joinCode"] = generateCode()
                         itemMutable["joinCode"] = generateCode()
                         itemMutable["joinCode"] = generateCode()
+                        codeGenerated = itemMutable["joinCode"].toString()
                         db.collection("tables").add(itemMutable).addOnSuccessListener {
                             Toast.makeText(this, "Poprawnie dodano stół.", Toast.LENGTH_SHORT)
                                 .show()

@@ -12,15 +12,19 @@ class ListaPostaci : AppCompatActivity() {
     val db = FirebaseFirestore.getInstance()
     val firebaseUser = FirebaseAuth.getInstance().currentUser!!
 
+    override fun onRestart() {
+        super.onRestart()
+        finish()
+        overridePendingTransition(0, 0)
+        startActivity(intent)
+        overridePendingTransition(0, 0)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_postaci)
 
         val characters: MutableList<CharacterOnList> = mutableListOf()
-        //val characterNamesMutable: MutableList<String> = mutableListOf()
-        //val characterOcupationsMutable: MutableList<String> = mutableListOf()
-        //val characterAvatarsMutable: MutableList<String> = mutableListOf()
-        //val characterIDsMutable: MutableList<String> = mutableListOf()
 
         FirebaseFirestore.getInstance().collection("charactersheet").whereEqualTo("id", firebaseUser.uid).get().addOnCompleteListener { task ->
             if (task.isSuccessful) {

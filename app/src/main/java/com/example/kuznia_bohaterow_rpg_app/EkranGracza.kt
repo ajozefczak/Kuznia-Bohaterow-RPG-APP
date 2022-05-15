@@ -15,10 +15,12 @@ import kotlinx.android.synthetic.main.activity_ekran_gracza.*
 import kotlinx.android.synthetic.main.activity_ekran_postaci.*
 import java.util.HashMap
 
-val db = FirebaseFirestore.getInstance()
-val firebaseUser = FirebaseAuth.getInstance().currentUser!!
 
 class EkranGracza : AppCompatActivity() {
+
+    val db = FirebaseFirestore.getInstance()
+    val firebaseUser = FirebaseAuth.getInstance().currentUser!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ekran_gracza)
@@ -69,13 +71,14 @@ class EkranGracza : AppCompatActivity() {
                                         var tempIDTable = data.id
                                         joinMutable["tableID"] = data.id
                                         joinMutable["playerID"] = firebaseUser.uid
-                                        joinMutable["characterID"] = ""
+                                        joinMutable["characterID"] = "brak"
+                                        joinMutable["characterName"] = "Nieznany"
 
                                         var tempGID = data["gmID"].toString()
                                         if(tempGID.equals(firebaseUser.uid)){
                                             Toast.makeText(
                                                 this,
-                                                "Jesteś już na tym stole, bądź jesteś jego Mistrzem Gry ",
+                                                "Jesteś Mistrzem Gry tego stołu. Nie możesz dołączyć.",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                         }
@@ -86,14 +89,13 @@ class EkranGracza : AppCompatActivity() {
                                                 {
                                                     Toast.makeText(
                                                         this,
-                                                        "Jesteś już na tym stole, bądź jesteś jego Mistrzem Gry ",
+                                                        "Jesteś już na tym stole." + firebaseUser.uid,
                                                         Toast.LENGTH_SHORT
                                                     ).show()
                                                 }
                                                 else {
                                                     FirebaseFirestore.getInstance().collection("tables_joins").add(joinMutable).addOnSuccessListener {
-                                                        val StolyIntent = Intent(this, Stoly::class.java)
-                                                        StolyIntent.putExtra("tableID",data.id)
+                                                        val StolyIntent = Intent(this, ListaStoly::class.java)
                                                         startActivity(StolyIntent)
 
                                                     }.addOnFailureListener { e ->
