@@ -319,6 +319,14 @@ class Stoly : AppCompatActivity() {
             StolyButtonD100.isEnabled = true
         }
 
+        archivum.setOnClickListener {
+            archivum.isEnabled = false
+            val archivumIntent = Intent(this, archiwum::class.java)
+            archivumIntent.putExtra("tableID",idTable)
+            startActivity(archivumIntent)
+            archivum.isEnabled = true
+        }
+
         val players: MutableList<PlayerOnList> = mutableListOf()
         val chatMessages: MutableList<MessagesOnList> = mutableListOf()
 
@@ -335,7 +343,9 @@ class Stoly : AppCompatActivity() {
 
                     chatMessages.sortBy { it.date }
 
-                    val myListChatAdapter = MyListChatMessageAdapter(this,chatMessages)
+                    var firstTenMsg = chatMessages.takeLast(15).toMutableList()
+
+                    val myListChatAdapter = MyListChatMessageAdapter(this,firstTenMsg)
                     chatlist.adapter = myListChatAdapter
                 }
             }
@@ -396,7 +406,9 @@ class Stoly : AppCompatActivity() {
 
                         chatMessages.sortBy { it.date }
 
-                        val myListChatAdapter = MyListChatMessageAdapter(this,chatMessages)
+                        var firstTenMsg = chatMessages.takeLast(15).toMutableList()
+
+                        val myListChatAdapter = MyListChatMessageAdapter(this,firstTenMsg)
                         chatlist.adapter = myListChatAdapter
                     }
                 }
