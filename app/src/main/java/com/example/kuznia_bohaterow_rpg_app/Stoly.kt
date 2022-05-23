@@ -27,6 +27,10 @@ class Stoly : AppCompatActivity() {
     var runnable: Runnable? = null
     var delay = 3000
 
+    var colorR = "255"
+    var colorG = "255"
+    var colorB = "255"
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +46,16 @@ class Stoly : AppCompatActivity() {
         if(firebaseUser.uid.equals(gmID)){
             EditTableButton.visibility = View.VISIBLE
             StolyButtonDodajPostac.visibility = View.GONE
+        }
+
+        FirebaseFirestore.getInstance().collection("tables_joins").whereEqualTo("tableID", idTable).whereEqualTo("playerID", firebaseUser.uid).get().addOnCompleteListener { task ->
+            if (task.isComplete) {
+                for (data in task.result) {
+                    colorR = data["colorR"].toString()
+                    colorG = data["colorG"].toString()
+                    colorB = data["colorB"].toString()
+                }
+            }
         }
 
         StolyButtonDodajPostac.setOnClickListener {
@@ -90,6 +104,11 @@ class Stoly : AppCompatActivity() {
                             charactersheet["table"] = idTable
                             charactersheet["nick"] = tempNick
                             charactersheet["date"] = current.toString()
+
+                            charactersheet["colorR"] = colorR
+                            charactersheet["colorG"] = colorG
+                            charactersheet["colorB"] = colorB
+
 
                             db.collection("chat").add(charactersheet).addOnSuccessListener {
                                 Toast.makeText(this, "Wiadomość została wysłana", Toast.LENGTH_SHORT).show()
@@ -343,8 +362,12 @@ class Stoly : AppCompatActivity() {
                     var message = data["message"].toString()
                     var date = data["date"].toString()
 
+                    var msgColorR = data["colorR"].toString()
+                    var msgColorG = data["colorG"].toString()
+                    var msgColorB = data["colorB"].toString()
 
-                    var tempChatMessage = MessagesOnList(nick,message,date)
+
+                    var tempChatMessage = MessagesOnList(nick,message,date,msgColorR,msgColorG,msgColorB)
                     chatMessages.add(tempChatMessage)
 
                     chatMessages.sortBy { it.date }
@@ -440,8 +463,12 @@ class Stoly : AppCompatActivity() {
                         var message = data["message"].toString()
                         var date = data["date"].toString()
 
+                        var msgColorR = data["colorR"].toString()
+                        var msgColorG = data["colorG"].toString()
+                        var msgColorB = data["colorB"].toString()
 
-                        var tempChatMessage = MessagesOnList(nick,message,date)
+
+                        var tempChatMessage = MessagesOnList(nick,message,date,msgColorR,msgColorG,msgColorB)
                         chatMessages.add(tempChatMessage)
 
                         chatMessages.sortBy { it.date }

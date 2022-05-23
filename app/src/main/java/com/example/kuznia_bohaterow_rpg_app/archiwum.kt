@@ -21,8 +21,12 @@ class archiwum : AppCompatActivity() {
                     var message = data["message"].toString()
                     var date = data["date"].toString()
 
+                    var msgColorR = data["colorR"].toString()
+                    var msgColorG = data["colorG"].toString()
+                    var msgColorB = data["colorB"].toString()
 
-                    var tempChatMessage = MessagesOnList(nick,message,date)
+
+                    var tempChatMessage = MessagesOnList(nick,message,date,msgColorR,msgColorG,msgColorB)
                     chatMessages.add(tempChatMessage)
 
                     chatMessages.sortBy { it.date }

@@ -1,19 +1,16 @@
 package com.example.kuznia_bohaterow_rpg_app
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_dodaj_przedmiot.*
-import kotlinx.android.synthetic.main.activity_dodaj_stol.*
 import kotlinx.android.synthetic.main.activity_ekran_gracza.*
-import kotlinx.android.synthetic.main.activity_ekran_postaci.*
-import java.util.HashMap
+import java.util.*
 
 
 class EkranGracza : AppCompatActivity() {
@@ -73,6 +70,10 @@ class EkranGracza : AppCompatActivity() {
                                         joinMutable["playerID"] = firebaseUser.uid
                                         joinMutable["characterID"] = "brak"
                                         joinMutable["characterName"] = "Nieznany"
+                                        joinMutable["colorR"] = (0..256).random().toString()
+                                        joinMutable["colorG"] = (0..256).random().toString()
+                                        joinMutable["colorB"] = (0..256).random().toString()
+
 
                                         var tempGID = data["gmID"].toString()
                                         if(tempGID.equals(firebaseUser.uid)){
