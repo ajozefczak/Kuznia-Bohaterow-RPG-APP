@@ -19,6 +19,9 @@
             android:name=".ChooseCharacter"
             android:exported="false" />
         <activity
+            android:name=".CheckCharacterOnList"
+            android:exported="false" />
+        <activity
             android:name=".DodajStol"
             android:exported="false" />
         <activity
