@@ -89,7 +89,7 @@ class EkranGracza : AppCompatActivity() {
                                                 {
                                                     Toast.makeText(
                                                         this,
-                                                        "Jesteś już na tym stole." + firebaseUser.uid,
+                                                        "Jesteś już na tym stole.",
                                                         Toast.LENGTH_SHORT
                                                     ).show()
                                                 }

@@ -58,6 +58,12 @@ class Stoly : AppCompatActivity() {
             }
         }
 
+        EditTableButton.setOnClickListener{
+            val editTable = Intent(this, EdycjaStolu::class.java)
+            val idTable = intent.getStringExtra("tableID").toString()
+            editTable.putExtra("tableID",idTable);
+            startActivity(editTable);
+        }
 
         StolyButtonCofnij.setOnClickListener {
             finish()
@@ -379,9 +385,35 @@ class Stoly : AppCompatActivity() {
                             players.sortBy { it.nick }
                             val myListAdapter = MyListPlayerAdapter(this, players)
                             playerList.adapter = myListAdapter
+
+
+
+                            playerList.setOnItemClickListener(){adapterView, view, position, id ->
+                                if(players[position].charname != "Brak wybranej postaci"){
+                                    val intent = Intent(this,CheckCharacterOnList::class.java)
+                                    intent.putExtra("id",players[position].chID)
+                                    startActivity(intent)
+                                    finish()
+                                }
+                                else {
+                                    Toast.makeText(this, "Gracz nie wybrał postaci!", Toast.LENGTH_SHORT).show()
+                                }
+                            }
                         }
                     }
                 }
+            }
+        }
+
+
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        val idTable = intent.getStringExtra("tableID").toString()
+        FirebaseFirestore.getInstance().collection("tables").document(idTable).get().addOnSuccessListener(){ task ->
+            if(!task.exists()){
+                finish()
             }
         }
     }
@@ -390,8 +422,16 @@ class Stoly : AppCompatActivity() {
         handler.postDelayed(Runnable {
             handler.postDelayed(runnable!!, delay.toLong())
 
+            var idTable = intent.getStringExtra("tableID").toString()
+            var gmID = intent.getStringExtra("gmID").toString()
+
+            FirebaseFirestore.getInstance().collection("tables_joins").whereEqualTo("tableID",idTable).whereEqualTo("playerID", firebaseUser.uid).get().addOnCompleteListener{ task ->
+                if(task.result.isEmpty && gmID != firebaseUser.uid) {
+                    finish()
+                }
+            }
+
             val chatMessages: MutableList<MessagesOnList> = mutableListOf()
-            val idTable = intent.getStringExtra("tableID").toString()
 
             FirebaseFirestore.getInstance().collection("chat").whereEqualTo("table",idTable).get().addOnCompleteListener{ task ->
                 if(task.isComplete){
@@ -413,16 +453,15 @@ class Stoly : AppCompatActivity() {
                     }
                 }
             }
+
             val players: MutableList<PlayerOnList> = mutableListOf()
             FirebaseFirestore.getInstance().collection("tables_joins").whereEqualTo("tableID", idTable).get().addOnCompleteListener { task ->
-                if (task.isComplete) {
+                if (!task.result.isEmpty) {
                     for (data in task.result) {
-
                         var tempPlayerID = data["playerID"].toString()
                         var tempCharID = data["characterID"].toString()
                         var tempNick = "Nieznany"
                         var tempCharName = "Brak wybranej postaci"
-
                         if(tempCharID != "brak") {
                             tempCharName = data["characterName"].toString()
                         }
@@ -442,9 +481,26 @@ class Stoly : AppCompatActivity() {
                                 players.sortBy { it.nick }
                                 val myListAdapter = MyListPlayerAdapter(this, players)
                                 playerList.adapter = myListAdapter
+
+                                playerList.setOnItemClickListener(){adapterView, view, position, id ->
+                                    if(players[position].charname != "Brak wybranej postaci"){
+                                        val intent = Intent(this,CheckCharacterOnList::class.java)
+                                        intent.putExtra("id",players[position].chID)
+                                        startActivity(intent)
+                                        finish()
+                                    }
+                                    else {
+                                        Toast.makeText(this, "Gracz nie wybrał postaci!", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
                             }
                         }
                     }
+                }
+                else{
+                    players.clear()
+                    val myListAdapter = MyListPlayerAdapter(this, players)
+                    playerList.adapter = myListAdapter
                 }
             }
         }.also { runnable = it },delay.toLong())

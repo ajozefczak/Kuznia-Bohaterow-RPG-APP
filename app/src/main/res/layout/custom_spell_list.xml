@@ -57,6 +57,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="2dp"
                 android:background="@drawable/przycisknaprzyciski"
+                android:fontFamily="@font/gabriela"
                 android:text="Usuń"
                 android:textColor="#ebebeb" />
 

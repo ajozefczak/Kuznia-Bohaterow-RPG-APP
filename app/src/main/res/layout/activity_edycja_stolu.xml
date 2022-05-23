@@ -13,7 +13,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/EditTableNameText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -35,7 +35,7 @@
             android:textColor="#ebebeb" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName15"
+            android:id="@+id/EditTableTextDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -57,6 +57,7 @@
             android:textColor="#ebebeb" />
 
         <ListView
+            android:id="@+id/ETListOfUsers"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp"

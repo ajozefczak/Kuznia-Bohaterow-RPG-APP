@@ -1,6 +1,7 @@
 package com.example.kuznia_bohaterow_rpg_app
 
 import android.app.Activity
+import android.graphics.Color
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
@@ -17,7 +18,6 @@ public class MyListChatMessageAdapter(private val context: Activity, private val
 
         nick.text = chatlist[position].nick
         message.text = chatlist[position].message
-
 
         return rowView
     }

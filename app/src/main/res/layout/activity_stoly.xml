@@ -145,6 +145,7 @@
                 android:fontFamily="@font/gabriela"
                 android:text="Archiwum"
                 android:textColor="#ebebeb" />
+
         </LinearLayout>
 
         <LinearLayout

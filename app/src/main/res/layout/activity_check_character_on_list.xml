@@ -19,7 +19,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/EPAvatarImage"
+                android:id="@+id/CPAvatarImage"
                 android:layout_width="150dp"
                 android:layout_height="85dp"
                 android:layout_margin="5dp"
@@ -32,7 +32,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/EPTextImie"
+                    android:id="@+id/CPTextImie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -44,7 +44,7 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/EPTextZawod"
+                    android:id="@+id/CPTextZawod"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -89,7 +89,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/EPLayoutSila"
+            android:id="@+id/CPLayoutSila"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -108,7 +108,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/EPLiczbaSila"
+                android:id="@+id/CPLiczbaSila"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
@@ -119,7 +119,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/EPLayoutKondycja"
+            android:id="@+id/CPLayoutKondycja"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -138,9 +138,9 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/EPLiczbaKondycja"
+                android:id="@+id/CPLiczbaKondycja"
                 android:layout_width="40dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:fontFamily="@font/gabriela"
                 android:text="50"
@@ -149,7 +149,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/EPLayoutBudowaCiala"
+            android:id="@+id/CPLayoutBudowaCiala"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -160,7 +160,7 @@
             <TextView
                 android:id="@+id/textView28"
                 android:layout_width="40dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/gabriela"
                 android:text="Budowa Ciała"
@@ -168,7 +168,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/EPLiczbaBudowaCiala"
+                android:id="@+id/CPLiczbaBudowaCiala"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -179,7 +179,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/EPLayoutZrecznosc"
+            android:id="@+id/CPLayoutZrecznosc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -198,7 +198,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/EPLiczbaZrecznosc"
+                android:id="@+id/CPLiczbaZrecznosc"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -209,7 +209,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/EPLayoutInteligecja"
+            android:id="@+id/CPLayoutInteligecja"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -228,7 +228,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/EPLiczbaInteligencja"
+                android:id="@+id/CPLiczbaInteligencja"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -239,7 +239,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/EPLayoutMoc"
+            android:id="@+id/CPLayoutMoc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -258,7 +258,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/EPLiczbaMoc"
+                android:id="@+id/CPLiczbaMoc"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -269,7 +269,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/EPLayoutWyksztalcenie"
+            android:id="@+id/CPLayoutWyksztalcenie"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -288,7 +288,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/EPLiczbaWyksztalcenie"
+                android:id="@+id/CPLiczbaWyksztalcenie"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -299,7 +299,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/EPLayoutPoczytalnosc"
+            android:id="@+id/CPLayoutPoczytalnosc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -318,7 +318,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/EPLiczbaPoczytalnosc"
+                android:id="@+id/CPLiczbaPoczytalnosc"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -329,7 +329,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/EPLayoutWyglad"
+            android:id="@+id/CPLayoutWyglad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -348,7 +348,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/EPLiczbaWyglad"
+                android:id="@+id/CPLiczbaWyglad"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -361,88 +361,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
             android:layout_weight="1"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/EPButtonRozwin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/przycisknaprzyciski"
-                android:fontFamily="@font/gabriela"
-                android:text="Rozwiń Postać"
-                android:textColor="#ebebeb" />
-
-            <Button
-                android:id="@+id/EPButtonUsun"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/przycisknaprzyciski"
-                android:fontFamily="@font/gabriela"
-                android:text="Usuń Postać"
-                android:textColor="#ebebeb" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/EPButtonEkiwpunek"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/przycisknaprzyciski"
-                android:fontFamily="@font/gabriela"
-                android:text="Ekwipunek"
-                android:textColor="#ebebeb" />
-
-            <Button
-                android:id="@+id/EPButtonHistoria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/przycisknaprzyciski"
-                android:fontFamily="@font/gabriela"
-                android:text="Historia"
-                android:textColor="#ebebeb" />
-
-            <Button
-                android:id="@+id/EPButtonZaklecia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/przycisknaprzyciski"
-                android:fontFamily="@font/gabriela"
-                android:text="Zaklęcia"
-                android:textColor="#ebebeb" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/EPButtonNotatki"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/przycisknaprzyciski"
-                android:fontFamily="@font/gabriela"
-                android:text="Notatki"
-                android:textColor="#ebebeb" />
-
-            <Button
-                android:id="@+id/EPButtonPowrot"
+                android:id="@+id/CPButtonPowrot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
