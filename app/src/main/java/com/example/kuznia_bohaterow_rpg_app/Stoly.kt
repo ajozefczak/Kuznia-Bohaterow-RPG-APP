@@ -134,6 +134,8 @@ class Stoly : AppCompatActivity() {
             val charactersheet: MutableMap<String, String> = HashMap()
             val current = LocalDateTime.now()
 
+
+
             var tempNick = firebaseUser.uid
             FirebaseFirestore.getInstance().collection("users").whereEqualTo("id", firebaseUser.uid).get().addOnCompleteListener { task2 ->
                 if (task2.isComplete) {
@@ -144,6 +146,10 @@ class Stoly : AppCompatActivity() {
                         charactersheet["table"] = idTable
                         charactersheet["nick"] = tempNick
                         charactersheet["date"] = current.toString()
+                        charactersheet["colorR"] = colorR
+                        charactersheet["colorG"] = colorG
+                        charactersheet["colorB"] = colorB
+
 
                         db.collection("chat").add(charactersheet).addOnSuccessListener {
                             StolyButtonWyslijWiadomosc.isEnabled = true
@@ -175,6 +181,9 @@ class Stoly : AppCompatActivity() {
                         charactersheet["table"] = idTable
                         charactersheet["nick"] = tempNick
                         charactersheet["date"] = current.toString()
+                        charactersheet["colorR"] = colorR
+                        charactersheet["colorG"] = colorG
+                        charactersheet["colorB"] = colorB
 
                         db.collection("chat").add(charactersheet).addOnSuccessListener {
                             StolyButtonWyslijWiadomosc.isEnabled = true
@@ -206,6 +215,9 @@ class Stoly : AppCompatActivity() {
                         charactersheet["table"] = idTable
                         charactersheet["nick"] = tempNick
                         charactersheet["date"] = current.toString()
+                        charactersheet["colorR"] = colorR
+                        charactersheet["colorG"] = colorG
+                        charactersheet["colorB"] = colorB
 
                         db.collection("chat").add(charactersheet).addOnSuccessListener {
                             StolyButtonWyslijWiadomosc.isEnabled = true
@@ -237,6 +249,9 @@ class Stoly : AppCompatActivity() {
                         charactersheet["table"] = idTable
                         charactersheet["nick"] = tempNick
                         charactersheet["date"] = current.toString()
+                        charactersheet["colorR"] = colorR
+                        charactersheet["colorG"] = colorG
+                        charactersheet["colorB"] = colorB
 
                         db.collection("chat").add(charactersheet).addOnSuccessListener {
                             StolyButtonWyslijWiadomosc.isEnabled = true
@@ -268,6 +283,9 @@ class Stoly : AppCompatActivity() {
                         charactersheet["table"] = idTable
                         charactersheet["nick"] = tempNick
                         charactersheet["date"] = current.toString()
+                        charactersheet["colorR"] = colorR
+                        charactersheet["colorG"] = colorG
+                        charactersheet["colorB"] = colorB
 
                         db.collection("chat").add(charactersheet).addOnSuccessListener {
                             StolyButtonWyslijWiadomosc.isEnabled = true
@@ -299,6 +317,9 @@ class Stoly : AppCompatActivity() {
                         charactersheet["table"] = idTable
                         charactersheet["nick"] = tempNick
                         charactersheet["date"] = current.toString()
+                        charactersheet["colorR"] = colorR
+                        charactersheet["colorG"] = colorG
+                        charactersheet["colorB"] = colorB
 
                         db.collection("chat").add(charactersheet).addOnSuccessListener {
                             StolyButtonWyslijWiadomosc.isEnabled = true
@@ -330,6 +351,9 @@ class Stoly : AppCompatActivity() {
                         charactersheet["table"] = idTable
                         charactersheet["nick"] = tempNick
                         charactersheet["date"] = current.toString()
+                        charactersheet["colorR"] = colorR
+                        charactersheet["colorG"] = colorG
+                        charactersheet["colorB"] = colorB
 
                         db.collection("chat").add(charactersheet).addOnSuccessListener {
                             StolyButtonWyslijWiadomosc.isEnabled = true
