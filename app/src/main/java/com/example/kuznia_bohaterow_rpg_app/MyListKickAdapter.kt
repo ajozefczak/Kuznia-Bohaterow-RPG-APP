@@ -7,6 +7,7 @@ import android.widget.*
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_tworzenie_postaci.*
 
 class MyListKickAdapter(private val context: Activity, private val playerKickList: MutableList<PlayerKickOnList>)
     : ArrayAdapter<PlayerKickOnList>(context, R.layout.custom_player_kick_list, playerKickList) {
@@ -24,6 +25,12 @@ class MyListKickAdapter(private val context: Activity, private val playerKickLis
             val db = FirebaseFirestore.getInstance()
             db.collection("tables_joins").document(playerKickList[position].joinID).delete().addOnCompleteListener() {
                 Toast.makeText(context, "Poprawnie wyrzucono gracza ze stołu", Toast.LENGTH_SHORT).show()
+
+                val playerBlock: MutableMap<String, String> = HashMap()
+                playerBlock["playerID"] = playerKickList[position].pID
+                playerBlock["tableID"] = playerKickList[position].tableID
+                db.collection("blocklist").add(playerBlock)
+
                 itemDelete.isEnabled = true
                 context.finish()
             }.addOnFailureListener{
