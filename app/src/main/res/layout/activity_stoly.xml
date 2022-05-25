@@ -223,7 +223,7 @@
             android:layout_weight="0.6"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
-            android:text="Cofnij"
+            android:text="Cofnijj"
             android:textColor="#ebebeb" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
