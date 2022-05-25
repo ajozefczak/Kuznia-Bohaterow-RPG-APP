@@ -26,7 +26,7 @@
         <entry key="..\:/01projekt android/Kuznia-Bohaterow-RPG-APP/app/src/main/res/layout/activity_rejestracja.xml" value="0.33" />
         <entry key="..\:/01projekt android/Kuznia-Bohaterow-RPG-APP/app/src/main/res/layout/activity_reset_hasla.xml" value="0.2947916666666667" />
         <entry key="..\:/01projekt android/Kuznia-Bohaterow-RPG-APP/app/src/main/res/layout/activity_rozwoj_postaci.xml" value="0.22" />
-        <entry key="..\:/01projekt android/Kuznia-Bohaterow-RPG-APP/app/src/main/res/layout/activity_stoly.xml" value="0.22" />
+        <entry key="..\:/01projekt android/Kuznia-Bohaterow-RPG-APP/app/src/main/res/layout/activity_stoly.xml" value="0.33" />
         <entry key="..\:/01projekt android/Kuznia-Bohaterow-RPG-APP/app/src/main/res/layout/activity_tworzenie_postaci.xml" value="0.33" />
         <entry key="..\:/01projekt android/Kuznia-Bohaterow-RPG-APP/app/src/main/res/layout/activity_zaklecia.xml" value="0.33" />
         <entry key="..\:/01projekt android/Kuznia-Bohaterow-RPG-APP/app/src/main/res/layout/custom_item_list.xml" value="0.36666666666666664" />
@@ -67,7 +67,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.22" />
+        <option name="scale" value="0.33" />
       </ProjectState>
     </option>
   </component>
