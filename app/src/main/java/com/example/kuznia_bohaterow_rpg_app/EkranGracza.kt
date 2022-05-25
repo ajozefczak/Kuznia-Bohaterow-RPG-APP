@@ -1,6 +1,7 @@
 package com.example.kuznia_bohaterow_rpg_app
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
@@ -95,19 +96,38 @@ class EkranGracza : AppCompatActivity() {
                                                     ).show()
                                                 }
                                                 else {
-                                                    FirebaseFirestore.getInstance().collection("tables_joins").add(joinMutable).addOnSuccessListener {
-                                                        val StolyIntent = Intent(this, ListaStoly::class.java)
-                                                        startActivity(StolyIntent)
+                                                    FirebaseFirestore.getInstance()
+                                                        .collection("blocklist")
+                                                        .whereEqualTo("tableID", tempIDTable)
+                                                        .whereEqualTo("playerID", firebaseUser.uid)
+                                                        .get().addOnCompleteListener { task ->
+                                                        if (!task.result.isEmpty) {
+                                                            Toast.makeText(
+                                                                this,
+                                                                "Jesteś na liście zablokowanych na tym stole. Gracze na tym stole nie potrzebują cię w swoim składzie.",
+                                                                Toast.LENGTH_SHORT
+                                                            ).show()
+                                                        } else {
+                                                            FirebaseFirestore.getInstance()
+                                                                .collection("tables_joins")
+                                                                .add(joinMutable)
+                                                                .addOnSuccessListener {
+                                                                    val StolyIntent = Intent(
+                                                                        this,
+                                                                        ListaStoly::class.java
+                                                                    )
+                                                                    startActivity(StolyIntent)
 
-                                                    }.addOnFailureListener { e ->
-                                                        Toast.makeText(
-                                                            this,
-                                                            "Wystąpił nieoczekiwany błąd: " + e,
-                                                            Toast.LENGTH_SHORT
-                                                        ).show()
+                                                                }.addOnFailureListener { e ->
+                                                                Toast.makeText(
+                                                                    this,
+                                                                    "Wystąpił nieoczekiwany błąd: " + e,
+                                                                    Toast.LENGTH_SHORT
+                                                                ).show()
+                                                            }
+                                                        }
                                                     }
                                                 }
-
                                             }
                                         }
                                     }

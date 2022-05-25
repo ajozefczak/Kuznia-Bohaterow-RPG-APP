@@ -67,6 +67,7 @@ class EdycjaStolu : AppCompatActivity() {
 
                     var tempPlayerID = data["playerID"].toString()
                     var tempJoinID = data.id
+                    var tempTableID = idTable
 
                     FirebaseFirestore.getInstance().collection("users").whereEqualTo("id", tempPlayerID).get().addOnCompleteListener { task2 ->
                         if (task2.isComplete) {
@@ -75,7 +76,8 @@ class EdycjaStolu : AppCompatActivity() {
                                 var playertemp = PlayerKickOnList(
                                     tempNick,
                                     tempPlayerID,
-                                    tempJoinID
+                                    tempJoinID,
+                                    tempTableID
                                 )
                                 playersKick.add(playertemp)
                             }

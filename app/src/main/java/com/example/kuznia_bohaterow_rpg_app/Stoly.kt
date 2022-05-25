@@ -478,6 +478,12 @@ class Stoly : AppCompatActivity() {
                 }
             }
 
+            FirebaseFirestore.getInstance().collection("tables").document(idTable).get().addOnCompleteListener{ task ->
+                if(!task.result.exists()) {
+                    finish()
+                }
+            }
+
             val chatMessages: MutableList<MessagesOnList> = mutableListOf()
 
             FirebaseFirestore.getInstance().collection("chat").whereEqualTo("table",idTable).get().addOnCompleteListener{ task ->
