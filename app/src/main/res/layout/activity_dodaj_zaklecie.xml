@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ebebeb"
                 android:fontFamily="@font/gabriela"
-                android:text="Nazwa zaklęcia:"
+                android:text="@string/NazwaZaklęcia"
                 android:textColor="#ebebeb" />
 
             <EditText
@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ebebeb"
                 android:fontFamily="@font/gabriela"
-                android:text="Koszt:"
+                android:text="@string/Koszt"
                 android:textColor="#ebebeb" />
 
             <EditText
@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ebebeb"
                 android:fontFamily="@font/gabriela"
-                android:text="Opis:"
+                android:text="@string/Opis"
                 android:textColor="#ebebeb" />
 
             <EditText
@@ -109,7 +109,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
-            android:text="Dodaj"
+            android:text="@string/Dodaj"
             android:textColor="#ebebeb" />
     </LinearLayout>
 

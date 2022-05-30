@@ -33,7 +33,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Cofnij"
+                android:text="@string/cofnij"
                 android:textColor="#ebebeb" />
 
             <Button
@@ -44,7 +44,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Dodaj zaklęcie"
+                android:text="@string/Dodaj"
                 android:textColor="#ebebeb" />
         </LinearLayout>
     </LinearLayout>

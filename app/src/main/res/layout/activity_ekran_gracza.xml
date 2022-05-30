@@ -44,7 +44,7 @@
                 android:layout_weight="0.5"
                 android:fontFamily="@font/gabriela"
                 android:padding="5dp"
-                android:text="Tryb Gracz"
+                android:text="@string/TrybGracz"
                 android:textColor="#ebebeb"
                 android:textColorHighlight="#ebebeb"
                 android:textColorHint="#6C5D5D"
@@ -58,7 +58,7 @@
                 android:layout_weight="0.5"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Wyloguj"
+                android:text="@string/Wyloguj"
                 android:textColor="#ebebeb" />
         </LinearLayout>
 
@@ -77,7 +77,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Kalendarz"
+                android:text="@string/Kalendarz"
                 android:textColor="#ebebeb" />
         </LinearLayout>
 
@@ -95,7 +95,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Stwórz postać"
+                android:text="@string/StwórzPostać"
                 android:textColor="#ebebeb" />
 
         </LinearLayout>
@@ -116,7 +116,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Dołacz do stołu"
+                android:text="@string/DołaczDoStołu"
                 android:textColor="#ebebeb" />
 
             <EditText
@@ -141,7 +141,7 @@
         android:layout_margin="10dp"
         android:layout_weight="1"
         android:background="@drawable/przycisknaprzyciski"
-        android:text="Lista stołów"
+        android:text="@string/ListaStołów"
         android:textColor="#ebebeb"
         app:layout_constraintBottom_toTopOf="@+id/GButtonWyszukajPostac"
         app:layout_constraintEnd_toEndOf="parent"
@@ -155,7 +155,7 @@
         android:layout_weight="1"
         android:background="@drawable/przycisknaprzyciski"
         android:fontFamily="@font/gabriela"
-        android:text="Stwórz nowy stół"
+        android:text="@string/StwórzStół"
         android:textColor="#ebebeb"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"

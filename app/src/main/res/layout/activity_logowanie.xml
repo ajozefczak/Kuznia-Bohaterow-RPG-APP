@@ -19,7 +19,7 @@
             android:layout_margin="15dp"
             android:fontFamily="@font/gabriela"
             android:padding="10dp"
-            android:text="Logowanie"
+            android:text="@string/logowanie"
             android:textAlignment="center"
             android:textColor="#ebebeb"
             android:textSize="20sp"
@@ -51,7 +51,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_weight="0.2"
                         android:fontFamily="@font/gabriela"
-                        android:text="Email:"
+                        android:text="@string/Email"
                         android:textColor="#ebebeb" />
 
                     <EditText
@@ -81,7 +81,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_weight="0.2"
                         android:fontFamily="@font/gabriela"
-                        android:text="Hasło:"
+                        android:text="@string/Hasło"
                         android:textColor="#ebebeb" />
 
                     <EditText
@@ -110,7 +110,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/przycisknaprzyciski"
                         android:fontFamily="@font/gabriela"
-                        android:text="Zaloguj"
+                        android:text="@string/logowanie"
                         android:textColor="#ebebeb" />
 
                     <Button
@@ -121,7 +121,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/przycisknaprzyciski"
                         android:fontFamily="@font/gabriela"
-                        android:text="Przywróć Hasło"
+                        android:text="@string/PrzywróćHasło"
                         android:textColor="#ebebeb" />
 
                 </LinearLayout>
@@ -134,7 +134,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/przycisknaprzyciski"
                     android:fontFamily="@font/gabriela"
-                    android:text="Załóż konto"
+                    android:text="@string/ZałóżKonto"
                     android:textAlignment="center"
                     android:textColor="#ebebeb"
                     android:textIsSelectable="false" />

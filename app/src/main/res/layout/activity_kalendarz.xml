@@ -15,7 +15,7 @@
         android:background="#94261309"
         android:fontFamily="@font/gabriela"
         android:padding="20dp"
-        android:text="Nie masz ustalonego spotkania"
+        android:text="@string/NoMeeting"
         android:textAlignment="center"
         android:textColor="#ebebeb"
         android:textSize="34sp"
@@ -42,7 +42,7 @@
             android:layout_weight="4"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
-            android:text="Cofnij"
+            android:text="@string/cofnij"
             android:textColor="#ebebeb" />
 
         <Button
@@ -53,7 +53,7 @@
             android:layout_weight="2"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
-            android:text="Zapisz termin"
+            android:text="@string/ZapiszTermin"
             android:textColor="#ebebeb" />
     </LinearLayout>
 
@@ -74,7 +74,7 @@
             android:layout_weight="1"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
-            android:text="Ustal Spotkanie"
+            android:text="@string/SetSpotkanie"
             android:textColor="#ebebeb" />
     </LinearLayout>
 

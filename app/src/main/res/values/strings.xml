@@ -16,7 +16,77 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="rejestracja">Rejestracja</string>
+    <string name="logowanie">Logowanie</string>
+    <string name="cofnij">Cofnij</string>
+    <string name="szukaj">Szukaj</string>
+    <string name="imie">Imie</string>
+    <string name="zawod">Zawód</string>
+
+    <string name="Statystyka">Statystyka</string>
+    <string name="Wartość">Wartość</string>
+    <string name="Siła">Siła</string>
+    <string name="Kondycja">Kondycja</string>
+    <string name="BudowaCiała">Budowa Ciała</string>
+    <string name="Zręczność">Zręczność</string>
+    <string name="Inteligencja">Inteligencja</string>
+    <string name="Moc">Moc</string>
+    <string name="Wykształcenie">Wykształcenie</string>
+    <string name="Poczytalność">Poczytalność</string>
+    <string name="Wygląd">Wygląd</string>
+    <string name="Dodaj">Dodaj</string>
+    <string name="Nazwa">Nazwa:</string>
+    <string name="Wartosc">Wartość:</string>
+    <string name="Opis">Opis:</string>
+    <string name="NazwaStołu">Nazwa stołu:</string>
+    <string name="OpisStołu">Opis stołu:</string>
+    <string name="NazwaZaklęcia">Nazwa zaklęcia:</string>
+    <string name="Koszt">Koszt:</string>
+    <string name="ZmieńNazwe">Zmień nazwe</string>
+    <string name="ZmienOpis">Zmień opis</string>
+    <string name="UsunStol">Usuń stół</string>
+    <string name="Wyloguj">Wyloguj</string>
+    <string name="TrybGracz">Tryb Gracz</string>
+    <string name="Kalendarz">Kalendarz</string>
+    <string name="StwórzPostać">Stwórz postać</string>
+    <string name="DołaczDoStołu">Dołacz do stołu</string>
+    <string name="ListaStołów">Lista stołów</string>
+    <string name="StwórzStół">Stwórz nowy stół</string>
+    <string name="RozwińPostać">Rozwiń Postać</string>
+    <string name="UsuńPostać">Usuń Postać</string>
+    <string name="Ekwipunek">Ekwipunek</string>
+    <string name="Historia">Historia</string>
+    <string name="Zaklęcia">Zaklęcia</string>
+    <string name="Notatki">Notatki</string>
+    <string name="Zapisz">Zapisz</string>
+    <string name="HISTORIA">HISTORIA</string>
+    <string name="NoMeeting">Nie masz ustalonego spotkania</string>
+    <string name="SetSpotkanie">Ustal Spotkanie</string>
+    <string name="ZapiszTermin">Zapisz termin</string>
+    <string name="Email">Email:</string>
+    <string name="Hasło">Hasło:</string>
+    <string name="PrzywróćHasło">Przywróć Hasło</string>
+    <string name="ZałóżKonto">Załóż konto</string>
+    <string name="NOTATKI">NOTATKI</string>
+    <string name="Regulamin">Regulamin</string>
+    <string name="Nick">Nick</string>
+    <string name="haslo2">Powtórz Hasło</string>
+    <string name="accregulamin">Zaakceptuj regulamin</string>
+    <string name="Wyślij">Wyślij</string>
+    <string name="Statystyki">Statystyki</string>
+    <string name="ZmieńPostać">Zmień postać</string>
+    <string name="KodZaproszenia">Kod zaproszenia</string>
+    <string name="Archiwum">Archiwum</string>
+    <string name="Profesja">Profesja</string>
+    <string name="Wylosuj">Wylosuj</string>
+    <string name="RzutKostką">Rzut kostką</string>
+    <string name="Wynik">Wynik</string>
+    <string name="LosujWszystko">Losuj Wszystko</string>
+    <string name="ZmienPostać">ZmieńPostać</string>
+
+
+
 </resources>

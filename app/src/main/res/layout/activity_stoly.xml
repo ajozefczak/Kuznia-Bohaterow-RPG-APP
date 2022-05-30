@@ -26,7 +26,6 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Zmień postać"
                 android:textColor="#ebebeb" />
 
             <Button
@@ -63,7 +62,6 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/gabriela"
-                    android:text="Kod"
                     android:textAlignment="center"
                     android:textColor="#ebebeb"
                     android:textSize="20sp" />
@@ -133,7 +131,7 @@
                 android:layout_weight="5"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Wyślij"
+                android:text="@string/Wyślij"
                 android:textColor="#ebebeb" />
 
             <Button
@@ -143,7 +141,7 @@
                 android:layout_weight="0.1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Archiwum"
+                android:text="@string/Archiwum"
                 android:textColor="#ebebeb" />
 
         </LinearLayout>
@@ -221,7 +219,7 @@
             android:layout_weight="0.6"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
-            android:text="Cofnij"
+            android:text="@string/cofnij"
             android:textColor="#ebebeb" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
