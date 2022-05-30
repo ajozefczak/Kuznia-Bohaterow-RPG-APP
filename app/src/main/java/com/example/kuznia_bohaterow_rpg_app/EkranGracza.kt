@@ -27,7 +27,7 @@ class EkranGracza : AppCompatActivity() {
         GButtonWyloguj.setOnClickListener {
             GButtonWyloguj.isEnabled = false
             FirebaseAuth.getInstance().signOut()
-            Toast.makeText(this, "Poprawnie wylogowano sie z systemu", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.PoprawnieWylogowano, Toast.LENGTH_SHORT).show()
             GButtonWyloguj.isEnabled = true
             finish()
         }
@@ -56,7 +56,7 @@ class EkranGracza : AppCompatActivity() {
         GButtonDolaczDoStołu.setOnClickListener {
                 when {
                     TextUtils.isEmpty(GEditTextKodStolu.text.toString()) -> {
-                        Toast.makeText(this, "Wprowadź kod!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, R.string.WprowadzKod, Toast.LENGTH_SHORT).show()
                     }
                     else -> {
                         GButtonDolaczDoStołu.isEnabled = false
@@ -80,7 +80,7 @@ class EkranGracza : AppCompatActivity() {
                                         if(tempGID.equals(firebaseUser.uid)){
                                             Toast.makeText(
                                                 this,
-                                                "Jesteś Mistrzem Gry tego stołu. Nie możesz dołączyć.",
+                                                R.string.JestesMistrzem,
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                         }
@@ -91,7 +91,7 @@ class EkranGracza : AppCompatActivity() {
                                                 {
                                                     Toast.makeText(
                                                         this,
-                                                        "Jesteś już na tym stole.",
+                                                        R.string.JestesNaStole,
                                                         Toast.LENGTH_SHORT
                                                     ).show()
                                                 }
@@ -104,7 +104,7 @@ class EkranGracza : AppCompatActivity() {
                                                         if (!task.result.isEmpty) {
                                                             Toast.makeText(
                                                                 this,
-                                                                "Jesteś na liście zablokowanych na tym stole. Gracze na tym stole nie potrzebują cię w swoim składzie.",
+                                                                R.string.JestesNaLiscie,
                                                                 Toast.LENGTH_SHORT
                                                             ).show()
                                                         } else {
@@ -121,7 +121,7 @@ class EkranGracza : AppCompatActivity() {
                                                                 }.addOnFailureListener { e ->
                                                                 Toast.makeText(
                                                                     this,
-                                                                    "Wystąpił nieoczekiwany błąd: " + e,
+                                                                    R.string.WystapilBlad.toString() + e,
                                                                     Toast.LENGTH_SHORT
                                                                 ).show()
                                                             }
@@ -133,7 +133,7 @@ class EkranGracza : AppCompatActivity() {
                                     }
                                 }
                                 else {
-                                    Toast.makeText(this, "Nie znaleziono kodu lub stół nie istnieje.", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(this, R.string.WystapilBlad, Toast.LENGTH_SHORT).show()
                                 }
                             }
                     }
@@ -155,13 +155,13 @@ class EkranGracza : AppCompatActivity() {
                 GButtonWyszukajPostac.visibility = View.INVISIBLE;
                 idLayoutDolacz.visibility = View.INVISIBLE;
                 GButtonPostac.visibility = View.INVISIBLE;
-                GButtonSwitchPlayer.text = "Tryb MG"
+                GButtonSwitchPlayer.text = getString(R.string.TrybMG);
             } else {
                 GButtonTworzenieStołu.visibility = View.INVISIBLE;
                 GButtonWyszukajPostac.visibility = View.VISIBLE;
                 idLayoutDolacz.visibility = View.VISIBLE;
                 GButtonPostac.visibility = View.VISIBLE;
-                GButtonSwitchPlayer.text = "Tryb Gracza"
+                GButtonSwitchPlayer.text = getString(R.string.TrybGracz);
             }
         }
     }

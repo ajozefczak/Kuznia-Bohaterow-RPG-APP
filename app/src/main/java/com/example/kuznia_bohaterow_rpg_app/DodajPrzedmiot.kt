@@ -28,22 +28,22 @@ class DodajPrzedmiot : AppCompatActivity() {
 
             when {
                 TextUtils.isEmpty(NazwaPrzedmiotuInput.text.toString()) -> {
-                    Toast.makeText(this, "Wprowadź nazwę przedmiotu", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.WprowadzNazwePrzedmiotu, Toast.LENGTH_SHORT).show()
                 }
 
                 TextUtils.isEmpty(KosztPrzedmiotuInput.text.toString()) -> {
-                    Toast.makeText(this, "Wprowadź koszt przedmiotu", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.WprowadzKosztPrzedmiotu, Toast.LENGTH_SHORT).show()
                 }
 
                 TextUtils.isEmpty(OpisPrzedmiotuInput.text.toString()) -> {
-                    Toast.makeText(this, "Wprowadź opis przedmiotu", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.WprowadzOpisPrzedmiotu, Toast.LENGTH_SHORT).show()
                 }
 
                 else -> {
                     val number = KosztPrzedmiotuInput.text.toString().toIntOrNull()
                     val isInteger = number != null
                     if(!isInteger){
-                        Toast.makeText(this, "Wprowadź poprawny numer w koszcie", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, R.string.WprowadzPoprawnyNumer, Toast.LENGTH_SHORT).show()
                     }
                     else{
                         val idCharacter = intent.getStringExtra("id").toString()
@@ -55,7 +55,7 @@ class DodajPrzedmiot : AppCompatActivity() {
                         itemMutable["itemValue"] = KosztPrzedmiotuInput.text.toString()
                         itemMutable["itemDescription"] = OpisPrzedmiotuInput.text.toString()
                         db.collection("equipment").add(itemMutable).addOnSuccessListener {
-                            Toast.makeText(this, "Poprawnie dodano przedmiot.", Toast.LENGTH_SHORT)
+                            Toast.makeText(this, R.string.PoprawnieDodanoPrzedmiot, Toast.LENGTH_SHORT)
                                 .show()
                             finish()
                             DodajPrzedmiotButtonDodaj.isEnabled = true
@@ -63,7 +63,7 @@ class DodajPrzedmiot : AppCompatActivity() {
                         }.addOnFailureListener { e ->
                             Toast.makeText(
                                 this,
-                                "Wystąpił nieoczekiwany błąd: " + e,
+                                R.string.WystapilBlad.toString() + e,
                                 Toast.LENGTH_SHORT
                             ).show()
                             DodajPrzedmiotButtonDodaj.isEnabled = true

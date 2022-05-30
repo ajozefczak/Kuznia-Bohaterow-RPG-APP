@@ -16,11 +16,11 @@ class ResetHasla : AppCompatActivity() {
         RButtonWyslijResetHasla.setOnClickListener {
             RButtonWyslijResetHasla.isEnabled = false
             if(RHEditTextEmailWpisanie.text.toString().isEmpty()) {
-                Toast.makeText(this, "Wprowadź email", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.WprowadzEmail, Toast.LENGTH_SHORT).show()
                 RButtonWyslijResetHasla.isEnabled = true
             }else{
                 FirebaseAuth.getInstance().sendPasswordResetEmail(RHEditTextEmailWpisanie.text.toString())
-                        Toast.makeText(this, "Jeżeli dane konto istnienieje na podany adres została wysłana wiadomość z instrukcją resetu hasła", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, R.string.JezeliDane, Toast.LENGTH_SHORT).show()
                 RButtonWyslijResetHasla.isEnabled = true
                         finish()
                 }

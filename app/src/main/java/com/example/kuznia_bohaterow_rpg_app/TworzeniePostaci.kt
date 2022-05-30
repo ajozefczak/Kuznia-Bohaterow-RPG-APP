@@ -159,21 +159,21 @@ class TworzeniePostaci : AppCompatActivity() {
                     imgToStore.downloadUrl.addOnSuccessListener {
                         charactersheet["imgURL"] = it.toString()
                         db.collection("charactersheet").add(charactersheet)
-                        Toast.makeText(this, "Pomyślnie stworzono postać", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, R.string.StworzonoPostac, Toast.LENGTH_SHORT).show()
                         /*val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
                         startActivity(EkranGraczaIntent)*/
                         TPButtonZapiszPostac.isEnabled = true
                         finish()
                     }.addOnFailureListener {
                             e ->
-                        Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, R.string.WystapilBlad.toString() + e, Toast.LENGTH_SHORT).show()
                         TPButtonZapiszPostac.isEnabled = true
                     }
                 }
 
 
             }else{
-                Toast.makeText(this, "Brak dodanego zdjęcia postaci", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.BrakDodanego, Toast.LENGTH_SHORT).show()
             }
         }
 

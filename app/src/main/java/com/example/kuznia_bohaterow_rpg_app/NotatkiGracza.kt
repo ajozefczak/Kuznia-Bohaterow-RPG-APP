@@ -37,10 +37,10 @@ class NotatkiGracza : AppCompatActivity() {
             userNotes["note"] = NGEditTextTextMultiLineNotatkiGracza.text.toString()
             db.collection("notes").document(idCharacter).delete().addOnCompleteListener {
                 db.collection("notes").document(idCharacter).set(userNotes).addOnSuccessListener {
-                    Toast.makeText(this, "Poprawnie edytowano notatki", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.PoprawnieEdytowanoNotatke, Toast.LENGTH_SHORT).show()
                     NotatkiButtonZapisz.isEnabled = true
                 }.addOnFailureListener { e ->
-                    Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.WystapilBlad.toString() + e, Toast.LENGTH_SHORT).show()
                     NotatkiButtonZapisz.isEnabled = true
                 }
             }

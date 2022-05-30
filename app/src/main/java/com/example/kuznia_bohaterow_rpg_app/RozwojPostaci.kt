@@ -80,11 +80,11 @@ class RozwojPostaci : AppCompatActivity() {
                             "APP" to editTextTextPersonName14.text.toString()
                         )
                     )
-                Toast.makeText(this, "Poprawnie edytowano postać", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.PoprawnieEdytowano, Toast.LENGTH_SHORT).show()
                 button2.isEnabled = true
                 finish()
             }else{
-                Toast.makeText(this, "Błąd podczas wprowadzania danych!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.BladPodczas, Toast.LENGTH_SHORT).show()
             }
         }
 

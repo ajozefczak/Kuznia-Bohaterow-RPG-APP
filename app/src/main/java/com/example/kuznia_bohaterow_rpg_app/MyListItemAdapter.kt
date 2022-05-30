@@ -31,11 +31,11 @@ class MyListItemAdapter(private val context: Activity, private val itemlist: Mut
             val db = FirebaseFirestore.getInstance()
             val firebaseUser = FirebaseAuth.getInstance().currentUser!!
             db.collection("equipment").document(itemlist[position].id).delete().addOnSuccessListener {
-                Toast.makeText(context, "Poprawnie usunięto przedmiot", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, R.string.PoprawnieUsunietoPrzedmiot, Toast.LENGTH_SHORT).show()
                 itemDelete.isEnabled = true
                 context.finish()
             }.addOnFailureListener{
-                Toast.makeText(context, "Wystąpił błąd przy usuwaniu przedmiotu", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, R.string.WystapilBladPrzyUsuwaniuPrzedmiotu, Toast.LENGTH_SHORT).show()
                 itemDelete.isEnabled = true
             }
         }

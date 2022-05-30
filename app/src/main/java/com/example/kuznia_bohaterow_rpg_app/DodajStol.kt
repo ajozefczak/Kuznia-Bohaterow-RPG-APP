@@ -25,10 +25,10 @@ class DodajStol : AppCompatActivity() {
 
             when {
                 TextUtils.isEmpty(NazwaStoluInput.text.toString()) -> {
-                    Toast.makeText(this, "Wprowadź nazwę stolu", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.WprowadzNazweStolu, Toast.LENGTH_SHORT).show()
                 }
                 TextUtils.isEmpty(OpisStoluInput.text.toString()) -> {
-                    Toast.makeText(this, "Wprowadź opis stolu", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.WprowadzOpisStolu, Toast.LENGTH_SHORT).show()
                 }
                 else -> {
                     DodajStolButton.isEnabled = false
@@ -42,7 +42,7 @@ class DodajStol : AppCompatActivity() {
                         itemMutable["joinCode"] = generateCode()
                         codeGenerated = itemMutable["joinCode"].toString()
                         db.collection("tables").add(itemMutable).addOnSuccessListener {
-                            Toast.makeText(this, "Poprawnie dodano stół.", Toast.LENGTH_SHORT)
+                            Toast.makeText(this, R.string.PoprawnieDodanoStol, Toast.LENGTH_SHORT)
                                 .show()
                             finish()
                             DodajStolButton.isEnabled = true
@@ -50,7 +50,7 @@ class DodajStol : AppCompatActivity() {
                         }.addOnFailureListener { e ->
                             Toast.makeText(
                                 this,
-                                "Wystąpił nieoczekiwany błąd: " + e,
+                                R.string.WystapilBlad.toString() + e,
                                 Toast.LENGTH_SHORT
                             ).show()
                             DodajStolButton.isEnabled = true

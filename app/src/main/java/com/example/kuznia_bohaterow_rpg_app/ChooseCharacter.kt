@@ -49,10 +49,10 @@ class ChooseCharacter : AppCompatActivity() {
 
                 characterChooseList.setOnItemClickListener(){adapterView, view, position, id ->
                     db.collection("tables_joins").document(idTable).update("characterID", characters2[position].id, "characterName", characters2[position].firstName).addOnSuccessListener  {
-                        Toast.makeText(this, "Poprawnie wybrano postać", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, R.string.PoprawnieWybranoPostac, Toast.LENGTH_SHORT).show()
                         finish()
                     }.addOnFailureListener { e ->
-                        Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, R.string.WystapilBlad.toString() + e, Toast.LENGTH_SHORT).show()
                     }
                 }
 

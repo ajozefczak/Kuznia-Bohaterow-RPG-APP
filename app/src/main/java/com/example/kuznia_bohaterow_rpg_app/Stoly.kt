@@ -16,7 +16,6 @@ import kotlinx.android.synthetic.main.activity_lista_postaci.*
 import kotlinx.android.synthetic.main.activity_rozwoj_postaci.*
 import kotlinx.android.synthetic.main.activity_stoly.*
 import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 
 class Stoly : AppCompatActivity() {
 
@@ -26,7 +25,7 @@ class Stoly : AppCompatActivity() {
     var handler: Handler = Handler()
     var runnable: Runnable? = null
     var delay = 3000
-
+    var shouldExecuteOnResume = true
     var colorR = "255"
     var colorG = "255"
     var colorB = "255"
@@ -35,6 +34,8 @@ class Stoly : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stoly)
+
+        shouldExecuteOnResume = true
 
         val idTable = intent.getStringExtra("tableID").toString()
         var gmID = intent.getStringExtra("gmID").toString()
@@ -111,18 +112,17 @@ class Stoly : AppCompatActivity() {
 
 
                             db.collection("chat").add(charactersheet).addOnSuccessListener {
-                                Toast.makeText(this, "Wiadomość została wysłana", Toast.LENGTH_SHORT).show()
                                 StolyButtonWyslijWiadomosc.isEnabled = true
                                 editTextTextPersonName5.text.clear()
                             }.addOnFailureListener { e ->
-                                Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this, getString(R.string.WystapilBlad) + e, Toast.LENGTH_SHORT).show()
                                 StolyButtonWyslijWiadomosc.isEnabled = true
                             }
                         }
                     }
                 }
             }else{
-                Toast.makeText(this, "Wprowadź wiadomość", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.WprowadzWiadomosc, Toast.LENGTH_SHORT).show()
                 StolyButtonWyslijWiadomosc.isEnabled = true
             }
         }
@@ -142,7 +142,7 @@ class Stoly : AppCompatActivity() {
                     for (data2 in task2.result) {
                         tempNick = data2["nick"].toString()
                         charactersheet["id"] = firebaseUser.uid
-                        charactersheet["message"] = "Użytkownik rzucił d4 i wylosował " + pepegaValue + "."
+                        charactersheet["message"] = getString(R.string.d4) + pepegaValue + "."
                         charactersheet["table"] = idTable
                         charactersheet["nick"] = tempNick
                         charactersheet["date"] = current.toString()
@@ -155,7 +155,7 @@ class Stoly : AppCompatActivity() {
                             StolyButtonWyslijWiadomosc.isEnabled = true
                             editTextTextPersonName5.text.clear()
                         }.addOnFailureListener { e ->
-                            Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, getString(R.string.WystapilBlad) + e, Toast.LENGTH_SHORT).show()
                             StolyButtonWyslijWiadomosc.isEnabled = true
                         }
                     }
@@ -177,7 +177,7 @@ class Stoly : AppCompatActivity() {
                     for (data2 in task2.result) {
                         tempNick = data2["nick"].toString()
                         charactersheet["id"] = firebaseUser.uid
-                        charactersheet["message"] = "Użytkownik rzucił d6 i wylosował " + pepegaValue + "."
+                        charactersheet["message"] = getString(R.string.d6) + pepegaValue + "."
                         charactersheet["table"] = idTable
                         charactersheet["nick"] = tempNick
                         charactersheet["date"] = current.toString()
@@ -189,7 +189,7 @@ class Stoly : AppCompatActivity() {
                             StolyButtonWyslijWiadomosc.isEnabled = true
                             editTextTextPersonName5.text.clear()
                         }.addOnFailureListener { e ->
-                            Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, getString(R.string.WystapilBlad) + e, Toast.LENGTH_SHORT).show()
                             StolyButtonWyslijWiadomosc.isEnabled = true
                         }
                     }
@@ -211,7 +211,7 @@ class Stoly : AppCompatActivity() {
                     for (data2 in task2.result) {
                         tempNick = data2["nick"].toString()
                         charactersheet["id"] = firebaseUser.uid
-                        charactersheet["message"] = "Użytkownik rzucił d8 i wylosował " + pepegaValue + "."
+                        charactersheet["message"] = getString(R.string.d8) + pepegaValue + "."
                         charactersheet["table"] = idTable
                         charactersheet["nick"] = tempNick
                         charactersheet["date"] = current.toString()
@@ -223,7 +223,7 @@ class Stoly : AppCompatActivity() {
                             StolyButtonWyslijWiadomosc.isEnabled = true
                             editTextTextPersonName5.text.clear()
                         }.addOnFailureListener { e ->
-                            Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, getString(R.string.WystapilBlad) + e, Toast.LENGTH_SHORT).show()
                             StolyButtonWyslijWiadomosc.isEnabled = true
                         }
                     }
@@ -245,7 +245,7 @@ class Stoly : AppCompatActivity() {
                     for (data2 in task2.result) {
                         tempNick = data2["nick"].toString()
                         charactersheet["id"] = firebaseUser.uid
-                        charactersheet["message"] = "Użytkownik rzucił d10 i wylosował " + pepegaValue + "."
+                        charactersheet["message"] = getString(R.string.d10) + pepegaValue + "."
                         charactersheet["table"] = idTable
                         charactersheet["nick"] = tempNick
                         charactersheet["date"] = current.toString()
@@ -257,7 +257,7 @@ class Stoly : AppCompatActivity() {
                             StolyButtonWyslijWiadomosc.isEnabled = true
                             editTextTextPersonName5.text.clear()
                         }.addOnFailureListener { e ->
-                            Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, getString(R.string.WystapilBlad) + e, Toast.LENGTH_SHORT).show()
                             StolyButtonWyslijWiadomosc.isEnabled = true
                         }
                     }
@@ -279,7 +279,7 @@ class Stoly : AppCompatActivity() {
                     for (data2 in task2.result) {
                         tempNick = data2["nick"].toString()
                         charactersheet["id"] = firebaseUser.uid
-                        charactersheet["message"] = "Użytkownik rzucił d12 i wylosował " + pepegaValue + "."
+                        charactersheet["message"] = getString(R.string.d12) + pepegaValue + "."
                         charactersheet["table"] = idTable
                         charactersheet["nick"] = tempNick
                         charactersheet["date"] = current.toString()
@@ -291,7 +291,7 @@ class Stoly : AppCompatActivity() {
                             StolyButtonWyslijWiadomosc.isEnabled = true
                             editTextTextPersonName5.text.clear()
                         }.addOnFailureListener { e ->
-                            Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, getString(R.string.WystapilBlad) + e, Toast.LENGTH_SHORT).show()
                             StolyButtonWyslijWiadomosc.isEnabled = true
                         }
                     }
@@ -313,7 +313,7 @@ class Stoly : AppCompatActivity() {
                     for (data2 in task2.result) {
                         tempNick = data2["nick"].toString()
                         charactersheet["id"] = firebaseUser.uid
-                        charactersheet["message"] = "Użytkownik rzucił d20 i wylosował " + pepegaValue + "."
+                        charactersheet["message"] = getString(R.string.d20) + pepegaValue + "."
                         charactersheet["table"] = idTable
                         charactersheet["nick"] = tempNick
                         charactersheet["date"] = current.toString()
@@ -325,7 +325,7 @@ class Stoly : AppCompatActivity() {
                             StolyButtonWyslijWiadomosc.isEnabled = true
                             editTextTextPersonName5.text.clear()
                         }.addOnFailureListener { e ->
-                            Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, getString(R.string.WystapilBlad) + e, Toast.LENGTH_SHORT).show()
                             StolyButtonWyslijWiadomosc.isEnabled = true
                         }
                     }
@@ -347,7 +347,7 @@ class Stoly : AppCompatActivity() {
                     for (data2 in task2.result) {
                         tempNick = data2["nick"].toString()
                         charactersheet["id"] = firebaseUser.uid
-                        charactersheet["message"] = "Użytkownik rzucił d100 i wylosował " + pepegaValue + "."
+                        charactersheet["message"] = getString(R.string.d100) + pepegaValue + "."
                         charactersheet["table"] = idTable
                         charactersheet["nick"] = tempNick
                         charactersheet["date"] = current.toString()
@@ -359,7 +359,7 @@ class Stoly : AppCompatActivity() {
                             StolyButtonWyslijWiadomosc.isEnabled = true
                             editTextTextPersonName5.text.clear()
                         }.addOnFailureListener { e ->
-                            Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, getString(R.string.WystapilBlad) + e, Toast.LENGTH_SHORT).show()
                             StolyButtonWyslijWiadomosc.isEnabled = true
                         }
                     }
@@ -411,7 +411,7 @@ class Stoly : AppCompatActivity() {
                     var tempPlayerID = data["playerID"].toString()
                     var tempCharID = data["characterID"].toString()
                     var tempNick = "Nieznany"
-                    var tempCharName = "Brak wybranej postaci"
+                    var tempCharName = getString(R.string.BrakWybranejPostaci)
 
                     if(tempCharID != "brak") {
                         tempCharName = data["characterName"].toString()
@@ -436,14 +436,14 @@ class Stoly : AppCompatActivity() {
 
 
                             playerList.setOnItemClickListener(){adapterView, view, position, id ->
-                                if(players[position].charname != "Brak wybranej postaci"){
+                                if(players[position].charname != getString(R.string.BrakWybranejPostaci)){
                                     val intent = Intent(this,CheckCharacterOnList::class.java)
                                     intent.putExtra("id",players[position].chID)
                                     startActivity(intent)
                                     finish()
                                 }
                                 else {
-                                    Toast.makeText(this, "Gracz nie wybrał postaci!", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(this, R.string.GraczNieWybral, Toast.LENGTH_SHORT).show()
                                 }
                             }
                         }
@@ -469,97 +469,105 @@ class Stoly : AppCompatActivity() {
         handler.postDelayed(Runnable {
             handler.postDelayed(runnable!!, delay.toLong())
 
-            var idTable = intent.getStringExtra("tableID").toString()
-            var gmID = intent.getStringExtra("gmID").toString()
+            if(shouldExecuteOnResume) {
+                var idTable = intent.getStringExtra("tableID").toString()
+                var gmID = intent.getStringExtra("gmID").toString()
+                var temp = false
 
-            FirebaseFirestore.getInstance().collection("tables_joins").whereEqualTo("tableID",idTable).whereEqualTo("playerID", firebaseUser.uid).get().addOnCompleteListener{ task ->
-                if(task.result.isEmpty && gmID != firebaseUser.uid) {
-                    finish()
-                }
-            }
-
-            FirebaseFirestore.getInstance().collection("tables").document(idTable).get().addOnCompleteListener{ task ->
-                if(!task.result.exists()) {
-                    finish()
-                }
-            }
-
-            val chatMessages: MutableList<MessagesOnList> = mutableListOf()
-
-            FirebaseFirestore.getInstance().collection("chat").whereEqualTo("table",idTable).get().addOnCompleteListener{ task ->
-                if(task.isComplete){
-                    for(data in task.result){
-                        var nick = data["nick"].toString()
-                        var message = data["message"].toString()
-                        var date = data["date"].toString()
-
-                        var msgColorR = data["colorR"].toString()
-                        var msgColorG = data["colorG"].toString()
-                        var msgColorB = data["colorB"].toString()
-
-
-                        var tempChatMessage = MessagesOnList(nick,message,date,msgColorR,msgColorG,msgColorB)
-                        chatMessages.add(tempChatMessage)
-
-                        chatMessages.sortBy { it.date }
-
-                        var firstTenMsg = chatMessages.takeLast(15).toMutableList()
-
-                        val myListChatAdapter = MyListChatMessageAdapter(this,firstTenMsg)
-                        chatlist.adapter = myListChatAdapter
+                FirebaseFirestore.getInstance().collection("tables_joins").whereEqualTo("tableID",idTable).whereEqualTo("playerID", firebaseUser.uid).get().addOnSuccessListener{ task ->
+                    if(task.isEmpty && gmID != firebaseUser.uid) {
+                            Toast.makeText(this, "Zostałeś wyrzucony!", Toast.LENGTH_SHORT).show()
+                            finish()
+                            shouldExecuteOnResume = false
                     }
                 }
-            }
 
-            val players: MutableList<PlayerOnList> = mutableListOf()
-            FirebaseFirestore.getInstance().collection("tables_joins").whereEqualTo("tableID", idTable).get().addOnCompleteListener { task ->
-                if (!task.result.isEmpty) {
-                    for (data in task.result) {
-                        var tempPlayerID = data["playerID"].toString()
-                        var tempCharID = data["characterID"].toString()
-                        var tempNick = "Nieznany"
-                        var tempCharName = "Brak wybranej postaci"
-                        if(tempCharID != "brak") {
-                            tempCharName = data["characterName"].toString()
+                FirebaseFirestore.getInstance().collection("tables").document(idTable).get().addOnCompleteListener{ task ->
+                    if(!task.result.exists()) {
+                        Toast.makeText(this, "Stół został usunięty!", Toast.LENGTH_SHORT).show()
+                        finish()
+                        shouldExecuteOnResume = false
+                    }
+                }
+
+                val chatMessages: MutableList<MessagesOnList> = mutableListOf()
+
+                FirebaseFirestore.getInstance().collection("chat").whereEqualTo("table",idTable).get().addOnCompleteListener{ task ->
+                    if(task.isComplete){
+                        for(data in task.result){
+                            var nick = data["nick"].toString()
+                            var message = data["message"].toString()
+                            var date = data["date"].toString()
+
+                            var msgColorR = data["colorR"].toString()
+                            var msgColorG = data["colorG"].toString()
+                            var msgColorB = data["colorB"].toString()
+
+
+                            var tempChatMessage = MessagesOnList(nick,message,date,msgColorR,msgColorG,msgColorB)
+                            chatMessages.add(tempChatMessage)
+
+                            chatMessages.sortBy { it.date }
+
+                            var firstTenMsg = chatMessages.takeLast(15).toMutableList()
+
+                            val myListChatAdapter = MyListChatMessageAdapter(this,firstTenMsg)
+                            chatlist.adapter = myListChatAdapter
                         }
+                    }
+                }
 
-                        FirebaseFirestore.getInstance().collection("users").whereEqualTo("id", tempPlayerID).get().addOnCompleteListener { task2 ->
-                            if (task2.isComplete) {
-                                for(data2 in task2.result){
-                                    tempNick = data2["nick"].toString()
-                                    var playertemp = PlayerOnList(
-                                        tempNick,
-                                        tempCharName,
-                                        tempCharID,
-                                        tempPlayerID
-                                    )
-                                    players.add(playertemp)
-                                }
-                                players.sortBy { it.nick }
-                                val myListAdapter = MyListPlayerAdapter(this, players)
-                                playerList.adapter = myListAdapter
+                val players: MutableList<PlayerOnList> = mutableListOf()
+                FirebaseFirestore.getInstance().collection("tables_joins").whereEqualTo("tableID", idTable).get().addOnCompleteListener { task ->
+                    if (!task.result.isEmpty) {
+                        for (data in task.result) {
+                            var tempPlayerID = data["playerID"].toString()
+                            var tempCharID = data["characterID"].toString()
+                            var tempNick = "Nieznany"
+                            var tempCharName = getString(R.string.BrakWybranejPostaci)
+                            if(tempCharID != "brak") {
+                                tempCharName = data["characterName"].toString()
+                            }
 
-                                playerList.setOnItemClickListener(){adapterView, view, position, id ->
-                                    if(players[position].charname != "Brak wybranej postaci"){
-                                        val intent = Intent(this,CheckCharacterOnList::class.java)
-                                        intent.putExtra("id",players[position].chID)
-                                        startActivity(intent)
-                                        finish()
+                            FirebaseFirestore.getInstance().collection("users").whereEqualTo("id", tempPlayerID).get().addOnCompleteListener { task2 ->
+                                if (task2.isComplete) {
+                                    for(data2 in task2.result){
+                                        tempNick = data2["nick"].toString()
+                                        var playertemp = PlayerOnList(
+                                            tempNick,
+                                            tempCharName,
+                                            tempCharID,
+                                            tempPlayerID
+                                        )
+                                        players.add(playertemp)
                                     }
-                                    else {
-                                        Toast.makeText(this, "Gracz nie wybrał postaci!", Toast.LENGTH_SHORT).show()
+                                    players.sortBy { it.nick }
+                                    val myListAdapter = MyListPlayerAdapter(this, players)
+                                    playerList.adapter = myListAdapter
+
+                                    playerList.setOnItemClickListener(){adapterView, view, position, id ->
+                                        if(players[position].charname != getString(R.string.BrakWybranejPostaci)){
+                                            val intent = Intent(this,CheckCharacterOnList::class.java)
+                                            intent.putExtra("id",players[position].chID)
+                                            startActivity(intent)
+                                            finish()
+                                        }
+                                        else {
+                                            Toast.makeText(this, R.string.GraczNieWybral, Toast.LENGTH_SHORT).show()
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                }
-                else{
-                    players.clear()
-                    val myListAdapter = MyListPlayerAdapter(this, players)
-                    playerList.adapter = myListAdapter
+                    else{
+                        players.clear()
+                        val myListAdapter = MyListPlayerAdapter(this, players)
+                        playerList.adapter = myListAdapter
+                    }
                 }
             }
+
         }.also { runnable = it },delay.toLong())
         super.onResume()
     }

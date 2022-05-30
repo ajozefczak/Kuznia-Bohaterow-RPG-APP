@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Kuznia-Bohaterow-RPG-APP</string>
+    <string name="app_name">Kuźnia Bohaterów</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -18,14 +18,12 @@
     <string name="previous">Previous</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-
     <string name="rejestracja">Rejestracja</string>
     <string name="logowanie">Logowanie</string>
     <string name="cofnij">Cofnij</string>
     <string name="szukaj">Szukaj</string>
     <string name="imie">Imie</string>
     <string name="zawod">Zawód</string>
-
     <string name="Statystyka">Statystyka</string>
     <string name="Wartość">Wartość</string>
     <string name="Siła">Siła</string>
@@ -54,7 +52,7 @@
     <string name="StwórzPostać">Stwórz postać</string>
     <string name="DołaczDoStołu">Dołacz do stołu</string>
     <string name="ListaStołów">Lista stołów</string>
-    <string name="StwórzStół">Stwórz nowy stół</string>
+    <string name="StwórzStol">Stwórz nowy stół</string>
     <string name="RozwińPostać">Rozwiń Postać</string>
     <string name="UsuńPostać">Usuń Postać</string>
     <string name="Ekwipunek">Ekwipunek</string>
@@ -86,7 +84,71 @@
     <string name="Wynik">Wynik</string>
     <string name="LosujWszystko">Losuj Wszystko</string>
     <string name="ZmienPostać">ZmieńPostać</string>
-
-
-
+    <string name="TrybMG">Tryb MG</string>
+    <string name="WyszukajPostac">Search for characters</string>
+    <string name="WystapilBlad">"Wystąpił błąd w następujących polach:"</string>
+    <string name="WprowadzNick">"Wprowadź nick"</string>
+    <string name="BlednyAdres">"Błędny adres email"</string>
+    <string name="WprowadzHaslo">"Wprowadź hasło"</string>
+    <string name="WprowadzPonownieHaslo">"Wprowadź ponownie haslo"</string>
+    <string name="HaslaTakieSame">"Hasła nie są takie same"</string>
+    <string name="WCelu">"W celu utworzenia konta wymagana jest akceptacja regulaminu"</string>
+    <string name="HaslaWieksze">"Hasło powinno mieć więcej niż 6 znaków"</string>
+    <string name="HasloZbyt">"Hasło jest zbyt długie"</string>
+    <string name="ZalozoneKonto">"Konto zostało założone w serwisie"</string>
+    <string name="WprowadzEmail">"Wprowadź adres email"</string>
+    <string name="PoprawnieZalogowano">"Poprawnie zalogowano sie do systemu"</string>
+    <string name="WystapilBladPodczasLogowania">"Wystąpił błąd podczas logowania. Użytkownik nie istnieje lub podane dane są błędne"</string>
+    <string name="JestesNaLiscie">"Jesteś na liście zablokowanych na tym stole. Gracze na tym stole nie potrzebują cię w swoim składzie."</string>
+    <string name="WprowadzKod">"Wprowadź kod!"</string>
+    <string name="JestesMistrzem">"Jesteś Mistrzem Gry tego stołu. Nie możesz dołączyć."</string>
+    <string name="JestesNaStole">"Jesteś już na tym stole."</string>
+    <string name="NieZnaleziono">"Nie znaleziono kodu lub stół nie istnieje."</string>
+    <string name="PoprawnieWylogowano">"Poprawnie wylogowano sie z systemu"</string>
+    <string name="PoprawnieWybranoPostac">"Poprawnie wybrano postać"</string>
+    <string name="BrakDodanego">"Brak dodanego zdjęcia postaci"</string>
+    <string name="StworzonoPostac">"Pomyślnie stworzono postać"</string>
+    <string name="WprowadzWiadomosc">"Wprowadź wiadomość"</string>
+    <string name="d4">"Użytkownik rzucił d4 i wylosował "</string>
+    <string name="d6">"Użytkownik rzucił d6 i wylosował "</string>
+    <string name="d8">"Użytkownik rzucił d8 i wylosował "</string>
+    <string name="d10">"Użytkownik rzucił d10 i wylosował "</string>
+    <string name="d12">"Użytkownik rzucił d12 i wylosował "</string>
+    <string name="d20">"Użytkownik rzucił d20 i wylosował "</string>
+    <string name="d100">"Użytkownik rzucił d100 i wylosował "</string>
+    <string name="BrakWybranejPostaci">"Brak wybranej postaci"</string>
+    <string name="GraczNieWybral">"Gracz nie wybrał postaci!"</string>
+    <string name="PoprawnieEdytowano">"Poprawnie edytowano postać"</string>
+    <string name="BladPodczas">"Błąd podczas wprowadzania danych!"</string>
+    <string name="JezeliDane">"Jeżeli dane konto istnienieje na podany adres została wysłana wiadomość z instrukcją resetu hasła"</string>
+    <string name="PoprawnieEdytowanoNotatke">"Poprawnie edytowano notatki"</string>
+    <string name="PoprawnieUsunietoPrzedmiot">"Poprawnie usunięto przedmiot"</string>
+    <string name="WystapilBladPrzyUsuwaniuPrzedmiotu">"Wystąpił błąd przy usuwaniu przedmiotu"</string>
+    <string name="NastepneSpotkanie">"Następne spotkanie odbędzie sie: "</string>
+    <string name="BlednaGodzina">"Błędna godzina"</string>
+    <string name="PoprawnieDodanoSpotkanie">"Poprawnie dodano spotkanie"</string>
+    <string name="PoprawnieEdytowanoHistorie">"Poprawnie edytowano historie"</string>
+    <string name="PoprawnieUsunietoPostac">"Poprawnie usunięto postać"</string>
+    <string name="WystapilBladPrzyUsuwaniuPostaci">"Wystąpił błąd przy usuwaniu postaci"</string>
+    <string name="PoprawnieUsunietoStol">"Poprawnie usunięto stół"</string>
+    <string name="WystapilBladPodczasUsuwaniuStolu">"Wystąpił błąd przy usuwaniu stołu!</string>
+    <string name="PoprawnieZmienionoNazweStolu">"Poprawnie zmieniono nazwę stołu."</string>
+    <string name="PoprawnieZmienionoOpisStolu">"Poprawnie zmieniono opis stołu."</string>
+    <string name="WprowadzNazZak">"Wprowadź nazwę zaklęcia"</string>
+    <string name="WprowadzKoszZak">"Wprowadź koszt zaklęcia"</string>
+    <string name="WprowadzOpisZak">"Wprowadź opis zaklęcia"</string>
+    <string name="WprowadzPoprNumer">"Wprowadź poprawny numer w koszcie"</string>
+    <string name="PoprawnieDodanoZaklecie">"Poprawnie dodano zaklęcie."</string>
+    <string name="WprowadzNazweStolu">"Wprowadź nazwę stolu"</string>
+    <string name="WprowadzOpisStolu">"Wprowadź opis stolu"</string>
+    <string name="PoprawnieDodanoStol">"Poprawnie dodano stół."</string>
+    <string name="WprowadzNazwePrzedmiotu">"Wprowadź nazwę przedmiotu"</string>
+    <string name="WprowadzKosztPrzedmiotu">"Wprowadź koszt przedmiotu"</string>
+    <string name="WprowadzOpisPrzedmiotu">"Wprowadź opis przedmiotu"</string>
+    <string name="WprowadzPoprawnyNumer">"Wprowadź poprawny numer w koszcie"</string>
+    <string name="PoprawnieDodanoPrzedmiot">"Poprawnie dodano przedmiot."</string>
+    <string name="EdytujStol">Edytuj stół</string>
+    <string name="WybierzPostac">Wybierz postać</string>
+    <string name="Usun">Usuń</string>
+    <string name="WyrzucGracza">Wyrzuć gracza</string>
 </resources>

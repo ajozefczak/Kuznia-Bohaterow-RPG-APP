@@ -29,11 +29,11 @@ class Logowanie : AppCompatActivity() {
             LButtonZaloguj.isEnabled = false
             when{
                 TextUtils.isEmpty(editTextTextEmailAddress.text.toString()) -> {
-                    Toast.makeText(this,"Wprowadź adres email",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,getString(R.string.WprowadzEmail),Toast.LENGTH_SHORT).show()
                 }
 
                 TextUtils.isEmpty(editTextTextPassword.text.toString()) -> {
-                    Toast.makeText(this,"Wprowadź hasło",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,R.string.WprowadzHaslo,Toast.LENGTH_SHORT).show()
                 }
 
                 else -> {
@@ -41,14 +41,14 @@ class Logowanie : AppCompatActivity() {
                     FirebaseAuth.getInstance().signInWithEmailAndPassword(editTextTextEmailAddress.text.toString(),editTextTextPassword.text.toString()).addOnCompleteListener{
                         task ->
                         if(task.isSuccessful){
-                            Toast.makeText(this,"Poprawnie zalogowano sie do systemu",Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this,R.string.PoprawnieZalogowano,Toast.LENGTH_SHORT).show()
                             val EkranGraczaIntent = Intent(this, EkranGracza::class.java)
                             startActivity(EkranGraczaIntent)
                             LButtonZaloguj.isEnabled = true
                             finish()
                         }else{
                             LButtonZaloguj.isEnabled = true
-                            Toast.makeText(this,"Wystąpił błąd podczas logowania. Użytkownik nie istnieje lub podane dane są błędne",Toast.LENGTH_LONG).show()
+                            Toast.makeText(this,R.string.WystapilBladPodczasLogowania,Toast.LENGTH_LONG).show()
                         }
                     }
 

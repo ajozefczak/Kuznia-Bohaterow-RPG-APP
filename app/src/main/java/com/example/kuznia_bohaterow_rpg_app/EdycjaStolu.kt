@@ -27,13 +27,13 @@ class EdycjaStolu : AppCompatActivity() {
 
 
             FirebaseFirestore.getInstance().collection("tables").document(idTable).delete().addOnSuccessListener {
-                Toast.makeText(this, "Poprawnie usunięto stół", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.PoprawnieUsunietoStol, Toast.LENGTH_SHORT).show()
                 val listaStolowIntent = Intent(this, ListaStoly::class.java)
                 startActivity(listaStolowIntent)
                 finish()
                 EdycjaStoluButtonUsunStol.isEnabled = true
             }.addOnFailureListener{
-                Toast.makeText(this, "Wystąpił błąd przy usuwaniu stołu!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.WystapilBladPodczasUsuwaniuStolu, Toast.LENGTH_SHORT).show()
                 EdycjaStoluButtonUsunStol.isEnabled = true
             }
         }
@@ -41,14 +41,14 @@ class EdycjaStolu : AppCompatActivity() {
         EdycjaStoluButtonZmienNazwe.setOnClickListener {
             EdycjaStoluButtonZmienNazwe.isEnabled = false
             FirebaseFirestore.getInstance().collection("tables").document(idTable).update(mapOf("tableName" to EditTableNameText.text.toString()))
-            Toast.makeText(this, "Poprawnie zmieniono nazwę stołu.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.PoprawnieZmienionoNazweStolu, Toast.LENGTH_SHORT).show()
             EdycjaStoluButtonZmienNazwe.isEnabled = true
         }
 
         EdycjaStoluButtonZmienOpis.setOnClickListener {
             EdycjaStoluButtonZmienOpis.isEnabled = false
             FirebaseFirestore.getInstance().collection("tables").document(idTable).update(mapOf("tableDesc" to EditTableTextDesc.text.toString()))
-            Toast.makeText(this, "Poprawnie zmieniono opis stołu.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.PoprawnieZmienionoOpisStolu, Toast.LENGTH_SHORT).show()
             EdycjaStoluButtonZmienOpis.isEnabled = true
         }
 

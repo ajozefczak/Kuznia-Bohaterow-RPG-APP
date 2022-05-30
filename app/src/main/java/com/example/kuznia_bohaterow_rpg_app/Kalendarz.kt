@@ -65,7 +65,7 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
                         Log.e("logData",dbHour)
                         Log.e("logData",dbMinute)
 
-                        KTextPoka.text ="Następne spotkanie odbędzie sie: \n $savedDay-$savedMonth-$savedYear\n $savedHour:$savedMinute"
+                        KTextPoka.text =R.string.NastepneSpotkanie.toString() + "\n" + "$savedDay-$savedMonth-$savedYear\n $savedHour:$savedMinute"
 
                     }
                 }
@@ -139,10 +139,10 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
 
             db.collection("meetings").document(firebaseUser.uid).delete().addOnCompleteListener {
                 db.collection("meetings").document(firebaseUser.uid).set(userMeetingInformation).addOnSuccessListener {
-                    Toast.makeText(this, "Poprawnie dodano spotkanie", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.PoprawnieDodanoSpotkanie, Toast.LENGTH_SHORT).show()
                     KButtonZapiszTeermin.isEnabled = true
                 }.addOnFailureListener { e ->
-                    Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.WystapilBlad.toString() + e, Toast.LENGTH_SHORT).show()
                     KButtonZapiszTeermin.isEnabled = true
                 }
             }
@@ -201,9 +201,9 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
                 savedHour = p1
                 savedMinute = p2
                 KTextPoka.text =
-                    "Następne spotkanie odbędzie sie: \n $savedDay-$savedMonth-$savedYear\n $savedHour:$savedMinute"
+                    R.string.NastepneSpotkanie.toString() + "\n" + "$savedDay-$savedMonth-$savedYear\n $savedHour:$savedMinute"
             } else {
-                Toast.makeText(this, "Błędna godzina", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, R.string.BlednaGodzina, Toast.LENGTH_LONG).show()
                 val timePickerDialog = TimePickerDialog(this, this, currHour, currMinute, true)
                 timePickerDialog.show()
             }
@@ -211,7 +211,7 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
             savedHour = p1
             savedMinute = p2
             KTextPoka.text =
-                "Następne spotkanie odbędzie sie: \n $savedDay-$savedMonth-$savedYear\n $savedHour:$savedMinute"
+                R.string.NastepneSpotkanie.toString() + "\n" + "$savedDay-$savedMonth-$savedYear\n $savedHour:$savedMinute"
         }
     }
 
