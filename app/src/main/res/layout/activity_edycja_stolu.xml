@@ -55,9 +55,15 @@
             android:textColor="#ebebeb" />
 
         <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1" />
+
+        <ListView
             android:id="@+id/ETListOfUsers"
             android:layout_width="match_parent"
-            android:layout_height="166dp"
+            android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:layout_weight="1" />
 
