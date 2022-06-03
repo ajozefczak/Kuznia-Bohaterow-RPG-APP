@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bar"
+    tools:context=".Instrukcja">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="0.1"
+            android:background="#94261309"
+            android:text="Instrukcja Obsugi wybierz rozdział"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#ebebeb"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/InstrukcjaButtonRejestracja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:padding="3dp"
+            android:text="1.Rejestracja"
+            android:textColor="#ebebeb" />
+
+        <Button
+            android:id="@+id/InstrukcjaButtonLogowanie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:padding="3dp"
+            android:text="2.Logowanie"
+            android:textColor="#ebebeb" />
+
+        <Button
+            android:id="@+id/InstrukcjaButtonWygląd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:padding="3dp"
+            android:text="3.Wyloguj"
+            android:textColor="#ebebeb" />
+
+        <Button
+            android:id="@+id/InstrukcjaButtonKalendarz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:padding="3dp"
+            android:text="4.Kalendarz"
+            android:textColor="#ebebeb" />
+
+        <Button
+            android:id="@+id/InstrukcjaButtonStworzPostac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:padding="3dp"
+            android:text="5.Stwórz postać"
+            android:textColor="#ebebeb" />
+
+        <Button
+            android:id="@+id/InstrukcjaButtonDolaczDoStolu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:padding="3dp"
+            android:text="6.Dołącz do stołu"
+            android:textColor="#ebebeb" />
+
+        <Button
+            android:id="@+id/InstrukcjaButtonListaStolow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:padding="3dp"
+            android:text="7.lista stołów"
+            android:textColor="#ebebeb" />
+
+        <Button
+            android:id="@+id/InstrukcjaButtonWyszukajPostac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:padding="3dp"
+            android:text="8.Wyszukaj postaci"
+            android:textColor="#ebebeb" />
+
+        <Button
+            android:id="@+id/InstrukcjaButtonTryby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:padding="3dp"
+            android:text="9.Tryb Gracza/MG"
+            android:textColor="#ebebeb" />
+
+        <Button
+            android:id="@+id/InstrukcjaButtonStworzNowyStol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/przycisknaprzyciski"
+            android:padding="3dp"
+            android:text="10.stwórz nowy stół"
+            android:textColor="#ebebeb" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/przycisknaprzyciski"
+            android:padding="3dp"
+            android:text="11.XXXX"
+            android:textColor="#ebebeb" />
+
+        <Button
+            android:id="@+id/InstrukcjaButtonCofnij"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/przycisknaprzyciski"
+            android:padding="3dp"
+            android:text="@string/cofnij"
+            android:textColor="#ebebeb" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
