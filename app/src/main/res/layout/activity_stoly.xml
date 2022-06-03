@@ -53,7 +53,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/gabriela"
-                    android:text="Kod zaproszenia"
+                    android:text="@string/KodZaproszenia"
                     android:textColor="#ebebeb" />
 
                 <TextView

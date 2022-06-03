@@ -476,7 +476,7 @@ class Stoly : AppCompatActivity() {
 
                 FirebaseFirestore.getInstance().collection("tables_joins").whereEqualTo("tableID",idTable).whereEqualTo("playerID", firebaseUser.uid).get().addOnSuccessListener{ task ->
                     if(task.isEmpty && gmID != firebaseUser.uid) {
-                            Toast.makeText(this, "Zostałeś wyrzucony!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, R.string.ZostalesWyrzucony, Toast.LENGTH_SHORT).show()
                             finish()
                             shouldExecuteOnResume = false
                     }
@@ -484,7 +484,7 @@ class Stoly : AppCompatActivity() {
 
                 FirebaseFirestore.getInstance().collection("tables").document(idTable).get().addOnCompleteListener{ task ->
                     if(!task.result.exists()) {
-                        Toast.makeText(this, "Stół został usunięty!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, R.string.StolUsuniety, Toast.LENGTH_SHORT).show()
                         finish()
                         shouldExecuteOnResume = false
                     }

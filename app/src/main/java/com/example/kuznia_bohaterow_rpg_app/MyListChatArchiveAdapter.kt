@@ -31,7 +31,12 @@ class MyListChatArchiveAdapter(private val context: Activity, private val chatli
         var monthtemp = ""
         if(dateRaw.monthValue < 10) monthtemp = "0" + dateRaw.monthValue.toString()
         else monthtemp = dateRaw.monthValue.toString()
-        date.text = dateRaw.dayOfMonth.toString() + "-" + monthtemp + "-" + dateRaw.year.toString() + " " + dateRaw.hour.toString() + ":" + dateRaw.minute.toString()
+
+        var minutetemp = ""
+        if(dateRaw.minute < 10) minutetemp = "0" + dateRaw.minute.toString()
+        else minutetemp = dateRaw.minute.toString()
+
+        date.text = dateRaw.dayOfMonth.toString() + "-" + monthtemp + "-" + dateRaw.year.toString() + " " + dateRaw.hour.toString() + ":" + minutetemp
 
         var intColorR = chatlist[position].colorR.toInt()
         var intColorG = chatlist[position].colorG.toInt()

@@ -65,7 +65,15 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
                         Log.e("logData",dbHour)
                         Log.e("logData",dbMinute)
 
-                        KTextPoka.text =R.string.NastepneSpotkanie.toString() + "\n" + "$savedDay-$savedMonth-$savedYear\n $savedHour:$savedMinute"
+                        var tempMinute = ""
+                        if(savedMinute < 10) {
+                            tempMinute = "0" + savedMinute.toString()
+                        }
+                        else{
+                            tempMinute = savedMinute.toString()
+                        }
+
+                        KTextPoka.text =R.string.NastepneSpotkanie.toString() + "\n" + "$savedDay-$savedMonth-$savedYear\n $savedHour:" + tempMinute
 
                     }
                 }
@@ -195,13 +203,21 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
          currMonth = calendar[Calendar.MONTH] + 1
          currYear = calendar[Calendar.YEAR]
 
-
         if(savedDay==currDay && savedMonth==currMonth && savedYear==currYear) {
             if (p1 >= currHour && p2 >= currMinute) {
                 savedHour = p1
                 savedMinute = p2
+
+                var tempMinute = ""
+                if(savedMinute < 10) {
+                    tempMinute = "0" + savedMinute.toString()
+                }
+                else{
+                    tempMinute = savedMinute.toString()
+                }
+
                 KTextPoka.text =
-                    R.string.NastepneSpotkanie.toString() + "\n" + "$savedDay-$savedMonth-$savedYear\n $savedHour:$savedMinute"
+                    getString(R.string.NastepneSpotkanie) + "\n" + "$savedDay-$savedMonth-$savedYear\n $savedHour:" + tempMinute
             } else {
                 Toast.makeText(this, R.string.BlednaGodzina, Toast.LENGTH_LONG).show()
                 val timePickerDialog = TimePickerDialog(this, this, currHour, currMinute, true)
@@ -210,8 +226,18 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
         }else{
             savedHour = p1
             savedMinute = p2
+
+            var tempMinute = ""
+            if(savedMinute < 10) {
+                tempMinute = "0" + savedMinute.toString()
+            }
+            else{
+                tempMinute = savedMinute.toString()
+            }
+
+
             KTextPoka.text =
-                R.string.NastepneSpotkanie.toString() + "\n" + "$savedDay-$savedMonth-$savedYear\n $savedHour:$savedMinute"
+                getString(R.string.NastepneSpotkanie) + "\n" + "$savedDay-$savedMonth-$savedYear\n $savedHour:"+ tempMinute
         }
     }
 

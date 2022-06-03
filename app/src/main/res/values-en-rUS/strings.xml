@@ -151,4 +151,6 @@
     <string name="WybierzPostac">Wybierz postać</string>
     <string name="Usun">Delete</string>
     <string name="WyrzucGracza">Kick Player</string>
+    <string name="StolUsuniety">"The table was deleted!"</string>
+    <string name="ZostalesWyrzucony">"You were kicked!"</string>
 </resources>

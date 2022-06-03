@@ -85,7 +85,7 @@
     <string name="LosujWszystko">Losuj Wszystko</string>
     <string name="ZmienPostać">ZmieńPostać</string>
     <string name="TrybMG">Tryb MG</string>
-    <string name="WyszukajPostac">Search for characters</string>
+    <string name="WyszukajPostac">Wyszukaj postać</string>
     <string name="WystapilBlad">"Wystąpił błąd w następujących polach:"</string>
     <string name="WprowadzNick">"Wprowadź nick"</string>
     <string name="BlednyAdres">"Błędny adres email"</string>
@@ -151,4 +151,6 @@
     <string name="WybierzPostac">Wybierz postać</string>
     <string name="Usun">Usuń</string>
     <string name="WyrzucGracza">Wyrzuć gracza</string>
+    <string name="StolUsuniety">"Stół został usunięty!"</string>
+    <string name="ZostalesWyrzucony">"Zostałeś wyrzucony!"</string>
 </resources>
