@@ -132,6 +132,16 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/EkranGraczaButtonInstrukcja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="108dp"
+            android:background="@drawable/przycisknaprzyciski"
+            android:fontFamily="@font/gabriela"
+            android:text="Instrukcja dla opornych"
+            android:textColor="#ebebeb" />
+
     </LinearLayout>
 
     <Button
