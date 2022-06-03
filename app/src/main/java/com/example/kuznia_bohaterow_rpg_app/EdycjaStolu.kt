@@ -89,6 +89,36 @@ class EdycjaStolu : AppCompatActivity() {
                 }
             }
         }
+
+        val playersKicked: MutableList<PlayerKickOnList> = mutableListOf()
+        FirebaseFirestore.getInstance().collection("blocklist").whereEqualTo("tableID", idTable).get().addOnCompleteListener { task ->
+            if (task.isComplete) {
+                for (data in task.result) {
+
+                    var tempPlayerID = data["playerID"].toString()
+                    var tempJoinID = data.id
+                    var tempTableID = idTable
+
+                    FirebaseFirestore.getInstance().collection("users").whereEqualTo("id", tempPlayerID).get().addOnCompleteListener { task2 ->
+                        if (task2.isComplete) {
+                            for(data2 in task2.result){
+                                var tempNick = data2["nick"].toString()
+                                var playertemp = PlayerKickOnList(
+                                    tempNick,
+                                    tempPlayerID,
+                                    tempJoinID,
+                                    tempTableID
+                                )
+                                playersKicked.add(playertemp)
+                            }
+                            playersKicked.sortBy { it.nick }
+                            val myListAdapter = MyListKickedAdapter(this, playersKicked)
+                            ETListOfKickedUsers.adapter = myListAdapter
+                        }
+                    }
+                }
+            }
+        }
     }
     override fun onRestart() {
         super.onRestart()

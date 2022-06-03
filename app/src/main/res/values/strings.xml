@@ -153,4 +153,9 @@
     <string name="WyrzucGracza">Wyrzuć gracza</string>
     <string name="StolUsuniety">"Stół został usunięty!"</string>
     <string name="ZostalesWyrzucony">"Zostałeś wyrzucony!"</string>
+    <string name="OdbanujGracza">"Odbanuj użytkownika"</string>
+    <string name="WystapilBladPodczasWyrzucaniaGracza">"Wystąpił błąd podczas wyrzucania gracza"</string>
+    <string name="PoprawnieWyrzuconoZeStolu">"Poprawnie wyrzucono gracza ze stołu"</string>
+    <string name="WystapilBladPodczasOdbanowywaniaGracza">"Wystąpił błąd podczas odbanowywania gracza!"</string>
+    <string name="PoprawnieOdbanowano">"Poprawnie odbanowano!"</string>
 </resources>
