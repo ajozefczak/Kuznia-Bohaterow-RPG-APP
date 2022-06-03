@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="Statystyki"
+                android:text="@string/Statystyki"
                 android:textColor="#ebebeb"
                 android:textSize="20sp" />
 
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="0"
-                android:text="Siła"
+                android:text="@string/Siła"
                 android:textAlignment="textStart"
                 android:textColor="#ebebeb"
                 android:textSize="14sp" />
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="0"
-                android:text="Kondycja"
+                android:text="@string/Kondycja"
                 android:textAlignment="textStart"
                 android:textColor="#ebebeb"
                 android:textSize="14sp" />
@@ -102,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="0"
-                android:text="Budowa Ciała"
+                android:text="@string/BudowaCiała"
                 android:textAlignment="textStart"
                 android:textColor="#ebebeb"
                 android:textSize="14sp" />
@@ -132,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="0"
-                android:text="Zręczność"
+                android:text="@string/Zręczność"
                 android:textAlignment="textStart"
                 android:textColor="#ebebeb"
                 android:textSize="14sp" />
@@ -162,7 +162,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="0"
-                android:text="Inteligencja"
+                android:text="@string/Inteligencja"
                 android:textAlignment="textStart"
                 android:textColor="#ebebeb"
                 android:textSize="14sp" />
@@ -192,7 +192,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="0"
-                android:text="Moc"
+                android:text="@string/Moc"
                 android:textAlignment="textStart"
                 android:textColor="#ebebeb"
                 android:textSize="14sp" />
@@ -222,7 +222,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="0"
-                android:text="Wykształcenie"
+                android:text="@string/Wykształcenie"
                 android:textAlignment="textStart"
                 android:textColor="#ebebeb"
                 android:textSize="14sp" />
@@ -252,7 +252,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="0"
-                android:text="Poczytalność"
+                android:text="@string/Poczytalność"
                 android:textAlignment="textStart"
                 android:textColor="#ebebeb"
                 android:textSize="14sp" />
@@ -282,7 +282,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="0"
-                android:text="Wygląd"
+                android:text="@string/Wygląd"
                 android:textAlignment="textStart"
                 android:textColor="#ebebeb"
                 android:textSize="14sp" />
@@ -362,7 +362,6 @@
             android:layout_margin="10dp"
             android:background="#94261309"
             android:padding="10dp"
-            android:text="Wynik rzutu"
             android:textAlignment="center"
             android:textColor="#ebebeb"
             android:textSize="24sp" />
@@ -380,7 +379,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
-                android:text="Cofnij"
+                android:text="@string/cofnij"
                 android:textColor="#ebebeb" />
 
             <Button
@@ -391,7 +390,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
-                android:text="Zapisz"
+                android:text="@string/Zapisz"
                 android:textColor="#ebebeb" />
 
         </LinearLayout>

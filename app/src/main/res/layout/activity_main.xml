@@ -31,7 +31,7 @@
             android:background="#A1261309"
             android:fontFamily="@font/gabriela"
             android:padding="5dp"
-            android:text="Kuźnia Bohaterów"
+            android:text="@string/app_name"
             android:textAlignment="center"
             android:textColor="#ebebeb "
             android:textSize="45sp"
@@ -50,7 +50,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="0.5"
                 android:background="@drawable/przycisknaprzyciski"
-                android:text="Rejestracja"
+                android:text="@string/rejestracja"
                 android:textColor="#ebebeb "
                 android:textStyle="bold" />
 
@@ -62,7 +62,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="0.5"
                 android:background="@drawable/przycisknaprzyciski"
-                android:text="Zaloguj"
+                android:text="@string/logowanie"
                 android:textColor="#ebebeb "
                 android:textStyle="bold" />
         </LinearLayout>

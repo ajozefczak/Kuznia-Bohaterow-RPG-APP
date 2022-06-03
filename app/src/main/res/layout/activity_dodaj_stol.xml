@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gabriela"
-                android:text="Nazwa stołu:"
+                android:text="@string/NazwaStołu"
                 android:textColor="#ebebeb" />
 
             <EditText
@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gabriela"
-                android:text="Opis stołu:"
+                android:text="@string/OpisStołu"
                 android:textColor="#ebebeb" />
 
             <EditText
@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
-            android:text="Dodaj"
+            android:text="@string/Dodaj"
             android:textColor="#ebebeb" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

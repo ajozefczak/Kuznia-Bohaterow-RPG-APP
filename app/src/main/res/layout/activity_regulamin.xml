@@ -21,7 +21,7 @@
             android:layout_marginRight="10dp"
             android:background="#94261309"
             android:paddingLeft="5dp"
-            android:text="Regulamin"
+            android:text="@string/Regulamin"
             android:textColor="#ebebeb"
             android:textSize="34sp" />
 

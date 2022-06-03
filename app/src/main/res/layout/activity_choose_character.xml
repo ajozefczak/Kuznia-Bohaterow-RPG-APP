@@ -28,7 +28,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
-            android:text="Cofnij"
+            android:text="@string/cofnij"
             android:textColor="#ebebeb" />
 
     </LinearLayout>

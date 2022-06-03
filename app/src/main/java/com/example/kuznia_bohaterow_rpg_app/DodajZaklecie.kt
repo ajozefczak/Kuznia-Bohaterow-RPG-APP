@@ -23,22 +23,22 @@ class DodajZaklecie : AppCompatActivity() {
         DodajZaklecieButtonDodaj.setOnClickListener{
             when {
                 TextUtils.isEmpty(NazwaZaklecieInput.text.toString()) -> {
-                    Toast.makeText(this, "Wprowadź nazwę zaklęcia", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.WprowadzNazZak, Toast.LENGTH_SHORT).show()
                 }
 
                 TextUtils.isEmpty(KosztZakleciaInput.text.toString()) -> {
-                    Toast.makeText(this, "Wprowadź koszt zaklęcia", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.WprowadzKoszZak, Toast.LENGTH_SHORT).show()
                 }
 
                 TextUtils.isEmpty(OpisZakleciaInput.text.toString()) -> {
-                    Toast.makeText(this, "Wprowadź opis zaklęcia", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.WprowadzOpisZak, Toast.LENGTH_SHORT).show()
                 }
 
                 else -> {
                     val number = KosztZakleciaInput.text.toString().toIntOrNull()
                     val isInteger = number != null
                     if(!isInteger){
-                        Toast.makeText(this, "Wprowadź poprawny numer w koszcie", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, R.string.WprowadzPoprNumer, Toast.LENGTH_SHORT).show()
                     }
                     else{
                         val idCharacter = intent.getStringExtra("id").toString()
@@ -50,7 +50,7 @@ class DodajZaklecie : AppCompatActivity() {
                         spellMutable["spellCost"] = KosztZakleciaInput.text.toString()
                         spellMutable["spellDescription"] = OpisZakleciaInput.text.toString()
                         db.collection("spells").add(spellMutable).addOnSuccessListener {
-                            Toast.makeText(this, "Poprawnie dodano zaklęcie.", Toast.LENGTH_SHORT)
+                            Toast.makeText(this, R.string.PoprawnieDodanoZaklecie, Toast.LENGTH_SHORT)
                                 .show()
                             finish()
                             DodajZaklecieButtonDodaj.isEnabled = true
@@ -58,7 +58,7 @@ class DodajZaklecie : AppCompatActivity() {
                         }.addOnFailureListener { e ->
                             Toast.makeText(
                                 this,
-                                "Wystąpił nieoczekiwany błąd: " + e,
+                                R.string.WystapilBlad.toString() + e,
                                 Toast.LENGTH_SHORT
                             ).show()
                             DodajPrzedmiotButtonDodaj.isEnabled = true

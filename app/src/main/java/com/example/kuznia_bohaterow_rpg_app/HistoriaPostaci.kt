@@ -39,10 +39,10 @@ class HistoriaPostaci : AppCompatActivity() {
             userHistory["history"] = HistoriaEditTextTextMultiLineHistoria.text.toString()
             db.collection("history").document(idCharacter).delete().addOnCompleteListener {
                 db.collection("history").document(idCharacter).set(userHistory).addOnSuccessListener {
-                    Toast.makeText(this, "Poprawnie edytowano historie", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.PoprawnieEdytowanoHistorie, Toast.LENGTH_SHORT).show()
                     HistoriaButtonZapisz.isEnabled = true
                 }.addOnFailureListener { e ->
-                    Toast.makeText(this, "Wystąpił nieoczekiwany błąd: " + e, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.WystapilBlad.toString() + e, Toast.LENGTH_SHORT).show()
                     HistoriaButtonZapisz.isEnabled = true
                 }
             }

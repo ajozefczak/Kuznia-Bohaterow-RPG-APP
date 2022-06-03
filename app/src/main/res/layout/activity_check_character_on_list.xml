@@ -39,7 +39,7 @@
                     android:layout_weight="1"
                     android:background="#94261309"
                     android:fontFamily="@font/gabriela"
-                    android:text="Imie"
+                    android:text="@string/imie"
                     android:textColor="#ebebeb"
                     android:textSize="24sp" />
 
@@ -51,7 +51,7 @@
                     android:layout_weight="1"
                     android:background="#94261309"
                     android:fontFamily="@font/gabriela"
-                    android:text="Zawód"
+                    android:text="@string/zawod"
                     android:textColor="#ebebeb"
                     android:textSize="24sp" />
             </LinearLayout>
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:fontFamily="@font/gabriela"
-                android:text="Statystyka"
+                android:text="@string/Statystyka"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
 
@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:fontFamily="@font/gabriela"
-                android:text="Wartość"
+                android:text="@string/Wartość"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
         </LinearLayout>
@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:fontFamily="@font/gabriela"
-                android:text="Siła"
+                android:text="@string/Siła"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
 
@@ -133,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:fontFamily="@font/gabriela"
-                android:text="Kondycja"
+                android:text="@string/Kondycja"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
 
@@ -163,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/gabriela"
-                android:text="Budowa Ciała"
+                android:text="@string/BudowaCiała"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
 
@@ -193,7 +193,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/gabriela"
-                android:text="Zręczność"
+                android:text="@string/Zręczność"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
 
@@ -223,7 +223,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/gabriela"
-                android:text="Inteligencja"
+                android:text="@string/Inteligencja"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
 
@@ -253,7 +253,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/gabriela"
-                android:text="Moc"
+                android:text="@string/Moc"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
 
@@ -283,7 +283,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/gabriela"
-                android:text="Wykształcenie"
+                android:text="@string/Wykształcenie"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
 
@@ -313,7 +313,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/gabriela"
-                android:text="Poczytalność"
+                android:text="@string/Poczytalność"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
 
@@ -343,7 +343,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/gabriela"
-                android:text="Wygląd"
+                android:text="@string/Wygląd"
                 android:textColor="#ebebeb"
                 android:textSize="24sp" />
 
@@ -372,7 +372,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Cofnij"
+                android:text="@string/cofnij"
                 android:textColor="#ebebeb" />
         </LinearLayout>
 

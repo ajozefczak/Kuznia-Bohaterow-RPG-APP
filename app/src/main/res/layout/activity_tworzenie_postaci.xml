@@ -44,7 +44,7 @@
                     android:ems="10"
                     android:fontFamily="@font/gabriela"
                     android:inputType="textPersonName"
-                    android:text="Imie postaci"
+                    android:text="@string/imie"
                     android:textColor="#ebebeb" />
 
                 <EditText
@@ -55,7 +55,7 @@
                     android:ems="10"
                     android:fontFamily="@font/gabriela"
                     android:inputType="textPersonName"
-                    android:text="Profesja"
+                    android:text="@string/Profesja"
                     android:textColor="#ebebeb" />
 
             </LinearLayout>
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/gabriela"
-                android:text="Wylosuj"
+                android:text="@string/Wylosuj"
                 android:textAlignment="textEnd"
                 android:textColor="#ebebeb"
                 android:textIsSelectable="false"
@@ -88,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.5"
                 android:fontFamily="@font/gabriela"
-                android:text="Rzut kostką"
+                android:text="@string/RzutKostką"
                 android:textAlignment="center"
                 android:textColor="#ebebeb"
                 android:textStyle="bold" />
@@ -99,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/gabriela"
-                android:text="Wynik"
+                android:text="@string/Wynik"
                 android:textColor="#ebebeb"
                 android:textStyle="bold" />
 
@@ -120,7 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
-                android:text="Siła"
+                android:text="@string/Siła"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="#ebebeb"
@@ -164,7 +164,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
-                android:text="Kondycja"
+                android:text="@string/Kondycja"
                 android:textAlignment="center"
                 android:textColor="#ebebeb"
                 android:textStyle="bold" />
@@ -207,7 +207,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
-                android:text="Budowa Ciała"
+                android:text="@string/BudowaCiała"
                 android:textAlignment="center"
                 android:textColor="#ebebeb"
                 android:textStyle="bold" />
@@ -249,7 +249,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
-                android:text="Wygląd"
+                android:text="@string/Wygląd"
                 android:textAlignment="center"
                 android:textColor="#ebebeb"
                 android:textStyle="bold" />
@@ -290,7 +290,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
-                android:text="Inteligencja"
+                android:text="@string/Inteligencja"
                 android:textAlignment="center"
                 android:textColor="#ebebeb"
                 android:textStyle="bold" />
@@ -332,7 +332,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
-                android:text="Zręczność"
+                android:text="@string/Zręczność"
                 android:textAlignment="center"
                 android:textColor="#ebebeb"
                 android:textStyle="bold" />
@@ -374,7 +374,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
-                android:text="Wykształcenie"
+                android:text="@string/Wykształcenie"
                 android:textAlignment="center"
                 android:textColor="#ebebeb"
                 android:textStyle="bold" />
@@ -417,7 +417,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
-                android:text="Moc"
+                android:text="@string/Moc"
                 android:textAlignment="center"
                 android:textColor="#ebebeb"
                 android:textStyle="bold" />
@@ -459,7 +459,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:fontFamily="@font/gabriela"
-                android:text="Poczytalność"
+                android:text="@string/Poczytalność"
                 android:textAlignment="center"
                 android:textColor="#ebebeb"
                 android:textStyle="bold" />
@@ -504,7 +504,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Zapisz Postać"
+                android:text="@string/Zapisz"
                 android:textColor="#ebebeb" />
 
             <Button
@@ -515,7 +515,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Losuj Wszystko"
+                android:text="@string/LosujWszystko"
                 android:textColor="#ebebeb" />
 
         </LinearLayout>
@@ -528,7 +528,7 @@
             android:layout_weight="1"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
-            android:text="Wróć do menu głównego"
+            android:text="@string/cofnij"
             android:textColor="#ebebeb" />
 
     </LinearLayout>

@@ -120,13 +120,13 @@ class EkranPostaci : AppCompatActivity() {
         val idCharacter = intent.getStringExtra("id").toString()
 
         db.collection("charactersheet").document(idCharacter).delete().addOnSuccessListener {
-            Toast.makeText(this, "Poprawnie usunięto postać", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.PoprawnieUsunietoPostac, Toast.LENGTH_SHORT).show()
             val listaPostaciIntent = Intent(this, ListaPostaci::class.java)
             startActivity(listaPostaciIntent)
             finish()
             EPButtonUsun.isEnabled = true
         }.addOnFailureListener{
-            Toast.makeText(this, "Wystąpił błąd przy usuwaniu postaci", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.WystapilBladPrzyUsuwaniuPostaci, Toast.LENGTH_SHORT).show()
             EPButtonUsun.isEnabled = true
         }
     }

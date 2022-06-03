@@ -26,7 +26,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Zmień postać"
+                android:text="@string/WybierzPostac"
                 android:textColor="#ebebeb" />
 
             <Button
@@ -37,7 +37,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Edytuj stół"
+                android:text="@string/EdytujStol"
                 android:textColor="#ebebeb"
                 android:visibility="gone" />
 
@@ -63,7 +63,6 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/gabriela"
-                    android:text="Kod"
                     android:textAlignment="center"
                     android:textColor="#ebebeb"
                     android:textSize="20sp" />
@@ -119,7 +118,7 @@
                 android:id="@+id/editTextTextPersonName5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.05"
+                android:layout_weight="0.1"
                 android:backgroundTint="#ebebeb"
                 android:ems="10"
                 android:fontFamily="@font/gabriela"
@@ -128,24 +127,22 @@
 
             <Button
                 android:id="@+id/StolyButtonWyslijWiadomosc"
-                android:layout_width="wrap_content"
+                android:layout_width="88dp"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:layout_weight="10"
+                android:layout_weight="5"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Wyślij"
+                android:text="@string/Wyślij"
                 android:textColor="#ebebeb" />
 
             <Button
                 android:id="@+id/archivum"
-                android:layout_width="wrap_content"
+                android:layout_width="88dp"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:layout_weight="9"
+                android:layout_weight="0.1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Archiwum"
+                android:text="@string/Archiwum"
                 android:textColor="#ebebeb" />
 
         </LinearLayout>
@@ -223,7 +220,7 @@
             android:layout_weight="0.6"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
-            android:text="Cofnijj"
+            android:text="@string/cofnij"
             android:textColor="#ebebeb" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

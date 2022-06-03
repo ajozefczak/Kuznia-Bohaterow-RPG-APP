@@ -42,7 +42,7 @@
             android:layout_weight="1"
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
-            android:text="Wyrzuć Gracza"
+            android:text="@string/WyrzucGracza"
             android:textColor="#ebebeb" />
 
     </LinearLayout>

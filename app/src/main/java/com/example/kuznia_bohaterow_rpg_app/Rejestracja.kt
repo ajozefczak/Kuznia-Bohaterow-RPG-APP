@@ -30,7 +30,7 @@ class Rejestracja : AppCompatActivity() {
 
         // Code to register pepega acc
 
-        var errorMessage = "Wystąpił błąd w następujących polach:\n"
+        var errorMessage = getString(R.string.WystapilBlad) + "\n";
         var tockenAcc = true;
 
         RButtonRejestracja.setOnClickListener{
@@ -38,7 +38,7 @@ class Rejestracja : AppCompatActivity() {
             RButtonRejestracja.isEnabled = false
 
             if(TextUtils.isEmpty(editTextTextPersonName.text.toString().trim { it <= ' ' })) {
-                errorMessage = errorMessage + "Wprowadź nick\n"
+                errorMessage = errorMessage + getString(R.string.WprowadzNick) + "\n"
                 tockenAcc = false
             }
             /*if(TextUtils.isEmpty(editTextTextEmailAddress2.text.toString())){
@@ -46,31 +46,31 @@ class Rejestracja : AppCompatActivity() {
                 tockenAcc = false
             }*/
             if(!android.util.Patterns.EMAIL_ADDRESS.matcher(editTextTextEmailAddress2.text.toString()).matches()){
-                errorMessage = errorMessage + "Błędny adres email\n"
+                errorMessage = errorMessage + getString(R.string.BlednyAdres) + "\n"
                 tockenAcc = false
             }
             if(TextUtils.isEmpty(editTextTextPassword2.text.toString())){
-                errorMessage = errorMessage + "Wprowadź hasło\n"
+                errorMessage = errorMessage + getString(R.string.WprowadzHaslo) + "\n"
                 tockenAcc = false
             }
             if(TextUtils.isEmpty(editTextTextPassword3.text.toString())){
-                errorMessage = errorMessage + "Wprowadź ponownie haslo\n"
+                errorMessage = errorMessage + getString(R.string.WprowadzPonownieHaslo) + "\n"
                 tockenAcc = false
             }
             if(!editTextTextPassword2.text.toString().equals(editTextTextPassword3.text.toString())){
-                errorMessage = errorMessage + "Hasła nie są takie same\n"
+                errorMessage = errorMessage + getString(R.string.HaslaTakieSame) + "\n"
                 tockenAcc = false
             }
             if(!checkBox.isChecked){
-                errorMessage = errorMessage + "W celu utworzenia konta wymagana jest akceptacja regulaminu\n"
+                errorMessage = errorMessage + getString(R.string.WCelu) + "\n"
                 tockenAcc = false
             }
             if(editTextTextPassword2.text.toString().count()<7){
-                errorMessage = errorMessage + "Hasło powinno mieć więcej niż 6 znaków\n"
+                errorMessage = errorMessage + getString(R.string.HaslaWieksze) + "\n"
                 tockenAcc = false
             }
             if(editTextTextPassword2.text.toString().count()>128){
-                errorMessage = errorMessage + "Hasło jest zbyt długie\n"
+                errorMessage = errorMessage + getString(R.string.HasloZbyt) + "\n"
                 tockenAcc = false
             }
             if(tockenAcc==true) {
@@ -86,7 +86,7 @@ class Rejestracja : AppCompatActivity() {
                     user["id"] = firebaseUser.uid
                     db.collection("users").add(user)
 
-                    Toast.makeText(this, "Konto zostało założone w serwisie", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.ZalozoneKonto), Toast.LENGTH_SHORT).show()
 
                     val MainIntent = Intent(this, MainActivity::class.java)
                     startActivity(MainIntent)
@@ -100,7 +100,7 @@ class Rejestracja : AppCompatActivity() {
             }else{
                 Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
                 tockenAcc=true
-                errorMessage = "Wystąpił błąd w następujących polach: "
+                errorMessage = getString(R.string.WystapilBlad)
                 RButtonRejestracja.isEnabled = true
             }
         }

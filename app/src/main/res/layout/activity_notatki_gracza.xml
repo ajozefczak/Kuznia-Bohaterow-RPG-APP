@@ -19,7 +19,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/gabriela"
-            android:text="NOTATKI"
+            android:text="@string/NOTATKI"
             android:textColor="#ebebeb"
             android:textSize="20sp" />
 
@@ -51,7 +51,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Cofnij"
+                android:text="@string/cofnij"
                 android:textColor="#ebebeb" />
 
             <Button
@@ -63,7 +63,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/przycisknaprzyciski"
                 android:fontFamily="@font/gabriela"
-                android:text="Zapisz"
+                android:text="@string/Zapisz"
                 android:textColor="#ebebeb" />
         </LinearLayout>
     </LinearLayout>
