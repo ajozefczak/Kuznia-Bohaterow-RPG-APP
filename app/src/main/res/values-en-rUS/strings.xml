@@ -153,4 +153,9 @@
     <string name="WyrzucGracza">Kick Player</string>
     <string name="StolUsuniety">"The table was deleted!"</string>
     <string name="ZostalesWyrzucony">"You were kicked!"</string>
+    <string name="OdbanujGracza">"Unban Player"</string>
+    <string name="WystapilBladPodczasWyrzucaniaGracza">"There was an error during kicking the player."</string>
+    <string name="PoprawnieWyrzuconoZeStolu">"Player was kicked."</string>
+    <string name="WystapilBladPodczasOdbanowywaniaGracza">"Wystąpił błąd podczas odbanowywania gracza!"</string>
+    <string name="PoprawnieOdbanowano">"The player was unbaned."</string>
 </resources>

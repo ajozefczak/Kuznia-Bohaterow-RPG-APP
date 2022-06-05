@@ -24,7 +24,7 @@ class MyListKickAdapter(private val context: Activity, private val playerKickLis
             itemDelete.isEnabled = false
             val db = FirebaseFirestore.getInstance()
             db.collection("tables_joins").document(playerKickList[position].joinID).delete().addOnCompleteListener() {
-                Toast.makeText(context, "Poprawnie wyrzucono gracza ze stołu", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, R.string.PoprawnieWyrzuconoZeStolu, Toast.LENGTH_SHORT).show()
 
                 val playerBlock: MutableMap<String, String> = HashMap()
                 playerBlock["playerID"] = playerKickList[position].pID
@@ -34,7 +34,7 @@ class MyListKickAdapter(private val context: Activity, private val playerKickLis
                 itemDelete.isEnabled = true
                 context.finish()
             }.addOnFailureListener{
-                Toast.makeText(context, "Wystąpił błąd przy wyrzucaniu gracza!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, R.string.WystapilBladPodczasWyrzucaniaGracza, Toast.LENGTH_SHORT).show()
                 itemDelete.isEnabled = true
             }
         }

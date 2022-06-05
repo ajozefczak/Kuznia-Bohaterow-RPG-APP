@@ -121,7 +121,7 @@ class EkranGracza : AppCompatActivity() {
                                                                 }.addOnFailureListener { e ->
                                                                 Toast.makeText(
                                                                     this,
-                                                                    R.string.WystapilBlad.toString() + e,
+                                                                    getString(R.string.WystapilBlad) + e,
                                                                     Toast.LENGTH_SHORT
                                                                 ).show()
                                                             }
@@ -133,7 +133,7 @@ class EkranGracza : AppCompatActivity() {
                                     }
                                 }
                                 else {
-                                    Toast.makeText(this, R.string.WystapilBlad, Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(this, R.string.NieZnaleziono, Toast.LENGTH_SHORT).show()
                                 }
                             }
                     }
