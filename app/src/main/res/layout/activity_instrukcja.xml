@@ -185,7 +185,7 @@
             android:layout_weight="5"
             android:background="@drawable/przycisknaprzyciski"
             android:padding="3dp"
-            android:text="11.XXXX"
+            android:text="11.Stół"
             android:textColor="#ebebeb" />
 
         <Button
