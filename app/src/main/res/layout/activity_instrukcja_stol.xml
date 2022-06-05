@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".InstrukcjaStol">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView67"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#94261309"
+            android:text="Stół"
+            android:textAlignment="center"
+            android:textColor="#edededed"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView68"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#94261309"
+            android:text="Użytkownicy na stole mogą korzystać z głównej części aplikacji jaką jest chat oraz rzuty kośćmi. Po naciśnięciu odpowiedniej kości na czacie pojawi się wiadomość automatycznie wygenerowana przez system określająca wyrzuconą wartość. - Archiwum Aplikacja czatu przechowuje 10 najnowyszych wiadomości. W celu wyświetlenia całej historii czatu należy skorzystać z przycisku „archiwum”. Każdy wpis zawiera również datę wysłania. Aplikacja posiada również funkcję wyszukania konkretnej wiadomości. - Edytuj stół  Mistrz gry może w dowolnym momencie skorzystać z opcji edycji stołu. Może tam edytować podstawowe dane stołu jak i zarządzać graczami na stole.   - Dodaj postać  Gracze biorący udział w aktualnej rozgrywce mogę dodać swoją postać do gry wybierając ją z listy. "
+            android:textColor="#edededed" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

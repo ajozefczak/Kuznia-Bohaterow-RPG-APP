@@ -10,6 +10,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KuzniaBohaterowRPGAPP">
         <activity
+            android:name=".InstrukcjaStol"
+            android:exported="false" />
+        <activity
+            android:name=".InstrukcjaStworzNowyStol"
+            android:exported="false" />
+        <activity
+            android:name=".InstrukcjaTrybGraczaMG"
+            android:exported="false" />
+        <activity
+            android:name=".InstrukcjaWyszukajPostaci"
+            android:exported="false" />
+        <activity
+            android:name=".InstrukcjaListaStolow"
+            android:exported="false" />
+        <activity
+            android:name=".InstrukcjaDolaczDoStolu"
+            android:exported="false" />
+        <activity
+            android:name=".InstrukcjaStworzPostac"
+            android:exported="false" />
+        <activity
+            android:name=".InstrukcjaKalendarz"
+            android:exported="false" />
+        <activity
+            android:name=".InstrukcjaWyloguj"
+            android:exported="false" />
+        <activity
+            android:name=".InstrukcjaLogowanie"
+            android:exported="false" />
+        <activity
+            android:name=".InstrukcjaRejestracja"
+            android:exported="false" />
+        <activity
             android:name=".Instrukcja"
             android:exported="false" />
         <activity

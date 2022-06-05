@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".InstrukcjaLogowanie">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView63"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#94261309"
+            android:text="@string/logowanie"
+            android:textAlignment="center"
+            android:textColor="#edededed"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView64"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#94261309"
+            android:text="Wyświetla formularz z danymi do zalogowania się. W razie problemów z poprawnym logowaniem, użytkownik ma opcję resetu hasła. W takim wypadku na jego mail zostanie przesłany link w możliwością ustawienia nowego hasła.  "
+            android:textColor="#edededed" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
