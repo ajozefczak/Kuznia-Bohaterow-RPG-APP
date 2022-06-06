@@ -73,7 +73,7 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
                             tempMinute = savedMinute.toString()
                         }
 
-                        KTextPoka.text =R.string.NastepneSpotkanie.toString() + "\n" + "$savedDay-$savedMonth-$savedYear\n $savedHour:" + tempMinute
+                        KTextPoka.text =getString(R.string.NastepneSpotkanie) + "\n" + "$savedDay-$savedMonth-$savedYear\n $savedHour:" + tempMinute
 
                     }
                 }
@@ -150,7 +150,7 @@ class Kalendarz : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
                     Toast.makeText(this, R.string.PoprawnieDodanoSpotkanie, Toast.LENGTH_SHORT).show()
                     KButtonZapiszTeermin.isEnabled = true
                 }.addOnFailureListener { e ->
-                    Toast.makeText(this, R.string.WystapilBlad.toString() + e, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.WystapilBlad) + e, Toast.LENGTH_SHORT).show()
                     KButtonZapiszTeermin.isEnabled = true
                 }
             }

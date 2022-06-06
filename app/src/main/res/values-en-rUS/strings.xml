@@ -148,7 +148,7 @@
     <string name="WprowadzPoprawnyNumer">"Enter a correct number in the cost"</string>
     <string name="PoprawnieDodanoPrzedmiot">"Correctly added the item."</string>
     <string name="EdytujStol">Edit table</string>
-    <string name="WybierzPostac">Wybierz postać</string>
+    <string name="WybierzPostac">Select Character</string>
     <string name="Usun">Delete</string>
     <string name="WyrzucGracza">Kick Player</string>
     <string name="StolUsuniety">"The table was deleted!"</string>
