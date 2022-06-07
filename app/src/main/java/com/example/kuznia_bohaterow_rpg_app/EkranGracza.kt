@@ -24,6 +24,13 @@ class EkranGracza : AppCompatActivity() {
         setContentView(R.layout.activity_ekran_gracza)
         initListeners()
 
+        EkranGraczaButtonInstrukcja.setOnClickListener {
+            EkranGraczaButtonInstrukcja.isEnabled = false;
+            val instrukcjaIntent = Intent(this, Instrukcja::class.java)
+            startActivity(instrukcjaIntent)
+            EkranGraczaButtonInstrukcja.isEnabled = true;
+        }
+
         GButtonWyloguj.setOnClickListener {
             GButtonWyloguj.isEnabled = false
             FirebaseAuth.getInstance().signOut()
