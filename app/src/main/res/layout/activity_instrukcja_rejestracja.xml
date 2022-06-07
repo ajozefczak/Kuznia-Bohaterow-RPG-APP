@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="@string/rejestracja"
+            android:text="@string/Rozdzial1"
             android:textAlignment="center"
             android:textColor="#edededed"
             android:textSize="24sp" />
@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="W celu korzystania z funkcjonalności aplikacji, użytkownik musi założyć konto. Po naciśnięciu przycisku „Rejestracja”, zostanie wyświetlony formularz. W celu poprawnego konta wymagana jest akceptacja regulaminu. Można go wyświetlić korzystając z przycisku obok. "
+            android:text="@string/Rozdzial1t"
             android:textColor="#edededed" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

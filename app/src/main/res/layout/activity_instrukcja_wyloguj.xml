@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="@string/Wyloguj"
+            android:text="@string/Rozdzial3"
             android:textAlignment="center"
             android:textColor="#edededed"
             android:textSize="24sp" />
@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="Gracz ma możliwość wylogowania się z systemu w razie potrzeby. "
+            android:text="@string/Rozdzial3t"
             android:textColor="#edededed" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

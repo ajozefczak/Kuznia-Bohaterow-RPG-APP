@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="Tworzenie nowego stołu"
+            android:text="@string/Rozdzial10"
             android:textAlignment="center"
             android:textColor="#edededed"
             android:textSize="24sp" />
@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="W trybie MG użytkownik ma możliwość stworzenia stołu do którego inne będą się dołączać dzięki unikalnie wygenerowanemu kodowi. "
+            android:text="@string/Rozdzial10t"
             android:textColor="#edededed" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="Tworzenie Postaci"
+            android:text="@string/Rozdzial5"
             android:textAlignment="center"
             android:textColor="#edededed"
             android:textSize="24sp" />
@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="Najważniejszą rzeczą w grach rpg jest oczywiście tworzenie własnej postaci. Każdy z graczy ma możliwość stworzenia takowej. W takim celu użytkownik musi przesłać do aplikacji zdjęcie swojej postaci oraz uzupełnić informacje takie jak jej imię oraz profesję jaką się będzie zajmować. Kolejną ważną czynnością jest oczywiście przydzielenie statystyk. Gracz może przelosować wybraną daną poprzez kliknięcie na kostkę lub skorzystać z przycisku losowania każdej. "
+            android:text="@string/Rozdzial5t"
             android:textColor="#edededed" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

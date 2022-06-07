@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="@string/WyszukajPostac"
+            android:text="@string/Rozdzial8"
             android:textAlignment="center"
             android:textColor="#edededed"
             android:textSize="24sp" />
@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="Użytkownik ma możliwość przeglądania stworzonych przez siebie postaci. Po kliknięciu na dowolny awatar, gracz zostaje przeniesiony do jej ekranu. Tam dostaje możliwość modyfikowania jej danych. Aplikacja umożliwia:  - 	rozwój statystyk postaci po osiągnięciu nowego levela -	edycję ekwipunku  -	dodanie fascynującej historii, która będzie opowiadała o początkach postaci -	korzystanie oraz dodawanie zaklęć  -	dodanie notatek do swojej postaci  W razie śmierci postaci lub porzucenia jej gracz w każdym momencie jest w stanie ją usunąć.   "
+            android:text="@string/Rozdzial8t"
             android:textColor="#edededed" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

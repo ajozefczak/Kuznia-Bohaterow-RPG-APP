@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="Tryb Gracza i MG"
+            android:text="@string/Rozdzial9"
             android:textAlignment="center"
             android:textColor="#edededed"
             android:textSize="24sp" />
@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="W lewym górnym rogu ekranu menu głównego znajduje się przycisk do zmiany trybu aplikacji. Użytkownik może wykorzystywać aplikację na dwa sposoby:  -	jako gracz użytkownik może dołączać do istniejących stołów  brać udział w rozgrywce wcielając się w stworzoną przez siebie postać. -	jako mistrz gry, gracz może wcielić się w twórcę przygody w której jako narrator będzie kierował pozostałymi graczami. "
+            android:text="@string/Rozdzial9t"
             android:textColor="#edededed" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

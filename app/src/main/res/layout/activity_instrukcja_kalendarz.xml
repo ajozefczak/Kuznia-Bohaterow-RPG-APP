@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="@string/Kalendarz"
+            android:text="@string/Rozdzial4"
             android:textAlignment="center"
             android:textColor="#edededed"
             android:textSize="24sp" />
@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="W celu ułatwienia życia, każdy z graczu może ustalić termin najbliższego spotkania.  "
+            android:text="@string/Rozdzial4t"
             android:textColor="#edededed" />
     </LinearLayout>
 

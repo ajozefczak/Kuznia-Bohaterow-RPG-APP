@@ -19,7 +19,7 @@
             android:layout_margin="5dp"
             android:layout_weight="0.1"
             android:background="#94261309"
-            android:text="Instrukcja Obsugi wybierz rozdział"
+            android:text="@string/NazwaInstrukcja"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="#ebebeb"
@@ -37,7 +37,7 @@
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
             android:padding="3dp"
-            android:text="1.Rejestracja"
+            android:text="@string/Rozdzial1"
             android:textColor="#ebebeb" />
 
         <Button
@@ -52,7 +52,7 @@
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
             android:padding="3dp"
-            android:text="2.Logowanie"
+            android:text="@string/Rozdzial2"
             android:textColor="#ebebeb" />
 
         <Button
@@ -67,7 +67,7 @@
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
             android:padding="3dp"
-            android:text="3.Wyloguj"
+            android:text="@string/Rozdzial3"
             android:textColor="#ebebeb" />
 
         <Button
@@ -82,7 +82,7 @@
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
             android:padding="3dp"
-            android:text="4.Kalendarz"
+            android:text="@string/Rozdzial4"
             android:textColor="#ebebeb" />
 
         <Button
@@ -97,7 +97,7 @@
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
             android:padding="3dp"
-            android:text="5.Stwórz postać"
+            android:text="@string/Rozdzial5"
             android:textColor="#ebebeb" />
 
         <Button
@@ -112,7 +112,7 @@
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
             android:padding="3dp"
-            android:text="6.Dołącz do stołu"
+            android:text="@string/Rozdzial6"
             android:textColor="#ebebeb" />
 
         <Button
@@ -127,7 +127,7 @@
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
             android:padding="3dp"
-            android:text="7.lista stołów"
+            android:text="@string/Rozdzial7"
             android:textColor="#ebebeb" />
 
         <Button
@@ -142,7 +142,7 @@
             android:background="@drawable/przycisknaprzyciski"
             android:fontFamily="@font/gabriela"
             android:padding="3dp"
-            android:text="8.Wyszukaj postaci"
+            android:text="@string/Rozdzial8"
             android:textColor="#ebebeb" />
 
         <Button
@@ -171,7 +171,7 @@
             android:layout_weight="5"
             android:background="@drawable/przycisknaprzyciski"
             android:padding="3dp"
-            android:text="10.stwórz nowy stół"
+            android:text="@string/Rozdzial10"
             android:textColor="#ebebeb" />
 
         <Button
@@ -185,7 +185,7 @@
             android:layout_weight="5"
             android:background="@drawable/przycisknaprzyciski"
             android:padding="3dp"
-            android:text="11.Stół"
+            android:text="@string/Rozdzial11"
             android:textColor="#ebebeb" />
 
         <Button

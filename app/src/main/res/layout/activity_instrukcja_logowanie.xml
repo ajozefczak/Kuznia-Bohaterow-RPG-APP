@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="@string/logowanie"
+            android:text="@string/Rozdzial2"
             android:textAlignment="center"
             android:textColor="#edededed"
             android:textSize="24sp" />
@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="Wyświetla formularz z danymi do zalogowania się. W razie problemów z poprawnym logowaniem, użytkownik ma opcję resetu hasła. W takim wypadku na jego mail zostanie przesłany link w możliwością ustawienia nowego hasła.  "
+            android:text="@string/Rozdzial2t"
             android:textColor="#edededed" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

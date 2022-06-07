@@ -149,6 +149,7 @@
     <string name="PoprawnieDodanoPrzedmiot">"Poprawnie dodano przedmiot."</string>
     <string name="EdytujStol">Edytuj stół</string>
     <string name="WybierzPostac">Wybierz postać</string>
+    <string name="InstrukcjaObslugi">Instrukcja obsługi</string>
     <string name="Usun">Usuń</string>
     <string name="WyrzucGracza">Wyrzuć gracza</string>
     <string name="StolUsuniety">"Stół został usunięty!"</string>
@@ -158,4 +159,27 @@
     <string name="PoprawnieWyrzuconoZeStolu">"Poprawnie wyrzucono gracza ze stołu"</string>
     <string name="WystapilBladPodczasOdbanowywaniaGracza">"Wystąpił błąd podczas odbanowywania gracza!"</string>
     <string name="PoprawnieOdbanowano">"Poprawnie odbanowano!"</string>
+    <string name="NazwaInstrukcja">Instrukcja Obsługi wybierz rozdział</string>
+    <string name="Rozdzial1">1. Rejestracja</string>
+    <string name="Rozdzial2">2. Logowanie</string>
+    <string name="Rozdzial3">3. Wyloguj</string>
+    <string name="Rozdzial4">4. Kalendarz</string>
+    <string name="Rozdzial5">5. Stwórz postać</string>
+    <string name="Rozdzial6">6. Dołącz do stołu</string>
+    <string name="Rozdzial7">7. Lista stołów</string>
+    <string name="Rozdzial8">8. Wyszukaj postać</string>
+    <string name="Rozdzial9">9. Tryb gracza/MG</string>
+    <string name="Rozdzial10">10. Stwórz nowy stół</string>
+    <string name="Rozdzial11">11. Stół</string>
+    <string name="Rozdzial1t">W celu korzystania z funkcjonalności aplikacji, użytkownik musi założyć konto. Po naciśnięciu przycisku „Rejestracja”, zostanie wyświetlony formularz. W celu poprawnego konta wymagana jest akceptacja regulaminu. Można go wyświetlić korzystając z przycisku obok. </string>
+    <string name="Rozdzial2t">Wyświetla formularz z danymi do zalogowania się. W razie problemów z poprawnym logowaniem, użytkownik ma opcję resetu hasła. W takim wypadku na jego mail zostanie przesłany link w możliwością ustawienia nowego hasła.  </string>
+    <string name="Rozdzial3t">Gracz ma możliwość wylogowania się z systemu w razie potrzeby. </string>
+    <string name="Rozdzial4t">W celu ułatwienia życia, każdy z graczu może ustalić termin najbliższego spotkania.  </string>
+    <string name="Rozdzial5t">Najważniejszą rzeczą w grach rpg jest oczywiście tworzenie własnej postaci. Każdy z graczy ma możliwość stworzenia takowej. W takim celu użytkownik musi przesłać do aplikacji zdjęcie swojej postaci oraz uzupełnić informacje takie jak jej imię oraz profesję jaką się będzie zajmować. Kolejną ważną czynnością jest oczywiście przydzielenie statystyk. Gracz może przelosować wybraną daną poprzez kliknięcie na kostkę lub skorzystać z przycisku losowania każdej. </string>
+    <string name="Rozdzial6t">Aplikacja umożliwia dołączenie do stołu. Po podaniu prawidłowego kodu i naciśnięciu przycisku gracz jest przydzielany do danego miejsca gry.  </string>
+    <string name="Rozdzial7t">Przycisk wyświetla stoły do których gracz jest podłączony.</string>
+    <string name="Rozdzial8t">Użytkownik ma możliwość przeglądania stworzonych przez siebie postaci. Po kliknięciu na dowolny awatar, gracz zostaje przeniesiony do jej ekranu. Tam dostaje możliwość modyfikowania jej danych. Aplikacja umożliwia:  - 	rozwój statystyk postaci po osiągnięciu nowego levela -	edycję ekwipunku  -	dodanie fascynującej historii, która będzie opowiadała o początkach postaci -	korzystanie oraz dodawanie zaklęć  -	dodanie notatek do swojej postaci  W razie śmierci postaci lub porzucenia jej gracz w każdym momencie jest w stanie ją usunąć.   </string>
+    <string name="Rozdzial9t">W lewym górnym rogu ekranu menu głównego znajduje się przycisk do zmiany trybu aplikacji. Użytkownik może wykorzystywać aplikację na dwa sposoby:  -	jako gracz użytkownik może dołączać do istniejących stołów  brać udział w rozgrywce wcielając się w stworzoną przez siebie postać. -	jako mistrz gry, gracz może wcielić się w twórcę przygody w której jako narrator będzie kierował pozostałymi graczami. </string>
+    <string name="Rozdzial10t">W trybie MG użytkownik ma możliwość stworzenia stołu do którego inne będą się dołączać dzięki unikalnie wygenerowanemu kodowi. </string>
+    <string name="Rozdzial11t">Użytkownicy na stole mogą korzystać z głównej części aplikacji jaką jest chat oraz rzuty kośćmi. Po naciśnięciu odpowiedniej kości na czacie pojawi się wiadomość automatycznie wygenerowana przez system określająca wyrzuconą wartość. - Archiwum Aplikacja czatu przechowuje 10 najnowyszych wiadomości. W celu wyświetlenia całej historii czatu należy skorzystać z przycisku „archiwum”. Każdy wpis zawiera również datę wysłania. Aplikacja posiada również funkcję wyszukania konkretnej wiadomości. - Edytuj stół  Mistrz gry może w dowolnym momencie skorzystać z opcji edycji stołu. Może tam edytować podstawowe dane stołu jak i zarządzać graczami na stole.   - Dodaj postać  Gracze biorący udział w aktualnej rozgrywce mogę dodać swoją postać do gry wybierając ją z listy. </string>
 </resources>

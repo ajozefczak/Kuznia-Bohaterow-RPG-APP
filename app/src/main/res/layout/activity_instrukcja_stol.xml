@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="Stół"
+            android:text="@string/Rozdzial11"
             android:textAlignment="center"
             android:textColor="#edededed"
             android:textSize="24sp" />
@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:background="#94261309"
-            android:text="Użytkownicy na stole mogą korzystać z głównej części aplikacji jaką jest chat oraz rzuty kośćmi. Po naciśnięciu odpowiedniej kości na czacie pojawi się wiadomość automatycznie wygenerowana przez system określająca wyrzuconą wartość. - Archiwum Aplikacja czatu przechowuje 10 najnowyszych wiadomości. W celu wyświetlenia całej historii czatu należy skorzystać z przycisku „archiwum”. Każdy wpis zawiera również datę wysłania. Aplikacja posiada również funkcję wyszukania konkretnej wiadomości. - Edytuj stół  Mistrz gry może w dowolnym momencie skorzystać z opcji edycji stołu. Może tam edytować podstawowe dane stołu jak i zarządzać graczami na stole.   - Dodaj postać  Gracze biorący udział w aktualnej rozgrywce mogę dodać swoją postać do gry wybierając ją z listy. "
+            android:text="@string/Rozdzial11t"
             android:textColor="#edededed" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
